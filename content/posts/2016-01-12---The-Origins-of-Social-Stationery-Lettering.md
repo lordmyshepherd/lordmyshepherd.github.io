@@ -5,11 +5,11 @@ template: "post"
 draft: false
 slug: "/posts/the-origins-of-social-stationery-lettering"
 category: "Design Culture"
-description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
+description: "하루 시작이다."
 socialImage: "/media/image-3.jpg"
 ---
 
-##1. Error -  Unreachable "if" after "return"
+## 1. Error -  Unreachable "if" after "return"
 Array 관련 예제
 
 step1. addFirstAndLast 함수 안에 작성해주세요.<br>
@@ -20,8 +20,9 @@ step4. 만일 myArray에 한 개의 요소만 있다면 해당 요소의 값을 
 
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/wecode2.png)
 
-## Header Level 2
+## Array control
 
+arra
 + Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 + Aliquam tincidunt mauris eu risus.
 
