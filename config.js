@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://',//본인 블로그 url
+  url: 'https://lordmyshpherd.github.io',//본인 블로그 url
   pathPrefix: '/',
   title: 'Blog by John Doe',
   subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
