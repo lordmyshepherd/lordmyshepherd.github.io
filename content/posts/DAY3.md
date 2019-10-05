@@ -1,5 +1,5 @@
 ---
-title: Humane Typography in the Digital Age
+title: <DAY 4> Javascript
 date: "2017-08-19T22:40:32.169Z"
 template: "post"
 draft: false

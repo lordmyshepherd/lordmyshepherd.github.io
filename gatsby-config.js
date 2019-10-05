@@ -186,7 +186,7 @@ module.exports = {
         background_color: '#FFF',
         theme_color: '#F7A046',
         display: 'standalone',
-        icon: 'static/wecode2.png'
+        icon: 'static/cross.png'
       },
     },
     'gatsby-plugin-offline',
