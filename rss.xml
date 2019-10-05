@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Oct 2019 06:26:59 GMT</lastBuildDate><item><title><![CDATA[Humane Typography in the Digital Age]]></title><description><![CDATA[An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts.]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Sat, 19 Aug 2017 22:40:32 GMT</pubDate><content:encoded>&lt;ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 05 Oct 2019 13:51:21 GMT</lastBuildDate><item><title><![CDATA[<DAY 4> Javascript]]></title><description><![CDATA[An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts.]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Sat, 19 Aug 2017 22:40:32 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#the-first-transition&quot;&gt;The first transition&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#the-digital-age&quot;&gt;The digital age&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#loss-of-humanity-through-transitions&quot;&gt;Loss of humanity through transitions&lt;/a&gt;&lt;/li&gt;
@@ -10,46 +10,7 @@
 &lt;h2 id=&quot;the-first-transition&quot;&gt;&lt;a href=&quot;#the-first-transition&quot; aria-label=&quot;the first transition permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The first transition&lt;/h2&gt;
 &lt;p&gt;A similar conflict emerged after the invention of the first printing press in Europe. Johannes Gutenberg invented movable type and used it to produce different compositions. His workshop could print up to 240 impressions per hour. Until then, the books were being copied by hand. All the books were handwritten and decorated with hand drawn ornaments and figures. A process of copying a book was long but each book, even a copy, was a work of art.&lt;/p&gt;
 &lt;p&gt;The first printed books were, at first, perceived as inferior to the handwritten ones. They were smaller and cheaper to produce. Movable type provided the printers with flexibility that allowed them to print books in languages other than Latin. Gill describes the transition to industrialism as something that people needed and wanted. Something similar happened after the first printed books emerged. People wanted books in a language they understood and they wanted books they could take with them. They were hungry for knowledge and printed books satisfied this hunger.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6d93cbc4956a854d4c4369f0e281e7f3/a296c/42-line-bible.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 68.75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAAG9hSrMxf/EABoQAAICAwAAAAAAAAAAAAAAAAACARIQETH/2gAIAQEAAQUC4XYi2NqLZo//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAARFBAhBx/9oACAEBAAY/AlqhSWSsoXD/xAAcEAEAAgIDAQAAAAAAAAAAAAABABEhQTFRYZH/2gAIAQEAAT8hbFV3ACrcETOK6tmKVsdRp+YPKwn/2gAMAwEAAgADAAAAEH/P/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/EKyP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8QJ//EABoQAQEAAgMAAAAAAAAAAAAAAAERACExQVH/2gAIAQEAAT8QUSVSDzkUkLU7uPEbsWpO9e3AkarliEANePcMDTSBSa5uf//Z&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/6d93cbc4956a854d4c4369f0e281e7f3/01472/42-line-bible.webp 240w,
-/static/6d93cbc4956a854d4c4369f0e281e7f3/222bd/42-line-bible.webp 480w,
-/static/6d93cbc4956a854d4c4369f0e281e7f3/0cbce/42-line-bible.webp 800w&quot;
-          sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/6d93cbc4956a854d4c4369f0e281e7f3/3bc27/42-line-bible.jpg 240w,
-/static/6d93cbc4956a854d4c4369f0e281e7f3/98431/42-line-bible.jpg 480w,
-/static/6d93cbc4956a854d4c4369f0e281e7f3/a296c/42-line-bible.jpg 800w&quot;
-          sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-          type=&quot;image/jpeg&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/6d93cbc4956a854d4c4369f0e281e7f3/a296c/42-line-bible.jpg&quot;
-          alt=&quot;42-line-bible.jpg&quot;
-          title=&quot;42-line-bible.jpg&quot;
-          loading=&quot;lazy&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/42-line-bible.jpg&quot; alt=&quot;42-line-bible.jpg&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The 42–Line Bible, printed by Gutenberg.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;But, through this transition, the book lost a large part of its humanity. The machine took over most of the process but craftsmanship was still a part of it. The typefaces were cut manually by the first punch cutters. The paper was made by hand. The illustrations and ornaments were still being hand drawn. These were the remains of the craftsmanship that went almost extinct in the times of Eric Gill.&lt;/p&gt;
 &lt;h2 id=&quot;the-digital-age&quot;&gt;&lt;a href=&quot;#the-digital-age&quot; aria-label=&quot;the digital age permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The digital age&lt;/h2&gt;
@@ -121,122 +82,291 @@
 &lt;p&gt;We lost a part of ourselves because of this chase after perfection. We forgot about the craftsmanship along the way. And the worst part is that we don’t care. The transition to the digital age made that clear. We choose typefaces like clueless zombies. There’s no meaning in our work. Type sizes, leading, margins… It’s all just a few clicks or lines of code. The message isn’t important anymore. There’s no more “why” behind the “what”.&lt;/p&gt;
 &lt;h2 id=&quot;chasing-perfection&quot;&gt;&lt;a href=&quot;#chasing-perfection&quot; aria-label=&quot;chasing perfection permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Chasing perfection&lt;/h2&gt;
 &lt;p&gt;Human beings aren’t perfect. Perfection is something that will always elude us. There will always be a small part of humanity in everything we do. No matter how small that part, we should make sure that it transcends the limits of the medium. We have to think about the message first. What typeface should we use and why? Does the typeface match the message and what we want to communicate with it? What will be the leading and why? Will there be more typefaces in our design? On what ground will they be combined? What makes our design unique and why? This is the part of humanity that is left in typography. It might be the last part. Are we really going to give it up?&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Originally published by &lt;a href=&quot;http://matejlatin.co.uk/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Matej Latin&lt;/a&gt; on &lt;a href=&quot;https://medium.com/design-notes/humane-typography-in-the-digital-age-9bd5c16199bd?ref=webdesignernews.com#.lygo82z0x&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Medium&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Johannes Gutenberg: The Birth of Movable Type]]></title><description><![CDATA[German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible.]]></description><link>https://lordmyshepherd.github.io/posts/the-birth-of-movable-type/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/the-birth-of-movable-type/</guid><pubDate>Fri, 18 Aug 2017 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Johannes Gensfleisch zur Laden zum Gutenberg&lt;/strong&gt; (c. 1398 – 1468) was a German blacksmith, goldsmith, printer, and publisher who introduced printing to Europe. His invention of mechanical movable type printing started the Printing Revolution and is widely regarded as the most important event of the modern period. It played a key role in the development of the Renaissance, Reformation, the Age of Enlightenment, and the Scientific revolution and laid the material basis for the modern knowledge-based economy and the spread of learning to the masses.&lt;/p&gt;
-&lt;figure class=&quot;float-right&quot; style=&quot;width: 240px&quot;&gt;
-	&lt;img src=&quot;/media/gutenberg.jpg&quot; alt=&quot;Gutenberg&quot;&gt;
-	&lt;figcaption&gt;Johannes Gutenberg&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;With his invention of the printing press, Gutenberg was the first European to use movable type printing, in around 1439. Among his many contributions to printing are: the invention of a process for mass-producing movable type; the use of oil-based ink; and the use of a wooden printing press similar to the agricultural screw presses of the period. His truly epochal invention was the combination of these elements into a practical system that allowed the mass production of printed books and was economically viable for printers and readers alike. Gutenberg’s method for making type is traditionally considered to have included a type metal alloy and a hand mould for casting type. The alloy was a mixture of lead, tin, and antimony that melted at a relatively low temperature for faster and more economical casting, cast well, and created a durable type.&lt;/p&gt;
-&lt;p&gt;In Renaissance Europe, the arrival of mechanical movable type printing introduced the era of mass communication which permanently altered the structure of society. The relatively unrestricted circulation of information — including revolutionary ideas — transcended borders, captured the masses in the Reformation and threatened the power of political and religious authorities; the sharp increase in literacy broke the monopoly of the literate elite on education and learning and bolstered the emerging middle class. Across Europe, the increasing cultural self-awareness of its people led to the rise of proto-nationalism, accelerated by the flowering of the European vernacular languages to the detriment of Latin’s status as lingua franca. In the 19th century, the replacement of the hand-operated Gutenberg-style press by steam-powered rotary presses allowed printing on an industrial scale, while Western-style printing was adopted all over the world, becoming practically the sole medium for modern bulk printing.&lt;/p&gt;
-&lt;p&gt;The use of movable type was a marked improvement on the handwritten manuscript, which was the existing method of book production in Europe, and upon woodblock printing, and revolutionized European book-making. Gutenberg’s printing technology spread rapidly throughout Europe and later the world.&lt;/p&gt;
-&lt;p&gt;His major work, the Gutenberg Bible (also known as the 42-line Bible), has been acclaimed for its high aesthetic and technical quality.&lt;/p&gt;
-&lt;h2 id=&quot;printing-press&quot;&gt;&lt;a href=&quot;#printing-press&quot; aria-label=&quot;printing press permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Printing Press&lt;/h2&gt;
-&lt;p&gt;Around 1439, Gutenberg was involved in a financial misadventure making polished metal mirrors (which were believed to capture holy light from religious relics) for sale to pilgrims to Aachen: in 1439 the city was planning to exhibit its collection of relics from Emperor Charlemagne but the event was delayed by one year due to a severe flood and the capital already spent could not be repaid. When the question of satisfying the investors came up, Gutenberg is said to have promised to share a “secret”. It has been widely speculated that this secret may have been the idea of printing with movable type. Also around 1439–1440, the Dutch Laurens Janszoon Coster came up with the idea of printing. Legend has it that the idea came to him “like a ray of light”.&lt;/p&gt;
-&lt;figure class=&quot;float-left&quot; style=&quot;width: 240px&quot;&gt;
-	&lt;img src=&quot;/media/printing-press.jpg&quot; alt=&quot;Early Printing Press&quot;&gt;
-	&lt;figcaption&gt;Early wooden printing press as depicted in 1568.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;Until at least 1444 he lived in Strasbourg, most likely in the St. Arbogast parish. It was in Strasbourg in 1440 that Gutenberg is said to have perfected and unveiled the secret of printing based on his research, mysteriously entitled Kunst und Aventur (art and enterprise). It is not clear what work he was engaged in, or whether some early trials with printing from movable type may have been conducted there. After this, there is a gap of four years in the record. In 1448, he was back in Mainz, where he took out a loan from his brother-in-law Arnold Gelthus, quite possibly for a printing press or related paraphernalia. By this date, Gutenberg may have been familiar with intaglio printing; it is claimed that he had worked on copper engravings with an artist known as the Master of Playing Cards.&lt;/p&gt;
-&lt;p&gt;By 1450, the press was in operation, and a German poem had been printed, possibly the first item to be printed there. Gutenberg was able to convince the wealthy moneylender Johann Fust for a loan of 800 guilders. Peter Schöffer, who became Fust’s son-in-law, also joined the enterprise. Schöffer had worked as a scribe in Paris and is believed to have designed some of the first typefaces.&lt;/p&gt;
-&lt;figure&gt;
-	&lt;blockquote&gt;
-		&lt;p&gt;All that has been written to me about that marvelous man seen at Frankfurt is true. I have not seen complete Bibles but only a number of quires of various books of the Bible. The script was very neat and legible, not at all difficult to follow—your grace would be able to read it without effort, and indeed without glasses.&lt;/p&gt;
-		&lt;footer&gt;
-			&lt;cite&gt;—Future pope Pius II in a letter to Cardinal Carvajal, March 1455&lt;/cite&gt;
-		&lt;/footer&gt;
-	&lt;/blockquote&gt;
-&lt;/figure&gt;
-&lt;p&gt;Gutenberg’s workshop was set up at Hof Humbrecht, a property belonging to a distant relative. It is not clear when Gutenberg conceived the Bible project, but for this he borrowed another 800 guilders from Fust, and work commenced in 1452. At the same time, the press was also printing other, more lucrative texts (possibly Latin grammars). There is also some speculation that there may have been two presses, one for the pedestrian texts, and one for the Bible. One of the profit-making enterprises of the new press was the printing of thousands of indulgences for the church, documented from 1454–55.&lt;/p&gt;
-&lt;p&gt;In 1455 Gutenberg completed his 42-line Bible, known as the Gutenberg Bible. About 180 copies were printed, most on paper and some on vellum.&lt;/p&gt;
-&lt;h2 id=&quot;court-case&quot;&gt;&lt;a href=&quot;#court-case&quot; aria-label=&quot;court case permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Court Case&lt;/h2&gt;
-&lt;p&gt;Some time in 1456, there was a dispute between Gutenberg and Fust, and Fust demanded his money back, accusing Gutenberg of misusing the funds. Meanwhile the expenses of the Bible project had proliferated, and Gutenberg’s debt now exceeded 20,000 guilders. Fust sued at the archbishop’s court. A November 1455 legal document records that there was a partnership for a “project of the books,” the funds for which Gutenberg had used for other purposes, according to Fust. The court decided in favor of Fust, giving him control over the Bible printing workshop and half of all printed Bibles.&lt;/p&gt;
-&lt;p&gt;Thus Gutenberg was effectively bankrupt, but it appears he retained (or re-started) a small printing shop, and participated in the printing of a Bible in the town of Bamberg around 1459, for which he seems at least to have supplied the type. But since his printed books never carry his name or a date, it is difficult to be certain, and there is consequently a considerable scholarly debate on this subject. It is also possible that the large Catholicon dictionary, 300 copies of 754 pages, printed in Mainz in 1460, may have been executed in his workshop.&lt;/p&gt;
-&lt;p&gt;Meanwhile, the Fust–Schöffer shop was the first in Europe to bring out a book with the printer’s name and date, the Mainz Psalter of August 1457, and while proudly proclaiming the mechanical process by which it had been produced, it made no mention of Gutenberg.&lt;/p&gt;
-&lt;h2 id=&quot;later-life&quot;&gt;&lt;a href=&quot;#later-life&quot; aria-label=&quot;later life permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Later Life&lt;/h2&gt;
-&lt;p&gt;In 1462, during a conflict between two archbishops, Mainz was sacked by archbishop Adolph von Nassau, and Gutenberg was exiled. An old man by now, he moved to Eltville where he may have initiated and supervised a new printing press belonging to the brothers Bechtermünze.&lt;/p&gt;
-&lt;p&gt;In January 1465, Gutenberg’s achievements were recognized and he was given the title Hofmann (gentleman of the court) by von Nassau. This honor included a stipend, an annual court outfit, as well as 2,180 litres of grain and 2,000 litres of wine tax-free. It is believed he may have moved back to Mainz around this time, but this is not certain.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Gutenberg died in 1468 and was buried in the Franciscan church at Mainz, his contributions largely unknown. This church and the cemetery were later destroyed, and Gutenberg’s grave is now lost.&lt;/p&gt;
-&lt;p&gt;In 1504, he was mentioned as the inventor of typography in a book by Professor Ivo Wittig. It was not until 1567 that the first portrait of Gutenberg, almost certainly an imaginary reconstruction, appeared in Heinrich Pantaleon’s biography of famous Germans.&lt;/p&gt;
-&lt;h2 id=&quot;printing-method-with-movable-type&quot;&gt;&lt;a href=&quot;#printing-method-with-movable-type&quot; aria-label=&quot;printing method with movable type permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Printing Method With Movable Type&lt;/h2&gt;
-&lt;p&gt;Gutenberg’s early printing process, and what tests he may have made with movable type, are not known in great detail. His later Bibles were printed in such a way as to have required large quantities of type, some estimates suggesting as many as 100,000 individual sorts. Setting each page would take, perhaps, half a day, and considering all the work in loading the press, inking the type, pulling the impressions, hanging up the sheets, distributing the type, etc., it is thought that the Gutenberg–Fust shop might have employed as many as 25 craftsmen.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Originally published by &lt;a href=&quot;http://matejlatin.co.uk/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Matej Latin&lt;/a&gt; on &lt;a href=&quot;https://medium.com/design-notes/humane-typography-in-the-digital-age-9bd5c16199bd?ref=webdesignernews.com#.lygo82z0x&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Medium&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[<DAY 3> Gatsby blog]]></title><description><![CDATA[German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible.]]></description><link>https://lordmyshepherd.github.io/posts/the-birth-of-movable-type/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/the-birth-of-movable-type/</guid><pubDate>Fri, 18 Aug 2017 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1블로그-설치-필요한-용어&quot;&gt;&lt;a href=&quot;#1%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%84%A4%EC%B9%98-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9A%A9%EC%96%B4&quot; aria-label=&quot;1블로그 설치 필요한 용어 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.블로그 설치 필요한 용어&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Domain(도메인)
+&lt;br&gt;원래는 110.13.109.111과 같은 숫자로 이루어진 ip주소인데, 사람들이 기억하기 쉽도록 영문주소로 변경한 것을 의미합니다.&lt;br&gt;
+나만의 블로그를 갖고 싶다면 도메인을 구입하고, 직접 ip 주소에 연결하는 과정을 거쳐야 하지만 &lt;strong&gt;github에서 Github Pages 라는 서비스를 사용&lt;/strong&gt;할 예정입니다.   &lt;strong&gt;username.github.io 라는 도메인&lt;/strong&gt;을 갖게됩니다. 개인적으로 도메인을 구매했다면 자신만의 도메인을 연결할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;Depoly(배포)
+&lt;br&gt;배포란, 그동안 개발하던 것을 인터넷상에 공개하고 local 컴퓨터 뿐만 아니라 다른 컴퓨터에서도 접근해서 볼 수 있게 하는 것을 의미합니다.&lt;/li&gt;
+&lt;li&gt;localhost
+&lt;br&gt;웹상에 html, css, js를 작동시켜서 사이트를 보려면 서버가 필요합니다. aws, cafe24 등에서 서버를 빌려서 우리의 블로그 파일들을 올리고 어느 누구든지 접근할 수 있게 하는 것을 호스팅이라고 합니다. 서버를 빌렸으니 렌탈비용을 내야하는데 이런 것을 호스팅 비용이라고 하죠. (참고로 우리는 github의 서버를 통해 호스팅하고, 물론 무료입니다!)
+&lt;br&gt;그런데 markdown으로 작성된 포스팅이 잘 나오는지 매번 github에 올린 후, 내 사이트에 접속해서 확인하기는 번거롭습니다. 또는 블로그 css를 바꾸고 싶은데, 버튼 색 하나만 바꾸더라도 잘 나오는지 확인하려면 github에 올린 후, 사이트에 접속해서 확인을 해야겠죠.
+&lt;br&gt;이렇게 매번 복잡한 과정을 거쳐서 실제 사이트에 반영된 결과물을 보는 대신에, 수정 직후 내 컴퓨터에 서버를 띄워서 바로바로 확인할 수도 있습니다.
+&lt;br&gt;내 컴퓨터에 서버를 띄웠기 때문에 로컬환경 이라고 말합니다.&lt;/li&gt;
+&lt;li&gt;git&lt;/li&gt;
+&lt;li&gt;npm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-블로그-설치-시작&quot;&gt;&lt;a href=&quot;#2-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%84%A4%EC%B9%98-%EC%8B%9C%EC%9E%91&quot; aria-label=&quot;2 블로그 설치 시작 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 블로그 설치 시작&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;사전준비
+&lt;br&gt;터미널에 &lt;strong&gt;git&lt;/strong&gt;, &lt;strong&gt;npm&lt;/strong&gt;이 설치되어 있어야 합니다.&lt;/li&gt;
+&lt;li&gt;Gatsby 테마 선택
+&lt;br&gt;&lt;u&gt;Gatsby Starter&lt;/u&gt; 사이트에서 테마를 하나 선택해주세요. 저는 gatsby-starter-lumen 으로 하겠습니다. 테마가 다르면 설정이 조금 달라집니다. 다음의 스텝을 그대로 따라하지 못 할 수도 있습니다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gatsby Starter로 블로그 설치&lt;br&gt;터미널을 열어서 gatsby 명령어를 사용할 수 있도록 &lt;u&gt;gatsby-cli를 전역에 설치&lt;/u&gt;합니다. 터미널에서 아래 코드를 실행합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;npm install -g gatsby-cli&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그다음에는 우리가 정한 theme의 source code를 가져오려고 합니다. 블로그를 만들고 싶은 directory에서 아래와 같이 실행합니다. &lt;u&gt;gatsby 명령어를 사용하여 blog라는 디렉토리에 블로그의 소스코드를 가져온다&lt;/u&gt;는 의미입니다.
+starter-lumen이라는 theme의 github 주소입니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;gatsby new blog &lt;span class=&quot;token property&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;//github.com/alxshelepenok/gatsby-starter-lumen
+pwd //현재 directory 위치 확인
+ls -l // blog directory가 만들어 졌는지 확인
+cd blog // blog directory로 이동&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/bd0272909c25e194b94dc89edc338274/ee10b/movable-type.jpg&quot;
+    href=&quot;/static/1dc268befaf9adcf2d42a9c3fc64879d/30da1/DAY3_1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.43356643356644%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABlT8ktxAf/8QAGBABAQEBAQAAAAAAAAAAAAAAAQARAkH/2gAIAQEAAQUC8tkNJ7x//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAgMBAAAAAAAAAAAAAAAAARAAETFR/9oACAEBAAY/AidlLOv/xAAZEAEAAwEBAAAAAAAAAAAAAAABABEhUUH/2gAIAQEAAT8hGrOMO3FDOPkxyVDQzBzksaLuxEKn/9oADAMBAAIAAwAAABDQD//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/EKr/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8QCwb/xAAeEAEBAAICAgMAAAAAAAAAAAABEQAhMVFB4WGR8P/aAAgBAQABPxBGghtORln24lVU05k694Azx6uOmCkYRJ7fOW7gELT9vAiNOf/Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 33.00370828182942%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA9klEQVQoz32RwW7DIBBE/TFVAUMMmLCOY7eKrcpKK+XWU///PyYLjhWipj2MsJb17NuhCkPAiwoQcg+pCLKOLIJQEXrXY08TQpwQuxnWj7me7su+UpX1C3xYYNw7hL43becrD9pU1suzNgdI3UGxqt38Dbv8QIYTVEPr9Nu0leRRZT19JzPbvqG2R2g3oPJtWmmGMf3a/GD2zDRmlZRCFivX/QXqcIH0J0gmpP4DhrNLK24G/9FmQn8jtEzoui+03ScCzayJ8xzQtCNkyiWb0VOzzTDllh5PGc6Q/6lEPMN1CxwRDEU410KzobAjak1/0v0ibI5ZV0S62ccwGM/RAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
-          srcset=&quot;/static/bd0272909c25e194b94dc89edc338274/01472/movable-type.webp 240w,
-/static/bd0272909c25e194b94dc89edc338274/222bd/movable-type.webp 480w,
-/static/bd0272909c25e194b94dc89edc338274/620b9/movable-type.webp 960w,
-/static/bd0272909c25e194b94dc89edc338274/28063/movable-type.webp 1440w,
-/static/bd0272909c25e194b94dc89edc338274/34ef4/movable-type.webp 1920w,
-/static/bd0272909c25e194b94dc89edc338274/839a3/movable-type.webp 2288w&quot;
+          srcset=&quot;/static/1dc268befaf9adcf2d42a9c3fc64879d/01472/DAY3_1.webp 240w,
+/static/1dc268befaf9adcf2d42a9c3fc64879d/222bd/DAY3_1.webp 480w,
+/static/1dc268befaf9adcf2d42a9c3fc64879d/620b9/DAY3_1.webp 960w,
+/static/1dc268befaf9adcf2d42a9c3fc64879d/28063/DAY3_1.webp 1440w,
+/static/1dc268befaf9adcf2d42a9c3fc64879d/a692e/DAY3_1.webp 1618w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/bd0272909c25e194b94dc89edc338274/3bc27/movable-type.jpg 240w,
-/static/bd0272909c25e194b94dc89edc338274/98431/movable-type.jpg 480w,
-/static/bd0272909c25e194b94dc89edc338274/b3ee8/movable-type.jpg 960w,
-/static/bd0272909c25e194b94dc89edc338274/b97fe/movable-type.jpg 1440w,
-/static/bd0272909c25e194b94dc89edc338274/fb329/movable-type.jpg 1920w,
-/static/bd0272909c25e194b94dc89edc338274/ee10b/movable-type.jpg 2288w&quot;
+          srcset=&quot;/static/1dc268befaf9adcf2d42a9c3fc64879d/0783d/DAY3_1.png 240w,
+/static/1dc268befaf9adcf2d42a9c3fc64879d/782f4/DAY3_1.png 480w,
+/static/1dc268befaf9adcf2d42a9c3fc64879d/f570d/DAY3_1.png 960w,
+/static/1dc268befaf9adcf2d42a9c3fc64879d/8d0ff/DAY3_1.png 1440w,
+/static/1dc268befaf9adcf2d42a9c3fc64879d/30da1/DAY3_1.png 1618w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-          type=&quot;image/jpeg&quot;
+          type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/bd0272909c25e194b94dc89edc338274/b3ee8/movable-type.jpg&quot;
-          alt=&quot;Movable metal type, and composing stick, descended from Gutenberg&amp;#39;s press. Photo by Willi Heidelbach. Licensed under CC BY 2.5&quot;
-          title=&quot;Movable metal type, and composing stick, descended from Gutenberg&amp;#39;s press. Photo by Willi Heidelbach. Licensed under CC BY 2.5&quot;
+          src=&quot;/static/1dc268befaf9adcf2d42a9c3fc64879d/f570d/DAY3_1.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
           loading=&quot;lazy&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Movable metal type, and composing stick, descended from Gutenberg’s press. Photo by Willi Heidelbach. Licensed under CC BY 2.5&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Gutenberg’s technique of making movable type remains unclear. In the following decades, punches and copper matrices became standardized in the rapidly disseminating printing presses across Europe. Whether Gutenberg used this sophisticated technique or a somewhat primitive version has been the subject of considerable debate.&lt;/p&gt;
-&lt;p&gt;In the standard process of making type, a hard metal punch (made by punchcutting, with the letter carved back to front) is hammered into a softer copper bar, creating a matrix. This is then placed into a hand-held mould and a piece of type, or “sort”, is cast by filling the mould with molten type-metal; this cools almost at once, and the resulting piece of type can be removed from the mould. The matrix can be reused to create hundreds, or thousands, of identical sorts so that the same character appearing anywhere within the book will appear very uniform, giving rise, over time, to the development of distinct styles of typefaces or fonts. After casting, the sorts are arranged into type-cases, and used to make up pages which are inked and printed, a procedure which can be repeated hundreds, or thousands, of times. The sorts can be reused in any combination, earning the process the name of “movable type”.&lt;/p&gt;
-&lt;p&gt;The invention of the making of types with punch, matrix and mold has been widely attributed to Gutenberg. However, recent evidence suggests that Gutenberg’s process was somewhat different. If he used the punch and matrix approach, all his letters should have been nearly identical, with some variations due to miscasting and inking. However, the type used in Gutenberg’s earliest work shows other variations.&lt;/p&gt;
-&lt;figure&gt;
-	&lt;blockquote&gt;
-		&lt;p&gt;It is a press, certainly, but a press from which shall flow in inexhaustible streams… Through it, god will spread his word.&lt;/p&gt;
-		&lt;footer&gt;
-			&lt;cite&gt;—Johannes Gutenberg&lt;/cite&gt;
-		&lt;/footer&gt;
-	&lt;/blockquote&gt;
-&lt;/figure&gt;
-&lt;p&gt;In 2001, the physicist Blaise Agüera y Arcas and Princeton librarian Paul Needham, used digital scans of a Papal bull in the Scheide Library, Princeton, to carefully compare the same letters (types) appearing in different parts of the printed text. The irregularities in Gutenberg’s type, particularly in simple characters such as the hyphen, suggested that the variations could not have come from either ink smear or from wear and damage on the pieces of metal on the types themselves. While some identical types are clearly used on other pages, other variations, subjected to detailed image analysis, suggested that they could not have been produced from the same matrix. Transmitted light pictures of the page also appeared to reveal substructures in the type that could not arise from traditional punchcutting techniques. They hypothesized that the method may have involved impressing simple shapes to create alphabets in “cuneiform” style in a matrix made of some soft material, perhaps sand. Casting the type would destroy the mould, and the matrix would need to be recreated to make each additional sort. This could explain the variations in the type, as well as the substructures observed in the printed images.&lt;/p&gt;
-&lt;p&gt;Thus, they feel that “the decisive factor for the birth of typography”, the use of reusable moulds for casting type, might have been a more progressive process than was previously thought. They suggest that the additional step of using the punch to create a mould that could be reused many times was not taken until twenty years later, in the 1470s. Others have not accepted some or all of their suggestions, and have interpreted the evidence in other ways, and the truth of the matter remains very uncertain.&lt;/p&gt;
-&lt;p&gt;A 1568 history by Hadrianus Junius of Holland claims that the basic idea of the movable type came to Gutenberg from Laurens Janszoon Coster via Fust, who was apprenticed to Coster in the 1430s and may have brought some of his equipment from Haarlem to Mainz. While Coster appears to have experimented with moulds and castable metal type, there is no evidence that he had actually printed anything with this technology. He was an inventor and a goldsmith. However, there is one indirect supporter of the claim that Coster might be the inventor. The author of the Cologne Chronicle of 1499 quotes Ulrich Zell, the first printer of Cologne, that printing was performed in Mainz in 1450, but that some type of printing of lower quality had previously occurred in the Netherlands. However, the chronicle does not mention the name of Coster, while it actually credits Gutenberg as the “first inventor of printing” in the very same passage (fol. 312). The first securely dated book by Dutch printers is from 1471, and the Coster connection is today regarded as a mere legend.&lt;/p&gt;
-&lt;p&gt;The 19th century printer and typefounder Fournier Le Jeune suggested that Gutenberg might not have been using type cast with a reusable matrix, but possibly wooden types that were carved individually. A similar suggestion was made by Nash in 2004. This remains possible, albeit entirely unproven.&lt;/p&gt;
-&lt;p&gt;It has also been questioned whether Gutenberg used movable types at all. In 2004, Italian professor Bruno Fabbiani claimed that examination of the 42-line Bible revealed an overlapping of letters, suggesting that Gutenberg did not in fact use movable type (individual cast characters) but rather used whole plates made from a system somewhat like a modern typewriter, whereby the letters were stamped successively into the plate and then printed. However, most specialists regard the occasional overlapping of type as caused by paper movement over pieces of type of slightly unequal height.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Wecode day2]]></title><description><![CDATA[하루 시작이다.]]></description><link>https://lordmyshepherd.github.io/posts/the-origins-of-social-stationery-lettering</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/the-origins-of-social-stationery-lettering</guid><pubDate>Thu, 01 Dec 2016 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-error----unreachable-if-after-return&quot;&gt;&lt;a href=&quot;#1-error----unreachable-if-after-return&quot; aria-label=&quot;1 error    unreachable if after return permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Error -  Unreachable “if” after “return”&lt;/h2&gt;
-&lt;p&gt;Array 관련 예제&lt;/p&gt;
-&lt;p&gt;step1. addFirstAndLast 함수 안에 작성해주세요.&lt;br&gt;
-step2. addFirstAndLast 함수에 주어진 인자 myArray는 숫자 값으로만 이루어진 array 입니다.&lt;br&gt;
-step3. addFirstAndLast 함수에 주어진 인자 myArray 의 첫번째 element와 마지막 element의 값을 더한 값을 리턴해주세요.&lt;br&gt;
-step4. 만일 myArray에 한 개의 요소만 있다면 해당 요소의 값을 리턴해 주시고 요소가 없는 비어있는 array라면 0을 리턴해주세요.
-&lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;내 컴퓨터(local 환경)에서 블로그 띄우기
+&lt;br&gt;설치가 제대로 되었는지 확인해봅시다. 앞으로 블로그 글을 작성할 때마다 중간 점검을 하기 위해서는 아래 명령어로 로컬 서버를 띄워줘야합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;yarn develop // 또는 gatsby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;아래와 같이 나오면 성공!
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/88e2e5c1f954df0b56a8e8899930209b/de00b/DAY3_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.40579710144928%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6ElEQVQ4y41T227TQBB1Q2ynpk1baJEoFNQ0F3xbey92m6RNEEWNkHhBVOIbeOT/Hw4z4zQxBYk+HM3ZWe/ZOTNr72T2BW9uVjhb3OEt4XT+Ge+WK7yefSLcSv64XuBldSN40YobOM4tBF53EqMbp+hMCjz7oLEzLoiXwr2LTNbCByk84rx+HPl77zxpsF/m2Csz7OY1Dt1CcFQtcWCu0ctqHF9+xL6eI0grHNg57V/TPlVULyWeXNF+OUWHL2ZhfZ/i/W0MP8kRqRJ9XZGAQ99YEmVe04WarNUIUycXR+pSIq+Z97Jqk/NmP84wXg1okQrCNKUPtpzbwTxSZGeUwxv+B9PvrzC6O6dDiYDFGsFEBP244c8LEhxm24MXLT5SW5ze/6TeODps6WBFvbIC5pzrZU6sCacc29srrwRsUQbSFv36y8F8G1K/chxaBR5SXyscOeK6QJQzz+lp5FStlol3Y0PcSNxhkbZgZzCm0T/qw1N69cf3LdFeyjYfbBEUWbYaflEidAaB1hQ1gsI0U1a12A3J+l/9Y/hkIaQ++YlZP4UKu7VFaPS22lGr6vbhf1XrT+j2xJKglUr92Eo1geL+NH/CJj4BXkSlhzK5qVjiZgexWz/USiw2U28e9MOkwzV4n8F53v8NHvRrccLr2twAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/88e2e5c1f954df0b56a8e8899930209b/01472/DAY3_2.webp 240w,
+/static/88e2e5c1f954df0b56a8e8899930209b/222bd/DAY3_2.webp 480w,
+/static/88e2e5c1f954df0b56a8e8899930209b/620b9/DAY3_2.webp 960w,
+/static/88e2e5c1f954df0b56a8e8899930209b/11785/DAY3_2.webp 1104w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/88e2e5c1f954df0b56a8e8899930209b/0783d/DAY3_2.png 240w,
+/static/88e2e5c1f954df0b56a8e8899930209b/782f4/DAY3_2.png 480w,
+/static/88e2e5c1f954df0b56a8e8899930209b/f570d/DAY3_2.png 960w,
+/static/88e2e5c1f954df0b56a8e8899930209b/de00b/DAY3_2.png 1104w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/88e2e5c1f954df0b56a8e8899930209b/f570d/DAY3_2.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+이제 브라우저(크롬)를 열고 주소창에 localhost:8000으로 접속해보세요. 아래와 같은 화면이 떠야합니다. 제가 선택한 테마의 메인 화면입니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ba777c3b0c342b6a5f85dbfc4d18944c/c0260/DAY3_3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.0281690140845%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABoElEQVQ4y5VTSXLCMBD0/5+SF+QXOeSUAmMbvO8Lxrs76gE5xEUOUVUzsoRaPTMtwz98gmNd1w0cXdchiiLUVYmhSTG0FcZxVBgwDHfwez+Mj/e3l4R1XeN4POJ8dmAevmAeD2p+hud5sk5cLhchnudZwLNGkqYbiSbmuN1aBIEP3/dxVgddReS6LuI4RhiGSJJEIhEEgXwLYVEUaNtWEdxwvV4xTZMQ9v2AvChRVZWoZSS4vyzLS0jKuh593wvuGyumhb//G6KwLMuXmzelmvXL0gR14qJMQ9RNI9lQKbOh8kataeWiMM/zXzfoGvLg6XSSujmODUvNHceRpuh127YFlmUJqRDyFqasiXSkgjiOkGUZUtW4VCkl2BSu0VKMBEXxP+y0QcmELurmQ9WUfpgea8/4sRfPPGclCtkIKtwTDuOCpu3EyFiUgRcVsfzZDA2DMvVNz4R1XcE0TTFwGrqIXAuhf9k8x1Q53zfVeHXb/en1Ui82IYxigeffjU5se8rY9DCbKAr3T05HquZbpR3EzCoTRv3M5sc3od81z34DywTudhf5/mEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/ba777c3b0c342b6a5f85dbfc4d18944c/01472/DAY3_3.webp 240w,
+/static/ba777c3b0c342b6a5f85dbfc4d18944c/222bd/DAY3_3.webp 480w,
+/static/ba777c3b0c342b6a5f85dbfc4d18944c/620b9/DAY3_3.webp 960w,
+/static/ba777c3b0c342b6a5f85dbfc4d18944c/4dc8c/DAY3_3.webp 1136w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/ba777c3b0c342b6a5f85dbfc4d18944c/0783d/DAY3_3.png 240w,
+/static/ba777c3b0c342b6a5f85dbfc4d18944c/782f4/DAY3_3.png 480w,
+/static/ba777c3b0c342b6a5f85dbfc4d18944c/f570d/DAY3_3.png 960w,
+/static/ba777c3b0c342b6a5f85dbfc4d18944c/c0260/DAY3_3.png 1136w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/ba777c3b0c342b6a5f85dbfc4d18944c/f570d/DAY3_3.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;u&gt;블로그를 작성하는 도중에 생각대로 markdown이 잘 적용됐는지, 아닌지를 확인하려면 내 컴퓨터에서 yarn develop 명령어로 서버를 띄워서 localhost:8000으로 접속하면 됩니다.&lt;/u&gt;
+&lt;br&gt;&lt;br&gt;위 방법으로 서버를 띄우지 않으면 localhost:8000 로 중간 결과물을 볼 수가 없습니다. 또한 로컬서버가 켜있는 터미널을 닫으면 서버가 종료되므로 더이상 localhost:8000에 접속할 수 없고요. 포스팅 작성 시작할때부터 배포 직전까지 로컬서버를 띄우고 터미널을 계속 열어두면 됩니다. &lt;u&gt;만약 멈추고 싶으면 서버를 실행한 터미널에서 ctrl c를 입력&lt;/u&gt;해보세요.&lt;/p&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;github.io repo 만들기
+&lt;br&gt;자신의 github에 소스코드를 올리기 위해서 github에 접속해서 새로운 repository(이하 repo)를 만들어 주세요. 그런데 &lt;u&gt;repo 이름에 유의하셔야 합니다!&lt;/u&gt; 아래와 같이 github의 username 뒤에 .github.io 을 붙여서 만들어주세요. 제 github username은 &lt;strong&gt;lordmyshepherd&lt;/strong&gt;이기 때문에 &lt;strong&gt;lordmyshepherd&lt;/strong&gt;.github.io 으로 만들었습니다.
+&lt;br&gt;&lt;br&gt; 이제 lormyshepherd@github.io의 도메인으로 접속할 수 있는 블로그 repository가 생성뵈었습니다!!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;6. Gatsby config 파일 수정
+&lt;br&gt;&lt;strong&gt;config.js&lt;/strong&gt; 파일 찾기 —&gt; title,subtitle,author를 내 정보로 수정 —&gt; url은 4번에서 만들어진 도메인 주소를 쓰면 되는데 &lt;a href=&quot;https://%EA%B9%83%ED%97%99%EC%9C%A0%EC%A0%80%EB%84%A4%EC%9E%84.github.io/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://깃헙유저네임.github.io/&lt;/a&gt; 입니다.
+&lt;br&gt;&lt;strong&gt;package.json&lt;/strong&gt; 파일 찾기 (src/package.json) —&gt; script 아래 depoly 수정
+이렇게..&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;deploy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;yarn run clean &amp;amp;&amp;amp; gatsby build &amp;amp;&amp;amp; gh-pages -d public -b master&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이제 포스팅 작성을 완료하고, 로컬에서 잘 확인했으면 &lt;u&gt;yarn deploy로 배포&lt;/u&gt;합니다. 이때, 소스코드 빌드 후의 public 폴더를 github master 브랜치에 푸시한다는 뜻이고, 이 소스코드로 &lt;strong&gt;lordmyshepherd&lt;/strong&gt;.github.io/에 배포됩니다.&lt;/p&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;배포하기
+&lt;br&gt;로컬에 있는 블로그 소스코드를 github에 올리겠습니다.
+&lt;br&gt;&lt;br&gt;(1)blog root에서 git을 세팅합시다. lordmyshepherd 부분은 각자의 username으로 바꿔주세요.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;git init
+git remote add origin &lt;span class=&quot;token property&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;//github.com/lordmyshepherd/lordmyshepherd.github.io.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;origin git과 잘 연결되어도 아무 반응이 없습니다. 아래의 명령어로 origin 주소가 제대로 나오는지 확인해주세요.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;git remote -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(2)push 하기&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;git add .
+git commit -m &lt;span class=&quot;token string&quot;&gt;&quot;first commit&quot;&lt;/span&gt;
+git push origin master //master는 branch가 master로 되어있다는 의미.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;github에 가셔서 소스코드가 잘 올라왔는지 확인해보세요.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[<DAY 2> Javascript]]></title><description><![CDATA[#Array 조작하는 방법, #예제 관련 Error]]></description><link>https://lordmyshepherd.github.io/posts/perfecting-the-art-of-perfection/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/perfecting-the-art-of-perfection/</guid><pubDate>Thu, 01 Sep 2016 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-array-조작방법&quot;&gt;&lt;a href=&quot;#1-array-%EC%A1%B0%EC%9E%91%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;1 array 조작방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Array 조작방법&lt;/h2&gt;
+&lt;p&gt;빈 배열에 요소를 추가해주는 방법&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;index로 접근하는 방법(수정,추가)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; cities &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//빈 배열 할당&lt;/span&gt;
+cities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+cities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;대전&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+cities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;대구&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;push/unshift 함수 (추가)
+&lt;br&gt;: push와 unshift 함수는 요소를 추가해주는 함수입니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; cities &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;경주&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;전주&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;unshift&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;인천&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;pop 함수 (제거)&lt;br&gt;
+: pop 함수를 사용하면  요소가 제거되고,  마지막 요소의 값을 반환합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;합쳐서-보면-아래와-같습니다&quot;&gt;&lt;a href=&quot;#%ED%95%A9%EC%B3%90%EC%84%9C-%EB%B3%B4%EB%A9%B4-%EC%95%84%EB%9E%98%EC%99%80-%EA%B0%99%EC%8A%B5%EB%8B%88%EB%8B%A4&quot; aria-label=&quot;합쳐서 보면 아래와 같습니다 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;합쳐서 보면 아래와 같습니다.&lt;/h4&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b307d4e7949adc86ec98d192180ec488/1026c/wecode2.png&quot;
+    href=&quot;/static/3178a86b45eb68862dbfc3974af1eca0/94166/DAY2_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 104.05953991880921%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABYlAAAWJQFJUiTwAAACgElEQVQ4y42U6XKrMAyF+/7v19sEwhL2xWw22JDOnXMlJ7QkIb39obHHi0afjqS3USkoKTGNIxoh4ByPyNIUR1rDwMfJcRBHEU6uiyLPsb5n4/2jva0PeO27zjoTdY08y8hBgSwrUFcVqrK0579yuHWqpwnGGFyWGXKc0Q4aix5h2OhO8fsXzu4i3BqjsWVZjnPeo24VCqFQit46U19//uNw3XMeDx8fOBwOOJ4FcnIWFgpRJqCGAXt/XiIbTYjLgr+fFyh9QS8J31xxWTh+MykJM6onZ7uipElCItS0xkjTDFGcWkFYpIqQ42pERSnIqgFD3+9HuC2bI2GyU9c5IvADOM7Jlk3o+0iL1qIXjYIbd2ibxv57icyXyzxjNjM+LwvUtKBTF0I2dGagCdOMklaJefoF8lZlxmTkhPd9ja5rSeFvdX8U5Ull6o7TySWlSWXPgd/GKOsS9yWmdh0/qczYrPQ8aSpqg07OWGivyfjO2k1pNv2g9h2ypBpjYVjtvBXImhZJem258tZ6bG0nIUhp0SnUzWD/3UW4CsKP/7y/Iz6f4dcR8r6ER/hhENjhEJ0j+J6LrJbwc4W0HuElDbr2W+1dZM6N5rrsFWFTb0+EeSvsR2S2l8hrgnlAzEZDKoOq4e6QD/1+fcu5Ntr83Hq8+p5nEV3C3Rbv1vgsiSObjm0wT2XDCeaZmMQxQspZLbqdCK8Ow5By6oc2BXcOtxHOdhYu+KSOUWqGoNKZ9QSttU3FWj48HPphRFGUz3W4PXAJ9RyEiAVFORSEH1isgHo5Wns6r+DlE3Jah767zUW57zAm1Jxarmyp5mTzNWzXdiyLHEK0NCCozETznb8b6T9vHjs7M5Qv6AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/3178a86b45eb68862dbfc3974af1eca0/01472/DAY2_1.webp 240w,
+/static/3178a86b45eb68862dbfc3974af1eca0/222bd/DAY2_1.webp 480w,
+/static/3178a86b45eb68862dbfc3974af1eca0/620b9/DAY2_1.webp 960w,
+/static/3178a86b45eb68862dbfc3974af1eca0/28063/DAY2_1.webp 1440w,
+/static/3178a86b45eb68862dbfc3974af1eca0/2cfa5/DAY2_1.webp 1478w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/3178a86b45eb68862dbfc3974af1eca0/0783d/DAY2_1.png 240w,
+/static/3178a86b45eb68862dbfc3974af1eca0/782f4/DAY2_1.png 480w,
+/static/3178a86b45eb68862dbfc3974af1eca0/f570d/DAY2_1.png 960w,
+/static/3178a86b45eb68862dbfc3974af1eca0/8d0ff/DAY2_1.png 1440w,
+/static/3178a86b45eb68862dbfc3974af1eca0/94166/DAY2_1.png 1478w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/3178a86b45eb68862dbfc3974af1eca0/f570d/DAY2_1.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;2-error----unreachable-if-after-return&quot;&gt;&lt;a href=&quot;#2-error----unreachable-if-after-return&quot; aria-label=&quot;2 error    unreachable if after return permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Error -  Unreachable “if” after “return”&lt;/h2&gt;
+&lt;p&gt;Array 관련 예제&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;addFirstAndLast 함수 안ss에 작성해주세요.&lt;/li&gt;
+&lt;li&gt;addFirstAndLast 함수에 주어진 인자 myArray는 숫자 값으로만 이루어진 array 입니다.&lt;/li&gt;
+&lt;li&gt;addFirstAndLast 함수에 주어진 인자 myArray 의 첫번째 element와 마지막 element의 값을 더한 값을 리턴해주세요.  &lt;/li&gt;
+&lt;li&gt;만일 myArray에 한 개의 요소만 있다면 해당 요소의 값을 리턴해 주시고 요소가 없는 비어있는 array라면 0을 리턴해주세요.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1~9행은 문제를 1,2,3,4를 순서대로 풀었을 때 unreachable “if” after “return” 오류가 발생했다.&lt;br&gt;
+오류를 해석해보면 “‘return’ 다음에 ‘if’에 도달할 수 없다”라는 의미인 것 같다.&lt;br&gt;
+여기서, &lt;u&gt;return은 함수 내에서 사용할 경우에 return 뒤에 따라오는 값을 함수의 결과로 반환한다&lt;/u&gt;.
+동시에 함수를 종료 시킨다. 이런 이유 때문에 if에 도달할 수 없었던 것 같다.&lt;/p&gt;
+&lt;p&gt;11~19행처럼 코드를 수정하면 잘 실행되는 것을 확인 할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b307d4e7949adc86ec98d192180ec488/1026c/DAY2_3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -247,96 +377,137 @@ step4. 만일 myArray에 한 개의 요소만 있다면 해당 요소의 값을 
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
-          srcset=&quot;/static/b307d4e7949adc86ec98d192180ec488/01472/wecode2.webp 240w,
-/static/b307d4e7949adc86ec98d192180ec488/222bd/wecode2.webp 480w,
-/static/b307d4e7949adc86ec98d192180ec488/620b9/wecode2.webp 960w,
-/static/b307d4e7949adc86ec98d192180ec488/9ceb0/wecode2.webp 966w&quot;
+          srcset=&quot;/static/b307d4e7949adc86ec98d192180ec488/01472/DAY2_3.webp 240w,
+/static/b307d4e7949adc86ec98d192180ec488/222bd/DAY2_3.webp 480w,
+/static/b307d4e7949adc86ec98d192180ec488/620b9/DAY2_3.webp 960w,
+/static/b307d4e7949adc86ec98d192180ec488/9ceb0/DAY2_3.webp 966w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b307d4e7949adc86ec98d192180ec488/0783d/wecode2.png 240w,
-/static/b307d4e7949adc86ec98d192180ec488/782f4/wecode2.png 480w,
-/static/b307d4e7949adc86ec98d192180ec488/f570d/wecode2.png 960w,
-/static/b307d4e7949adc86ec98d192180ec488/1026c/wecode2.png 966w&quot;
+          srcset=&quot;/static/b307d4e7949adc86ec98d192180ec488/0783d/DAY2_3.png 240w,
+/static/b307d4e7949adc86ec98d192180ec488/782f4/DAY2_3.png 480w,
+/static/b307d4e7949adc86ec98d192180ec488/f570d/DAY2_3.png 960w,
+/static/b307d4e7949adc86ec98d192180ec488/1026c/DAY2_3.png 966w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b307d4e7949adc86ec98d192180ec488/f570d/wecode2.png&quot;
+          src=&quot;/static/b307d4e7949adc86ec98d192180ec488/f570d/DAY2_3.png&quot;
           alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
           title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
           loading=&quot;lazy&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;array-control&quot;&gt;&lt;a href=&quot;#array-control&quot; aria-label=&quot;array control permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Array control&lt;/h2&gt;
-&lt;p&gt;arra&lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[<Day 1> HTML CSS]]></title><description><![CDATA[#Position, #Block and inline, #float]]></description><link>https://lordmyshepherd.github.io/posts/a-brief-history-of-typography/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/a-brief-history-of-typography/</guid><pubDate>Tue, 02 Feb 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-position-br--relative-absolute-fixed&quot;&gt;&lt;a href=&quot;#1-position-br--relative-absolute-fixed&quot; aria-label=&quot;1 position br  relative absolute fixed permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Position &lt;br&gt;  relative, absolute, fixed&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+&lt;li&gt;왜 position property을 배울까요?&lt;br&gt;
+css의 position property를 이용하면 html 코드와 상관 없이 원하는 위치에 요소를 넣을 수 있다.&lt;/li&gt;
+&lt;li&gt;relative (property value)&lt;br&gt;
+relative 자체로는 특별한 의미가 없습니다. 딱히 어느 위치로 이동하지는 않습니다.&lt;br&gt;
+위치를 이동시켜주는 top, right, bottom, left 프로퍼티가 있어야 &lt;strong&gt;원래의 위치&lt;/strong&gt;에서 이동할 수 있습니다.&lt;br&gt;
+&lt;br&gt;
+예를 들어서, 아래와 같이 HTML 파일을 만들었다고 생각해봅시다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. &lt;/p&gt;
-&lt;figure&gt;
-	&lt;blockquote&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;
-		&lt;footer&gt;
-			&lt;cite&gt;— Aliquam tincidunt mauris eu risus.&lt;/cite&gt;
-		&lt;/footer&gt;
-	&lt;/blockquote&gt;
-&lt;/figure&gt;
-&lt;h3 id=&quot;header-level-3&quot;&gt;&lt;a href=&quot;#header-level-3&quot; aria-label=&quot;header level 3 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Header Level 3&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;div&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;relative&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;div.relative&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;relative&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&quot;top-20&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;div.relative.top-20&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;      &lt;strong&gt;각 element의 원래 위치가 어디인가???&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;      첫번째 빨간점 = div의 원래 위치&lt;br&gt;
+      빨간점 = div.relative의 원래 위치&lt;br&gt;
+      세번째 빨간점 = div.relative.top-20의 원래 위치&lt;br&gt;
+&lt;br&gt;
+&lt;img src=&quot;/media/DAY1_1.png&quot; alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;&gt;&lt;/p&gt;
+&lt;p&gt;       원래 위치를 알았으니 relative 속성을 이용해서 div.relative.top-20 element를&lt;br&gt;       이동시켜 보죠.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.top-20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;-20px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;30px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;       div.relative.top-20은 위로 20px 이동하고, 왼쪽에서 30px만큼 떨어졌습니다.
+&lt;br&gt;      마이너스 값을 주면 아래로 떨어지지 않고, 위로 올라가게 됩니다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+&lt;li&gt;absolute&lt;br&gt;
+position의 속성값 중에 하나인 absolute는 이름과 같이 요소를 절대적인 위치에 둘 수 있다. 어떤 기준으로 절대적이냐 하면, &lt;strong&gt;특정 부모에 대해 절대적으로&lt;/strong&gt; 움직이게 됩니다.&lt;br&gt;
+&lt;br&gt;
+부모 중에 position이 relative, fixed, absolute 하나라도 있으면 그 부모에 대해 절대적으로 움직이게 됩니다. &lt;u&gt;일반적으로 absolute를 쓸 경우, 절대적으로 움직이고 싶은 부모에게 position: relative; 를 부여&lt;/u&gt;하면 됩니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;#header h1 a&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 300px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 80px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;relative&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;input&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;검색어 입력&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;absolute position&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.relative&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 300px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;token property&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; relative&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token selector&quot;&gt;.absolute&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 17px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;token property&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; absolute&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;token property&quot;&gt;margin&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token selector&quot;&gt;.position&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;token property&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;10px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;token property&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;12px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/71ba9417da76c390c80ad2f49c9c227d/cpu.svg&quot; alt=&quot;Test SVG&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Perfecting the Art of Perfection]]></title><description><![CDATA[Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.]]></description><link>https://lordmyshepherd.github.io/posts/perfecting-the-art-of-perfection/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/perfecting-the-art-of-perfection/</guid><pubDate>Thu, 01 Sep 2016 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.&lt;/p&gt;
-&lt;p&gt;&lt;span
+&lt;ul&gt;
+&lt;li&gt;fixed&lt;br&gt;
+fixed는 말그대로 지금 보고있는 브라우저 화면 크기만큼, 화면 내에서만 움직입니다.
+화면을 스크롤을 움직여도 fixed값이 적용된 element는 그대로 있게 됩니다.&lt;br&gt;
+fiexd 값의 특징은 &lt;u&gt;absolute는 relative를 가진 부모가 필요했는데, fixed는 필요없습니다.&lt;/u&gt;
+아래 코드를 보시죠.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;header&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;fixed&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;absolute&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/apple/image_small.svg&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;20&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;48&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;header&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.coupon&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; fixed&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; red&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; white&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 20px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;right: 0; //브라우저의 오른쪽에서 0 만큼 떨어져있다는 뜻.&lt;br&gt;
+bottom: 0 //하단에서 0 만큼 떨어져있다는 뜻.&lt;br&gt;
+아래 그림에 보시는 것처럼 왼쪽 하단에 이미지가 고정되게 됩니다.
+&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0249a8579cfb4088acaf23fcac068444/98235/image-2.jpg&quot;
+    href=&quot;/static/8aeca48517f9f30d10efc2b50c02621d/1026c/DAY1_2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAaa8hyWBEP/EABoQAAIDAQEAAAAAAAAAAAAAAAECAAMSBBP/2gAIAQEAAQUCPOXmbM+hSK5BbqszP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AVf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFH/8QAHRAAAAYDAQAAAAAAAAAAAAAAAAECEBESISJxof/aAAgBAQAGPwKbkNIVwVWWWr63/8QAGhAAAwADAQAAAAAAAAAAAAAAAAERITFh8P/aAAgBAQABPyHduKW4HKoEp4zfE7OkG8yXCyU//9oADAMBAAIAAwAAABAAD//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QE7av/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERMf/aAAgBAgEBPxB3CT//xAAcEAEAAgMBAQEAAAAAAAAAAAABABEhQVFxYaH/2gAIAQEAAT8Q1tFIaHmY6qk11VGkZj6wwX+QQjfXfeygHuMAHzkVauVyruf/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 20.80745341614907%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAjElEQVQY053OMQrCQBBG4bmJtYKlxxA7O0Gw8RAWYm2bVgshdoK9rXqVuLO7aFzCJs0z6wmMxVf9w2NkdR4xyYXsPiM8I9Ypzrm/SW87QJbC+DClfkfUdgx6j7cWr/oli9OcYdZnc1lTvar2w3ZMR79K0RCwTYOLNeKdR41ijOmuKHik6O1Kud9RHnM++qseQJwzMIMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
-          srcset=&quot;/static/0249a8579cfb4088acaf23fcac068444/01472/image-2.webp 240w,
-/static/0249a8579cfb4088acaf23fcac068444/222bd/image-2.webp 480w,
-/static/0249a8579cfb4088acaf23fcac068444/620b9/image-2.webp 960w,
-/static/0249a8579cfb4088acaf23fcac068444/28063/image-2.webp 1440w,
-/static/0249a8579cfb4088acaf23fcac068444/44134/image-2.webp 1800w&quot;
+          srcset=&quot;/static/8aeca48517f9f30d10efc2b50c02621d/01472/DAY1_2.webp 240w,
+/static/8aeca48517f9f30d10efc2b50c02621d/222bd/DAY1_2.webp 480w,
+/static/8aeca48517f9f30d10efc2b50c02621d/620b9/DAY1_2.webp 960w,
+/static/8aeca48517f9f30d10efc2b50c02621d/9ceb0/DAY1_2.webp 966w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/0249a8579cfb4088acaf23fcac068444/3bc27/image-2.jpg 240w,
-/static/0249a8579cfb4088acaf23fcac068444/98431/image-2.jpg 480w,
-/static/0249a8579cfb4088acaf23fcac068444/b3ee8/image-2.jpg 960w,
-/static/0249a8579cfb4088acaf23fcac068444/b97fe/image-2.jpg 1440w,
-/static/0249a8579cfb4088acaf23fcac068444/98235/image-2.jpg 1800w&quot;
+          srcset=&quot;/static/8aeca48517f9f30d10efc2b50c02621d/0783d/DAY1_2.png 240w,
+/static/8aeca48517f9f30d10efc2b50c02621d/782f4/DAY1_2.png 480w,
+/static/8aeca48517f9f30d10efc2b50c02621d/f570d/DAY1_2.png 960w,
+/static/8aeca48517f9f30d10efc2b50c02621d/1026c/DAY1_2.png 966w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-          type=&quot;image/jpeg&quot;
+          type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/0249a8579cfb4088acaf23fcac068444/b3ee8/image-2.jpg&quot;
+          src=&quot;/static/8aeca48517f9f30d10efc2b50c02621d/f570d/DAY1_2.png&quot;
           alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
           title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
           loading=&quot;lazy&quot;
@@ -344,46 +515,251 @@ step4. 만일 myArray에 한 개의 요소만 있다면 해당 요소의 값을 
       &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. &lt;/p&gt;
-&lt;p&gt;Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[A Brief History of Typography]]></title><description><![CDATA[Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.]]></description><link>https://lordmyshepherd.github.io/posts/a-brief-history-of-typography/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/a-brief-history-of-typography/</guid><pubDate>Tue, 02 Feb 2016 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. &lt;/p&gt;
-&lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.  &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis.&lt;/p&gt;
-&lt;p&gt;&lt;span
+&lt;h2 id=&quot;2-block-inline-inline-block-property-value&quot;&gt;&lt;a href=&quot;#2-block-inline-inline-block-property-value&quot; aria-label=&quot;2 block inline inline block property value permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. block, inline, inline-block (property value)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;block&lt;br&gt;
+: block 요소의 의미는, 이 요소 바로 옆(좌우측)에 다른 요소를 붙여넣을 수 없다는 뜻입니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;.. // block element 종류&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;inline&lt;br&gt;
+: inline이라는 말 그대로 inline 요소는 요소끼리 서로 한 줄에, 바로 옆에 위치할 수 있다는 뜻입니다. block 요소와 성질이 반대인&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;, &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; // inline element 종류&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;inline-block&lt;br&gt;
+: block 요소의 성질을 가진 element를 css를 사용하여 inline 성질을 갖도록 하는 ‘property value’입니다. 적용 방법은 아래와 같습니다. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; // 원래 block element입니다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; inline-block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;3-float&quot;&gt;&lt;a href=&quot;#3-float&quot; aria-label=&quot;3 float permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. float&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;왜 float 속성을 배울까요?&lt;br&gt;
+: 페이지 전체의 레이아웃을 잡을 때 중요한 도구로 사용됩니다.  &lt;/li&gt;
+&lt;li&gt;float 속성 사용법&lt;br&gt;
+: element의 float 속성값(property value)이 left이면 그 요소는 부모 요소의 가장 좌측에 배치됩니다.
+&lt;br&gt;1)
+&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/98235/image-0.jpg&quot;
+    href=&quot;/static/77497d2ffdede98b89bd19affbf5f198/1026c/DAY1_3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAVhO4azw/wD/xAAcEAABAwUAAAAAAAAAAAAAAAABAAIhAxESMkH/2gAIAQEAAQUCBQkPxvKp6d//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAARAhYXH/2gAIAQEABj8CmhaPp//EAB0QAQADAAEFAAAAAAAAAAAAAAEAESExQVFhcYH/2gAIAQEAAT8htrv1hy4LT3KNpfmLq1U1Oc66X7GnMxE//9oADAMBAAIAAwAAABBzD//EABYRAAMAAAAAAAAAAAAAAAAAAAABIf/aAAgBAwEBPxBKEP/EABYRAAMAAAAAAAAAAAAAAAAAAAABIf/aAAgBAgEBPxBulP/EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQWFRcbH/2gAIAQEAAT8QGoNcw44SBSasTtvqOqqmWzEKyw4t138gKUs5A3YhC8wW8+5//9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAACRElEQVQoz5WR3UuTYRiH36PKs3C6tTU1dXPqdB/OmelcfkyrtaKDDiIEqQ6M8KTDSJPCjSa5UFcwp7a+qJPEDGQwy0SXQwlK9F9oQ4gKRm5s8+pVQ4IC6QcX93PyXHDfP2FqOsjC/Admtwnzbn6Bt3PzIguEZuf4+OkzU5NTvJ8cI7oaJBb9QiwW2yUajbK+vs7a2hozMzMI+gYbKmMtupomdOK7vLaJsmMNaC1Wigy1dHReo856kqddAkwfJP49RiKZIrGxQSKRIB6PsxWv10t2djZCgb4GSXE5R0qNKMqqOKwxk2eoIt9kJFdVyfn2SzS0OXjhEIWuHDI/f/BnMpnM9vT7/chkMoThkXFGxp/wYDTAsH8cr//RLoO+USZev8HSZue5RhSezSH57StpUZBOpUin0ySTyW2hz+dDKpUidDvd3Ha76RvwcMvZT6+rn5t9brrFeeOOi7HHz6g/ZefVAVFYKIFkgn8lEAjsCFWmenHlMoqPWlHrzZRUGJBq9Mg1lWQpijh3sYNmh4O+fftZlR4iLB4+srxMZHGRSCRCOBxmZWWFnp4eFAoFgrnFTrEoNTbbMbWeofp4K9YTDszWFgp01bR3dmGz2ZDk5qLIz0MufpLL5X+xJVMqlaLQdhqt2Kq5sRG9pZFSswW1qY4ScSq1Ji53XWdpaYlgMEgoFNoTQV1tIUelRSWuXGIwU15pRKKuQKbRkSUv5MKVq/xPBM/DEbGQIZyeHVyeQZwDg7juD9F79x4vJyZhc5PU71b34heGsRIQXveUegAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
-          srcset=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/01472/image-0.webp 240w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/222bd/image-0.webp 480w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/620b9/image-0.webp 960w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/28063/image-0.webp 1440w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/44134/image-0.webp 1800w&quot;
+          srcset=&quot;/static/77497d2ffdede98b89bd19affbf5f198/01472/DAY1_3.webp 240w,
+/static/77497d2ffdede98b89bd19affbf5f198/222bd/DAY1_3.webp 480w,
+/static/77497d2ffdede98b89bd19affbf5f198/620b9/DAY1_3.webp 960w,
+/static/77497d2ffdede98b89bd19affbf5f198/9ceb0/DAY1_3.webp 966w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/3bc27/image-0.jpg 240w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/98431/image-0.jpg 480w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/b3ee8/image-0.jpg 960w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/b97fe/image-0.jpg 1440w,
-/static/b3e5e61f7fb8888ba76b502242e27bd0/98235/image-0.jpg 1800w&quot;
+          srcset=&quot;/static/77497d2ffdede98b89bd19affbf5f198/0783d/DAY1_3.png 240w,
+/static/77497d2ffdede98b89bd19affbf5f198/782f4/DAY1_3.png 480w,
+/static/77497d2ffdede98b89bd19affbf5f198/f570d/DAY1_3.png 960w,
+/static/77497d2ffdede98b89bd19affbf5f198/1026c/DAY1_3.png 966w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-          type=&quot;image/jpeg&quot;
+          type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b3e5e61f7fb8888ba76b502242e27bd0/b3ee8/image-0.jpg&quot;
+          src=&quot;/static/77497d2ffdede98b89bd19affbf5f198/f570d/DAY1_3.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(2)
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9c243c6608760af3a258a4b047fabb64/1026c/DAY1_4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.761904761904766%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACcUlEQVQoz43SSUyTQQCG4d+GBOXAQdaWFmpTWqB0oS07lIJAGxWEhEVMNMpBSLx5comSSESWREUlITHGgwuCIIhENGKLB00gEEBBhIOe8MjSAwe21ykYvRhlkidzmJlvvkxGGpuYZHx8gs8zs0xOzwjTTHzaMTY5xfy37/xYWODF8x4+eAaZmx5lfmqUr+OjzPmN7hgXvszOIlVW16JNSsOeWYAt14XZUYAxKw+zM5dYeyYVp2sYejeEShXDm/NBrD3dw8o5GYsOGStpMnwyGUsBARSEheIuLUVylR1nX5SGGL0FRVwScp0dlclKjM1CiDaRwpJK3g6JwGg1I/V7YVCCC0KekCFIO9whIbj8gQ+edNJyq40bd9ppbL1LU2vbtubbbdS33ORxdy9er5cYtZpyp5KzJXJqsuXUGiOpSYikVi4oFCQIxf7A3oFXdHR3M/B6kK6+l3T39dPZ20+X8OhZD+8/juDxeFBGRREuV7M/QlAISkEliItCNRrCIiIoKipCOlR5gmCVFo0tHbU5hTiDmQi9iXCdiSCFhtyj5XiHh0k0GDCbjFjMgn82/pFkMqHX6aiqqkKqqK5BmWjD4nST4irG7iwk9aAbh+sIsZYU/G+8urrK8vIyi4uLLC0t/ZV/zefzIZWdOoPKaMeQ7iA+PQddqgNDcgb65CyUBiv5JRWsr2+w2yEaim9jTSWj0C2aiXaZOehFqD4lWzxB6nbDtbW17c2bm5tsbW39k3T42EkCI9UoDDbBSrw+ntADeoKjtQSGK7Hm5P8O9B/4b8P7Dzu4dK2JusYWrjQ0c/mXuuvNXLzaQGv7PTY2NnYd+BM0YDdQMOAcUAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/9c243c6608760af3a258a4b047fabb64/01472/DAY1_4.webp 240w,
+/static/9c243c6608760af3a258a4b047fabb64/222bd/DAY1_4.webp 480w,
+/static/9c243c6608760af3a258a4b047fabb64/620b9/DAY1_4.webp 960w,
+/static/9c243c6608760af3a258a4b047fabb64/9ceb0/DAY1_4.webp 966w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/9c243c6608760af3a258a4b047fabb64/0783d/DAY1_4.png 240w,
+/static/9c243c6608760af3a258a4b047fabb64/782f4/DAY1_4.png 480w,
+/static/9c243c6608760af3a258a4b047fabb64/f570d/DAY1_4.png 960w,
+/static/9c243c6608760af3a258a4b047fabb64/1026c/DAY1_4.png 966w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/9c243c6608760af3a258a4b047fabb64/f570d/DAY1_4.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;+ float 속성에 대한 궁굼증..&lt;br&gt;
+2번 그림에서 float 속성이 적용된 element의 &lt;u&gt;부모 element의 높이가 왜 0이 되는걸까요??&lt;/u&gt;
+그것은 float이 만들어진 목적에 따로 있기 때문이다.&lt;br&gt;
+float는 본질적으로 가로배치 전용 속성이 아니다. 원래는 아래 사진과 같이 이미지와 내용이 어우러지게  하기 위해서 만들어진 속성이다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/97b8d84d3ee622cdfc1e1ad628099e6c/1026c/DAY1_5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 32.815734989648035%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABv0lEQVQoz4WP3UtTcRjHz18SbkE6EgL7C8Juu7SIjChKxUUUumxubvbiy0URlRcF3Ug3jigoemOenTmpiOk5Y8edc9bO5qZErOaceBGEhz49WtBlFx8+D/x+z5fvozyfHmY2HmRu6hKJ4CCJnn5mj/czd3KAxDFxdx9PjvbxrPsskz2POdP7noHTGc6fWuBCb0ZYFFTOnTA50BZEwZ4GIw7WdXgxBjOj8DACj4TbYRi/BjfFsRA/U29xai7ra2Vc16Yqc7VaprKaxyn84HDnDQlcvsXOxwje0hheIox35yrePeG+MBHCGx1mJxqCkcs0X73EsB2KjoNpmtiWjWU5FCwdI9ui62BMAnNT/PoUk5bj8DQKd6XNA2FGmJR2kRFpJw4PsfXmtQQWKRVLEljAltm2PkugQW55WwLjKN9cnY2aRr2SZrO0SN1Qaa5kaJhpGoZG08hQz6q0xF+cLO6qKSealCv5v6xQW9fJ6V/p6oyiWHkou6Avgaq2mN9jk1Rqi6RY1f5YW9gm+e47md03cXp+Ay3ZwNRhrSL7H+BQ+wRKwH+FwP4gAX+Q9rbB/+Pb/fePDv/Fvf0O3xC+fUf4DbU+mhONOHc9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/97b8d84d3ee622cdfc1e1ad628099e6c/01472/DAY1_5.webp 240w,
+/static/97b8d84d3ee622cdfc1e1ad628099e6c/222bd/DAY1_5.webp 480w,
+/static/97b8d84d3ee622cdfc1e1ad628099e6c/620b9/DAY1_5.webp 960w,
+/static/97b8d84d3ee622cdfc1e1ad628099e6c/9ceb0/DAY1_5.webp 966w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/97b8d84d3ee622cdfc1e1ad628099e6c/0783d/DAY1_5.png 240w,
+/static/97b8d84d3ee622cdfc1e1ad628099e6c/782f4/DAY1_5.png 480w,
+/static/97b8d84d3ee622cdfc1e1ad628099e6c/f570d/DAY1_5.png 960w,
+/static/97b8d84d3ee622cdfc1e1ad628099e6c/1026c/DAY1_5.png 966w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/97b8d84d3ee622cdfc1e1ad628099e6c/f570d/DAY1_5.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+그래서 사실은 사용법만 알고 넘어가도 됩니다. 하지만 원리가 궁굼하시면 좀 더 읽어보세요.
+&lt;br&gt;완전히 주관적인 생각입니다.. 한번 3차원적으로 생각해볼게요.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f57c212ca46ab93588e3f14dbb534ac4/1026c/DAY1_6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.35196687370601%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAADJUlEQVQoz02SW2zTVRzHj0+GB3nG8ODgRY0k+GS8EE2MiVHABOxeQDdMTEzEYoKDOiAkRiKRWIObiktnu8HW2lEHSgyFdmHJWNn6Z2zrja1dL7D1unVr062Xf7t9PC1C/CW/5JyTk+/ve/mJ4uoqs8Ewwfkc3rk0E4EF6tXR0cmBAwfp6+vDaDTR9tUxmjXNFAqrfHTwYw4f1tJnttBt6Ob4MR3vv7ebYDCIKJVV1BpsbDzqcqXaALSY+/nDbMV53UEgcJ9z359j1xu7SCcXOK7Tcc12hb9NFyWZEF/r2tn8zGb8fn8dsML6+jqPq1qTqKxw0dCB2WbB9lc/s/4ZtNojvLxzJ5l5BV1bG1evX2HQPsidkVHO63+gpaUVz/Q0olgqo6pVahK0VqtRLJUawKdOnmbf/nfoH+jhpt3Jjpd2sGXLs+RyK7z15tscOdrCLdewVGLFaDJwov0kituNqFRUlpayZJeXWZadWVxErVZxOBxSpp6bNxy4XC70+h/p6upiVXpuNBr57cLvKHdGcLsc9Pb2N97SqTSi/mFDmldnV1Efyf+/BfX3ej+uQqHw5KyW86hrqSf3TCaDSCQS9PT0MipZ+DxenA4ntss2BqwDrOTybKgq+WyCeDZHMpWSlhSlAjm8XJVWlaXnVSqVtQbgolQnPB6PNPQQ3b9eoFcma7FYee3V13nh+ReJhMNUJLlxXwivP8qcP0Y6kWQp85D5B7dJxAvEYlmSyeJ/gJLh1NQkBoMJ5z9mTFcvYbcPsX1bE9uamojF07CgUL70GXfHvmHwgZ4/R4e5NjpGOPoJoeDnBENaZmdbpbcjZLNrCEVR+HC/hqGhG4TuBxpp7dm7m0OtLfjCcsknTPCp4LJ1O0cDr/ClqZN2k5XxqaeY9AqUewK3ImT652W464hIOIL2Cy09ckk9Hh9nvzvLmW/P8HPnT6QyJcorBmbsgsDtpxlXNuG+tRX38HNExgXxaUE6JKRsIQP9RTIEUV+VrDzVE6p3Pp+Xk5akH2k5tczDuI0J7x5m7mmYm9zHzMQHBCf34hvTEJrSEI80E429KwMbJBpN8y/wFQNWO1xatAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/f57c212ca46ab93588e3f14dbb534ac4/01472/DAY1_6.webp 240w,
+/static/f57c212ca46ab93588e3f14dbb534ac4/222bd/DAY1_6.webp 480w,
+/static/f57c212ca46ab93588e3f14dbb534ac4/620b9/DAY1_6.webp 960w,
+/static/f57c212ca46ab93588e3f14dbb534ac4/9ceb0/DAY1_6.webp 966w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/f57c212ca46ab93588e3f14dbb534ac4/0783d/DAY1_6.png 240w,
+/static/f57c212ca46ab93588e3f14dbb534ac4/782f4/DAY1_6.png 480w,
+/static/f57c212ca46ab93588e3f14dbb534ac4/f570d/DAY1_6.png 960w,
+/static/f57c212ca46ab93588e3f14dbb534ac4/1026c/DAY1_6.png 966w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/f57c212ca46ab93588e3f14dbb534ac4/f570d/DAY1_6.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(1)float이 적용된 element들은 위로 붕 뜨면서 element의 속성값이 block에서 inline으로 바뀌게 되고, 그 결과 왼쪽으로 순차적으로 붙는 결과가 나오는 것입니다. &lt;br&gt;(2)float된 element 다음에 있는 요소가 생긴 빈공간을 채우게 되면서 다음과 같은 결과가 나오게 됩니다.
+부모 입장에서 자식들이 없어져서 속상합니다.&lt;br&gt;(3)그래서 자식들이 돌아올 때를 대비해서 다른 형제 element들에게 ‘그 방은 이제 네가써 하지만 그 방안에 형들 침대는 그대로 놓고 남은 공간에 네 짐을 놓으렴’이라고 규칙을 알려주는 것 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;clear 속성 - float을 이용하여 layout만들때 사용하는 방법 1 &lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;clear 속성을 가진 element는 float 속성의 영향을 받지 않게 됩니다. 다시 말하면 #red, #green, #blue이 float 되었다는 사실을 모르고 여전히 그 자리에 있는 줄 알고 #가 아래로 내려가게 되는 것입니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b1eedffac6a56a58d82dc4db7c2af3d7/1026c/DAY1_7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.2111801242236%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABzElEQVQoz42SS2sTURSAb8GduNIhP8Kt4D9w68pfIaILSxeCSkV0I9gW31rUZd0oijWordqo2NqHJqEVm9ZMag1tM+/pPDLJ5+kIITZ9Xfg49zL3fvfcc0Y1m01SgNZ8E7R9220o2g5sN7aSbyts35hYNqbxh+XQ43c1YnVlFcs0O+Q7Ztj+5MTz8G0D13cx3XUczxE8wighEJJGY28ZptklCc7DOzQvn+fXtYv0TQ0yMHufq8NZrjwO6H3kUCh5srMh4rpIk000O4XR9X44c5bKuR4uTA7SO3eX7qejdN+C0zdh5ufODdlwtYSNRoIx1MN6/3FKt09wb/IUD4onGche4saTV/QNPefb3DMCfxjTfIllCRIN4wW+/1bO19trmObIj/mj5D4rRnL7GHnfRfZ1F2/eKT58UnydVnwcV4wJuS+KhYpiUSgtKGwnQxTZncKyfoRCUVGeUazkFbpIymOKiggWJ2QtsopcMC+szSqqQlFYq2WI4y2Eun6MfGE/5ekMSxMaS4VDItIoT2ks5zV0ifq4RvW7RlI7SFzTMKwDOO5hEbr/N0VKShjaUo8afii/TmDgCX5kpOs0bhD/i4HEsG6IqEYUm60u/wW+hBLR+otVkAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/b1eedffac6a56a58d82dc4db7c2af3d7/01472/DAY1_7.webp 240w,
+/static/b1eedffac6a56a58d82dc4db7c2af3d7/222bd/DAY1_7.webp 480w,
+/static/b1eedffac6a56a58d82dc4db7c2af3d7/620b9/DAY1_7.webp 960w,
+/static/b1eedffac6a56a58d82dc4db7c2af3d7/9ceb0/DAY1_7.webp 966w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/b1eedffac6a56a58d82dc4db7c2af3d7/0783d/DAY1_7.png 240w,
+/static/b1eedffac6a56a58d82dc4db7c2af3d7/782f4/DAY1_7.png 480w,
+/static/b1eedffac6a56a58d82dc4db7c2af3d7/f570d/DAY1_7.png 960w,
+/static/b1eedffac6a56a58d82dc4db7c2af3d7/1026c/DAY1_7.png 966w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/b1eedffac6a56a58d82dc4db7c2af3d7/f570d/DAY1_7.png&quot;
           alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
           title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
           loading=&quot;lazy&quot;
@@ -391,29 +767,110 @@ step4. 만일 myArray에 한 개의 요소만 있다면 해당 요소의 값을 
       &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;header-level-2&quot;&gt;&lt;a href=&quot;#header-level-2&quot; aria-label=&quot;header level 2 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Header Level 2&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. &lt;/p&gt;
-&lt;figure&gt;
-	&lt;blockquote&gt;
-		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;
-		&lt;footer&gt;
-			&lt;cite&gt;— Aliquam tincidunt mauris eu risus.&lt;/cite&gt;
-		&lt;/footer&gt;
-	&lt;/blockquote&gt;
-&lt;/figure&gt;
-&lt;h3 id=&quot;header-level-3&quot;&gt;&lt;a href=&quot;#header-level-3&quot; aria-label=&quot;header level 3 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Header Level 3&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;#header h1 a&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 300px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 80px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;//#yellow에 clear 속성 부여을 부여 합니다.
+&lt;span class=&quot;token property&quot;&gt;clear&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; left &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; //왼쪽을 비우라는 의미&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br&gt;
++ clearfix 핵 - float을 사용할 경우 나타날 수 있는 문제를 해결하는 방법&lt;br&gt;
+&lt;br&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; right&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;문제 발생
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/baf82062b6486d670d9d05f9ae907d74/c9a4a/DAY1_8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.712418300653596%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACVklEQVQoz4WSW0jTYRiHd1UQpC5P07k2DyhSF1nURdJNkBZBebOLCokiCMXWidTKbGQphhqReKHZAUrJixCLIMmwPJBJBw9truY2bXNubU7nadNtT/82iSDEFx7el+/jffjx8Ymea/pxeRdwLs4x5ZkP8u/s8iwwPvWLbu0g3UMD9Gk1aEe+MmkzMOO2Mu0wMflTi3lsCKtwJno3/AWXy4XVasVisQS7wWAIdqPRiMloQqPT0fSijWetbTTVVlNXcJS3DdVUnD9DvboYS08rs59fYuhtRWQbN6P/oRcWjUwIQqfDiW3SFmTCMoHDbue7wUTd/Uba7xTSXpDFucytZKZuIXKjlA3rolDuO8BwZQGDdZcQOVxTjFnMWO023Avz+EAg8Jc/ZRHE7VeK6Vcd5olyF1mpaYQJMkmUgvAwKYpwCc25SgYe3kXkXvYy519mzreEe8nDtPBm094QrsV5ZgM+9DoNxhI13rIaVBnbiIlIQBKpEJATIYjl4niqdu9gpL4WUTBCKMj/FQhdWE2jdF7Ig8oqSvbsJ1osJV2WRnJcCvExSeyUySlQRKG9V40oICytht/nCwpH+7voyDvCTE05+ptlpGySkhIrJzUukXRJIqfTkzghE9NbcW0l4WoBV4Tm7ld8UCkxVZbC4wZKsw8Rvj6MhIgYNotjOSiTcSpZRsetq2sI/SGhpe8NnaocPhXlY69SQ8tTGnOPkxEdx3aJlOvZe2nOyaKrfK2Efn+wz4x+4+ONfHouC19DfRHPo1poeoDubD7vTx5DU5iH+XYRztct/AbshWymEj3TjQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/baf82062b6486d670d9d05f9ae907d74/01472/DAY1_8.webp 240w,
+/static/baf82062b6486d670d9d05f9ae907d74/222bd/DAY1_8.webp 480w,
+/static/baf82062b6486d670d9d05f9ae907d74/620b9/DAY1_8.webp 960w,
+/static/baf82062b6486d670d9d05f9ae907d74/28063/DAY1_8.webp 1440w,
+/static/baf82062b6486d670d9d05f9ae907d74/d92f1/DAY1_8.webp 1530w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/baf82062b6486d670d9d05f9ae907d74/0783d/DAY1_8.png 240w,
+/static/baf82062b6486d670d9d05f9ae907d74/782f4/DAY1_8.png 480w,
+/static/baf82062b6486d670d9d05f9ae907d74/f570d/DAY1_8.png 960w,
+/static/baf82062b6486d670d9d05f9ae907d74/8d0ff/DAY1_8.png 1440w,
+/static/baf82062b6486d670d9d05f9ae907d74/c9a4a/DAY1_8.png 1530w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/baf82062b6486d670d9d05f9ae907d74/f570d/DAY1_8.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;해결방법&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.clearfix&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; auto&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; //적용
+  &lt;span class=&quot;token property&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; //적용
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fb4d20cba85ad462eb13e5b507a79066/84aa4/DAY1_9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.87096774193549%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACOklEQVQoz4WTXUjTYRSHd1EXRs5MW07dhq450yu7iMCgq6AuykQJL0aUGSEW2EUflJokRFIa2JeVoNCSTNBhmtUU7GPgcC7bnPkxv1KmaCqOyoH77+nv5qxE6MCPc9734uG853deyd0PzTw0vaGy08h9UyvGUQfuZQ/znp9+rdQD05O87e6krbuLj5+t2Hs+MTPtZFbUwlQ/rpEeJkYsuL5/Q2L96uDLUD+Dk+NMLc7j9vxiLXyBNOB0om800NjQiL7kEvfOZNJQVsLZjEyeXL/MjLmFuQ49Q9Z2JGwQPp/PL68g+M99w6NUlN/m/c0cDKf2c2JPEhp5PNItcjZv2k5eejp9BVk4WmsCQMEnrEFWFIQKq8CxXgeWKxex5B2j7FAKyfI4wsJiiYpQEbpVTqpiF+25J7G1NQWA60HBOggctlqYKCjGXVhKmlpLZLgShSxeBCqRhsaQIotBfzCVwfbXf4AbhSB4AzMUDTGdP4239A65ew8gj1CwOzYBtVxDfLSao2olxckqRtr+B/Qu+3NvSx2mczqWHpVjLypCFhKJNkpJnEzFvhgVORoF+dpo7M31wRn6/plhUEHgcFM15gtZjN0qhJoqbhzJICJkGzukkSjDd5KVmMjVlCTMhtqNXf7rzQFTjC/pyEujKz+H2dJrUP8cQ3Y2abEKdAkaGnQZvDt+mJ7mOiQryzu3usTrNbf0gwWxywmnja7aB5ifVWJ7UcWM6Oai8RWj1Y/pfVqBU7wbb9HjEj/Fbz/+cjSOZWxXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/fb4d20cba85ad462eb13e5b507a79066/01472/DAY1_9.webp 240w,
+/static/fb4d20cba85ad462eb13e5b507a79066/222bd/DAY1_9.webp 480w,
+/static/fb4d20cba85ad462eb13e5b507a79066/620b9/DAY1_9.webp 960w,
+/static/fb4d20cba85ad462eb13e5b507a79066/28063/DAY1_9.webp 1440w,
+/static/fb4d20cba85ad462eb13e5b507a79066/0c82c/DAY1_9.webp 1550w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/fb4d20cba85ad462eb13e5b507a79066/0783d/DAY1_9.png 240w,
+/static/fb4d20cba85ad462eb13e5b507a79066/782f4/DAY1_9.png 480w,
+/static/fb4d20cba85ad462eb13e5b507a79066/f570d/DAY1_9.png 960w,
+/static/fb4d20cba85ad462eb13e5b507a79066/8d0ff/DAY1_9.png 1440w,
+/static/fb4d20cba85ad462eb13e5b507a79066/84aa4/DAY1_9.png 1550w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/fb4d20cba85ad462eb13e5b507a79066/f570d/DAY1_9.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;overflow - float을 이용하여 layout만들때 사용하는 방법 2
+&lt;br&gt;주로 많이 사용하는 방법인데 바깥 div(.wecode-box)에 overflow : hidden; 을 주는 것입니다.
+float속성을 가진 element의 부모 element에 overflow 속성을 주는 것이다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>
