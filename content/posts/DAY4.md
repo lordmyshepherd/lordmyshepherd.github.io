@@ -89,7 +89,7 @@ yarn develop // 또는 gatsby develop
 
 6. 배포하기
 <br>로컬에 있는 블로그 소스코드를 github에 올리겠습니다.
-<br><br>(1)blog root에서 git을 세팅합시다. lordmyshepherd 부분은 각자의 username으로 바꿔주세요.
+<br>(1)blog root에서 git을 세팅합시다. lordmyshepherd 부분은 각자의 username으로 바꿔주세요.
 ```css
 git init
 git remote add origin https://github.com/lordmyshepherd/lordmyshepherd.github.io.git
@@ -105,4 +105,27 @@ git commit -m "first commit"
 git push origin master //master는 branch가 master로 되어있다는 의미.
 ```
 github에 가셔서 소스코드가 잘 올라왔는지 확인해보세요.
+![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY3_4.png)
+해당 소스는 포스팅을 작성할 수 있고, <u>커스터마이징 할 수 있는 개발 소스가 아니라 블로그 사이트에 배포될 수 있도록 md 파일이 모두 html, js로 바뀐 빌드된 파일</u>입니다.
+(3)depoly 하기
+```css
+yarn deploy
+```
+yarn deploy 라는 명령어가 알아서 build도 해주고, git의 master에 push도 해주고 배포도 해준것입니다.
+
+(3)브랜치 생성 및 이동
+앞으로 항상 deploy만 해도 되지만, 혹시 컴퓨터를 바꾸거나 다른데서 포스팅 작성을 할 경우를 대비하여 <u>개발코드도 보존하기로 하죠. develop이라는 브랜치를 따로 만들어서 여기에다만 올리도록 하겠습니다.</u>
+```css
+git branch develop // 브랜치 생성
+git checkout develop // 브랜치 이동
+```
+소스코드를 git에 올리는 과정
+```css
+git add .
+git commit -m “blog posting~~”
+git push -u origin develop //branch가 develop으로 바뀜
+```
+내 github 의 develop repo에 들어가서 소스코드가 모두 잘 올라갔는지 확인해주세요.
+<br>잘 올라갔다면 github default 브랜치를 develop으로 바꾸겠습니다. 어차피 빌드 결과물인 master 브랜치의 빌드 파일들을 파악할 필요도 없으니까요. github의 해당 블로그 repo 페이지에 들어가서 Settings -> Branches 메뉴에서 Default branch 를 develop으로 바꾸고 update 버튼을 눌러주세요!
+
 
