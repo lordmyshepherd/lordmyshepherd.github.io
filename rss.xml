@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2019 09:29:03 GMT</lastBuildDate><item><title><![CDATA[<DAY 4> Javascript]]></title><description><![CDATA[#Object, #Object-다시 :)]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;object&quot;&gt;&lt;a href=&quot;#object&quot; aria-label=&quot;object permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Object&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2019 10:25:12 GMT</lastBuildDate><item><title><![CDATA[DAY 5]]></title><description><![CDATA[#class]]></description><link>https://lordmyshepherd.github.io/posts/DAY5/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY5/</guid><pubDate>Fri, 04 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#the-first-transition&quot;&gt;The first transition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#the-digital-age&quot;&gt;The digital age&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#loss-of-humanity-through-transitions&quot;&gt;Loss of humanity through transitions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#chasing-perfection&quot;&gt;Chasing perfection&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts.&lt;/p&gt;
+&lt;p&gt;The typography of this industrial age was no longer handcrafted. Mass production and profit became more important. Quantity mattered more than the quality. The books and printed works in general lost a part of its humanity. The typefaces were not produced by craftsmen anymore. It was the machines printing and tying the books together now. The craftsmen had to let go of their craft and became a cog in the process. An extension of the industrial machine.&lt;/p&gt;
+&lt;p&gt;But the victory of the industrialism didn’t mean that the craftsmen were completely extinct. The two worlds continued to coexist independently. Each recognising the good in the other — the power of industrialism and the humanity of craftsmanship. This was the second transition that would strip typography of a part of its humanity. We have to go 500 years back in time to meet the first one.&lt;/p&gt;
+&lt;h2 id=&quot;the-first-transition&quot;&gt;&lt;a href=&quot;#the-first-transition&quot; aria-label=&quot;the first transition permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The first transition&lt;/h2&gt;
+&lt;p&gt;A similar conflict emerged after the invention of the first printing press in Europe. Johannes Gutenberg invented movable type and used it to produce different compositions. His workshop could print up to 240 impressions per hour. Until then, the books were being copied by hand. All the books were handwritten and decorated with hand drawn ornaments and figures. A process of copying a book was long but each book, even a copy, was a work of art.&lt;/p&gt;
+&lt;p&gt;The first printed books were, at first, perceived as inferior to the handwritten ones. They were smaller and cheaper to produce. Movable type provided the printers with flexibility that allowed them to print books in languages other than Latin. Gill describes the transition to industrialism as something that people needed and wanted. Something similar happened after the first printed books emerged. People wanted books in a language they understood and they wanted books they could take with them. They were hungry for knowledge and printed books satisfied this hunger.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/42-line-bible.jpg&quot; alt=&quot;42-line-bible.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The 42–Line Bible, printed by Gutenberg.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;But, through this transition, the book lost a large part of its humanity. The machine took over most of the process but craftsmanship was still a part of it. The typefaces were cut manually by the first punch cutters. The paper was made by hand. The illustrations and ornaments were still being hand drawn. These were the remains of the craftsmanship that went almost extinct in the times of Eric Gill.&lt;/p&gt;
+&lt;h2 id=&quot;the-digital-age&quot;&gt;&lt;a href=&quot;#the-digital-age&quot; aria-label=&quot;the digital age permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The digital age&lt;/h2&gt;
+&lt;p&gt;The first transition took away a large part of humanity from written communication. Industrialisation, the second transition described by Eric Gill, took away most of what was left. But it’s the third transition that stripped it naked. Typefaces are faceless these days. They’re just fonts on our computers. Hardly anyone knows their stories. Hardly anyone cares. Flicking through thousands of typefaces and finding the “right one” is a matter of minutes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the new computer age the proliferation of typefaces and type manipulations represents a new level of visual pollution threatening our culture. Out of thousands of typefaces, all we need are a few basic ones, and trash the rest.&lt;/p&gt;
+&lt;p&gt;— Massimo Vignelli&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Typography is not about typefaces. It’s not about what looks best, it’s about what feels right. What communicates the message best. Typography, in its essence, is about the message. “Typographical design should perform optically what the speaker creates through voice and gesture of his thoughts.”, as El Lissitzky, a famous Russian typographer, put it.&lt;/p&gt;
+&lt;h2 id=&quot;loss-of-humanity-through-transitions&quot;&gt;&lt;a href=&quot;#loss-of-humanity-through-transitions&quot; aria-label=&quot;loss of humanity through transitions permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Loss of humanity through transitions&lt;/h2&gt;
+&lt;p&gt;Each transition took away a part of humanity from written language. Handwritten books being the most humane form and the digital typefaces being the least. Overuse of Helvetica is a good example. Messages are being told in a typeface just because it’s a safe option. It’s always there. Everyone knows it but yet, nobody knows it. Stop someone on the street and ask him what Helvetica is? Ask a designer the same question. Ask him where it came from, when, why and who designed it. Most of them will fail to answer these questions. Most of them used it in their precious projects but they still don’t spot it in the street.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;blockquote&gt;
+		&lt;p&gt;Knowledge of the quality of a typeface is of the greatest importance for the functional, aesthetic and psychological effect.&lt;/p&gt;
+		&lt;footer&gt;
+			&lt;cite&gt;— Josef Mueller-Brockmann&lt;/cite&gt;
+		&lt;/footer&gt;
+	&lt;/blockquote&gt;
+&lt;/figure&gt;
+&lt;p&gt;Typefaces don’t look handmade these days. And that’s all right. They don’t have to. Industrialism took that away from them and we’re fine with it. We’ve traded that part of humanity for a process that produces more books that are easier to read. That can’t be bad. And it isn’t.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Humane typography will often be comparatively rough and even uncouth; but while a certain uncouthness does not seriously matter in humane works, uncouthness has no excuse whatever in the productions of the machine.&lt;/p&gt;
+&lt;p&gt;— Eric Gill&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We’ve come close to “perfection” in the last five centuries. The letters are crisp and without rough edges. We print our compositions with high–precision printers on a high quality, machine made paper.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/eaa988471fd2b61a1d4d313d0d9a5d23/313cc/type-through-time.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 20%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAEABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABtoJaRR//xAAWEAEBAQAAAAAAAAAAAAAAAAAAAjH/2gAIAQEAAQUClOv/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwEn/8QAFhAAAwAAAAAAAAAAAAAAAAAAAAEQ/9oACAEBAAY/Ahz/xAAYEAACAwAAAAAAAAAAAAAAAAABIQAQUf/aAAgBAQABPyEi2Zsr/9oADAMBAAIAAwAAABAID//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQMf/aAAgBAgEBPxCD/8QAGRABAAMBAQAAAAAAAAAAAAAAAQARQSEx/9oACAEBAAE/EAerusaDZp1lz//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/eaa988471fd2b61a1d4d313d0d9a5d23/01472/type-through-time.webp 240w,
+/static/eaa988471fd2b61a1d4d313d0d9a5d23/222bd/type-through-time.webp 480w,
+/static/eaa988471fd2b61a1d4d313d0d9a5d23/620b9/type-through-time.webp 960w,
+/static/eaa988471fd2b61a1d4d313d0d9a5d23/6db13/type-through-time.webp 1250w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/eaa988471fd2b61a1d4d313d0d9a5d23/3bc27/type-through-time.jpg 240w,
+/static/eaa988471fd2b61a1d4d313d0d9a5d23/98431/type-through-time.jpg 480w,
+/static/eaa988471fd2b61a1d4d313d0d9a5d23/b3ee8/type-through-time.jpg 960w,
+/static/eaa988471fd2b61a1d4d313d0d9a5d23/313cc/type-through-time.jpg 1250w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/eaa988471fd2b61a1d4d313d0d9a5d23/b3ee8/type-through-time.jpg&quot;
+          alt=&quot;type-through-time.jpg&quot;
+          title=&quot;type-through-time.jpg&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Type through 5 centuries.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We lost a part of ourselves because of this chase after perfection. We forgot about the craftsmanship along the way. And the worst part is that we don’t care. The transition to the digital age made that clear. We choose typefaces like clueless zombies. There’s no meaning in our work. Type sizes, leading, margins… It’s all just a few clicks or lines of code. The message isn’t important anymore. There’s no more “why” behind the “what”.&lt;/p&gt;
+&lt;h2 id=&quot;chasing-perfection&quot;&gt;&lt;a href=&quot;#chasing-perfection&quot; aria-label=&quot;chasing perfection permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Chasing perfection&lt;/h2&gt;
+&lt;p&gt;Human beings aren’t perfect. Perfection is something that will always elude us. There will always be a small part of humanity in everything we do. No matter how small that part, we should make sure that it transcends the limits of the medium. We have to think about the message first. What typeface should we use and why? Does the typeface match the message and what we want to communicate with it? What will be the leading and why? Will there be more typefaces in our design? On what ground will they be combined? What makes our design unique and why? This is the part of humanity that is left in typography. It might be the last part. Are we really going to give it up?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Originally published by &lt;a href=&quot;http://matejlatin.co.uk/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Matej Latin&lt;/a&gt; on &lt;a href=&quot;https://medium.com/design-notes/humane-typography-in-the-digital-age-9bd5c16199bd?ref=webdesignernews.com#.lygo82z0x&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Medium&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DAY 4]]></title><description><![CDATA[#Object, #Object-다시 :)]]></description><link>https://lordmyshepherd.github.io/posts/DAY4</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY4</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;object&quot;&gt;&lt;a href=&quot;#object&quot; aria-label=&quot;object permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Object&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Object가 왜 필요할까요?
 배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
@@ -45,11 +130,11 @@
       &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;객체의 규칙&lt;/li&gt;
-&lt;li&gt;property 이름은 중복될 수 없다.&lt;/li&gt;
-&lt;li&gt;property를 추가할 때는 ,(쉼표)를 붙여준다.&lt;/li&gt;
-&lt;li&gt;key와 value 사이에 :(콜론)으로 구분한다.&lt;/li&gt;
-&lt;li&gt;porperty value로는 어떤 data type도 가능하다.&lt;br&gt;(string, number, array, object, function ..)&lt;/li&gt;
+&lt;li&gt;객체의 규칙
+&lt;br&gt;property 이름은 중복될 수 없다.
+&lt;br&gt;property를 추가할 때는 ,(쉼표)를 붙여준다.
+&lt;br&gt;key와 value 사이에 :(콜론)으로 구분한다.
+&lt;br&gt;porperty value로는 어떤 data type도 가능하다.&lt;br&gt;(string, number, array, object, function ..)&lt;/li&gt;
 &lt;li&gt;객체 선언 및 사용법&lt;/li&gt;
 &lt;li&gt;객체 리터럴
 {}를 이용해서 객체를 만드는 방법입니다.&lt;/li&gt;
@@ -76,7 +161,7 @@ obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.&lt;/strong&gt;&lt;/p&gt;
-&lt;ol start=&quot;4&quot;&gt;
+&lt;ol start=&quot;5&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;Property에 접근하는 방법
 아래 예제를 통해서 알아보겠습니다.&lt;/p&gt;
@@ -303,7 +388,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &lt;/span&gt;
 hiObj가 갖고 있는 진짜 값은 메모리 주소인 reference입니다.
 &lt;br&gt;하지만 hiObj를 불러올 때 메모리 주소를 반환하는 것이 아니라,
-&lt;br&gt;해당 메모리에 저장된 데이터를 반환해 줍니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[<DAY 3> Gatsby blog]]></title><description><![CDATA[German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible.]]></description><link>https://lordmyshepherd.github.io/posts/the-birth-of-movable-type/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/the-birth-of-movable-type/</guid><pubDate>Wed, 02 Oct 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;해당 메모리에 저장된 데이터를 반환해 줍니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DAY 3]]></title><description><![CDATA[#Gatsby를 이용한 blog 만드는 방법 정리]]></description><link>https://lordmyshepherd.github.io/posts/DAY3</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY3</guid><pubDate>Wed, 02 Oct 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1블로그-설치-필요한-용어&quot;&gt;&lt;a href=&quot;#1%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%84%A4%EC%B9%98-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9A%A9%EC%96%B4&quot; aria-label=&quot;1블로그 설치 필요한 용어 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.블로그 설치 필요한 용어&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Domain(도메인)
@@ -559,7 +644,7 @@ git checkout develop // 브랜치 이동&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 git commit -m “blog posting~~”
 git push -u origin develop //branch가 develop으로 바뀜&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;내 github 의 develop repo에 들어가서 소스코드가 모두 잘 올라갔는지 확인해주세요.
-&lt;br&gt;잘 올라갔다면 github default 브랜치를 develop으로 바꾸겠습니다. 어차피 빌드 결과물인 master 브랜치의 빌드 파일들을 파악할 필요도 없으니까요. github의 해당 블로그 repo 페이지에 들어가서 Settings -&gt; Branches 메뉴에서 Default branch 를 develop으로 바꾸고 update 버튼을 눌러주세요!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[<DAY 2> Javascript]]></title><description><![CDATA[#Array 조작하는 방법, #예제 관련 Error]]></description><link>https://lordmyshepherd.github.io/posts/perfecting-the-art-of-perfection/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/perfecting-the-art-of-perfection/</guid><pubDate>Tue, 01 Oct 2019 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;잘 올라갔다면 github default 브랜치를 develop으로 바꾸겠습니다. 어차피 빌드 결과물인 master 브랜치의 빌드 파일들을 파악할 필요도 없으니까요. github의 해당 블로그 repo 페이지에 들어가서 Settings -&gt; Branches 메뉴에서 Default branch 를 develop으로 바꾸고 update 버튼을 눌러주세요!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DAY 2]]></title><description><![CDATA[#Array 조작하는 방법, #예제 관련 Error]]></description><link>https://lordmyshepherd.github.io/posts/DAY2/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY2/</guid><pubDate>Tue, 01 Oct 2019 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-array-조작방법&quot;&gt;&lt;a href=&quot;#1-array-%EC%A1%B0%EC%9E%91%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;1 array 조작방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Array 조작방법&lt;/h2&gt;
 &lt;p&gt;빈 배열에 요소를 추가해주는 방법&lt;/p&gt;
 &lt;ol&gt;
@@ -682,7 +767,7 @@ cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[<Day 1> HTML CSS]]></title><description><![CDATA[#Position, #Block and inline, #float]]></description><link>https://lordmyshepherd.github.io/posts/a-brief-history-of-typography/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/a-brief-history-of-typography/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[<Day 1>]]></title><description><![CDATA[#Position, #Block and inline, #float]]></description><link>https://lordmyshepherd.github.io/posts/DAY1/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY1/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-position-br--relative-absolute-fixed&quot;&gt;&lt;a href=&quot;#1-position-br--relative-absolute-fixed&quot; aria-label=&quot;1 position br  relative absolute fixed permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Position &lt;br&gt;  relative, absolute, fixed&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;왜 position property을 배울까요?&lt;br&gt;
@@ -712,8 +797,7 @@ relative 자체로는 특별한 의미가 없습니다. 딱히 어느 위치로 
 &lt;ul&gt;
 &lt;li&gt;absolute&lt;br&gt;
 position의 속성값 중에 하나인 absolute는 이름과 같이 요소를 절대적인 위치에 둘 수 있다. 어떤 기준으로 절대적이냐 하면, &lt;strong&gt;특정 부모에 대해 절대적으로&lt;/strong&gt; 움직이게 됩니다.&lt;br&gt;
-&lt;br&gt;
-부모 중에 position이 relative, fixed, absolute 하나라도 있으면 그 부모에 대해 절대적으로 움직이게 됩니다. &lt;u&gt;일반적으로 absolute를 쓸 경우, 절대적으로 움직이고 싶은 부모에게 position: relative; 를 부여&lt;/u&gt;하면 됩니다.&lt;/li&gt;
+&lt;br&gt;부모 중에 position이 relative, fixed, absolute 하나라도 있으면 그 부모에 대해 절대적으로 움직이게 됩니다. &lt;u&gt;일반적으로 absolute를 쓸 경우, 절대적으로 움직이고 싶은 부모에게 position: relative; 를 부여&lt;/u&gt;하면 됩니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;relative&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
       &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;input&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;검색어 입력&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -823,7 +907,7 @@ bottom: 0 //하단에서 0 만큼 떨어져있다는 뜻.&lt;br&gt;
 : 페이지 전체의 레이아웃을 잡을 때 중요한 도구로 사용됩니다.  &lt;/li&gt;
 &lt;li&gt;float 속성 사용법&lt;br&gt;
 : element의 float 속성값(property value)이 left이면 그 요소는 부모 요소의 가장 좌측에 배치됩니다.
-&lt;br&gt;1)
+(1)
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
@@ -909,8 +993,7 @@ bottom: 0 //하단에서 0 만큼 떨어져있다는 뜻.&lt;br&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;+ float 속성에 대한 궁굼증..&lt;br&gt;
+&lt;li&gt;float 속성에 대한 궁굼증..&lt;br&gt;
 2번 그림에서 float 속성이 적용된 element의 &lt;u&gt;부모 element의 높이가 왜 0이 되는걸까요??&lt;/u&gt;
 그것은 float이 만들어진 목적에 따로 있기 때문이다.&lt;br&gt;
 float는 본질적으로 가로배치 전용 속성이 아니다. 원래는 아래 사진과 같이 이미지와 내용이 어우러지게  하기 위해서 만들어진 속성이다.
@@ -1001,8 +1084,7 @@ float는 본질적으로 가로배치 전용 속성이 아니다. 원래는 아�
   &lt;/a&gt;
     &lt;/span&gt;
 (1)float이 적용된 element들은 위로 붕 뜨면서 element의 속성값이 block에서 inline으로 바뀌게 되고, 그 결과 왼쪽으로 순차적으로 붙는 결과가 나오는 것입니다. &lt;br&gt;(2)float된 element 다음에 있는 요소가 생긴 빈공간을 채우게 되면서 다음과 같은 결과가 나오게 됩니다.
-부모 입장에서 자식들이 없어져서 속상합니다.&lt;br&gt;(3)그래서 자식들이 돌아올 때를 대비해서 다른 형제 element들에게 ‘그 방은 이제 네가써 하지만 그 방안에 형들 침대는 그대로 놓고 남은 공간에 네 짐을 놓으렴’이라고 규칙을 알려주는 것 같다.&lt;/p&gt;
-&lt;ul&gt;
+부모 입장에서 자식들이 없어져서 속상합니다.&lt;br&gt;(3)그래서 자식들이 돌아올 때를 대비해서 다른 형제 element들에게 ‘그 방은 이제 네가써 하지만 그 방안에 형들 침대는 그대로 놓고 남은 공간에 네 짐을 놓으렴’이라고 규칙을 알려주는 것 같다.&lt;/li&gt;
 &lt;li&gt;clear 속성 - float을 이용하여 layout만들때 사용하는 방법 1 &lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;clear 속성을 가진 element는 float 속성의 영향을 받지 않게 됩니다. 다시 말하면 #red, #green, #blue이 float 되었다는 사실을 모르고 여전히 그 자리에 있는 줄 알고 #가 아래로 내려가게 되는 것입니다.
