@@ -16,34 +16,37 @@ socialImage: "/media/42-line-bible.jpg"
 
 ## Object
 
-1. Object가 왜 필요할까요?
+####1. Object가 왜 필요할까요?
 배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
 <br>객체는 순서가 없이 데이터를 저장할 수 있고 원하는 데이터에 이름을 붙여서 필요할때마다 바로 불러올 수 있습니다.
 
-2. 객체는 어떻게 생겼는지 볼까요?
+####2. 객체는 어떻게 생겼는지 볼까요?
 객체가 저장한 데이터를 **property**라고 합니다.  
 배열과 다른점에 이 property에 이름과 값을 지정해준다는 사실이에요.  
 아래에 보시는 것과 같이 <u>프로퍼티의 이름은 key</u>라고 하며, <u>프로퍼티 값은 value</u>라고 부릅니다.
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)
 
-3. 객체의 규칙
-+ property 이름은 중복될 수 없다.
-+ property를 추가할 때는 ,(쉼표)를 붙여준다.
-+ key와 value 사이에 :(콜론)으로 구분한다.
-+ porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
+####3. 객체의 규칙
+1. property 이름은 중복될 수 없다.
+2. property를 추가할 때는 ,(쉼표)를 붙여준다.
+3. key와 value 사이에 :(콜론)으로 구분한다.
+4. porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
 
-4. 객체 선언 및 사용법
-+ 객체 리터럴 {}를 이용해서 객체를 만드는 방법입니다.
+####4. 객체 선언 및 사용법
+
+1. 객체 리터럴 {}를 이용해서 객체를 만드는 방법입니다.
+
 ```js
-var obj = { 
-  name: 'jaehee', // 멤버명을 'name' 처럼 인용부호로 감싸는 것도 가능 
-  age : 10, 
-  increaseAge : function (i) {
-      this.age + i; 
-     } 
-};
+var obj = {
+  name :'jaehee', // 멤버명을 'name' 처럼 인용부호로 감싸는 것도 가능
+  age : 10,
+  increaseAge : function (i){
+    this.age + i;
+  }
+}
 ```
-+ Object 생성자
+
+2. Object 생성자
 아래 코드를 봐주세요.
 ```js
 var obj = new Object();  // obj = {}와 같은 의미
@@ -57,10 +60,9 @@ obj.increaseAge = function (i) {
    this.age + i; 
    };
 ```
-
 **객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.**
 
-5. Property에 접근하는 방법
+####5. Property에 접근하는 방법
 아래 예제를 통해서 알아보겠습니다.
 ```js
 let difficult = {
@@ -87,6 +89,7 @@ console.log(difficult['my name']);
 ```js
 console.log(difficult['33']);
 ```
+
 + 변수로 접근하는 방법이 있을까요?
 ```js
 let name = '키';
@@ -96,7 +99,7 @@ dot(.)과 []을 이용해서 접근해보겠습니다.
 <br>console.log(difficult[name]); --> 한글인 키는 따옴표가 없어도 되는군 !!
 dot(.)으로 접근한다는 뜻은 실제 키이름을 쓸 때입니다. 변수로 접근할 때는 항상 대괄호로 접근해야 합니다.
 
-6. property를 할당하는 방법
+####6. property를 할당하는 방법
 ```js
 difficult[name] = '값 바꾼다';
 console.log(difficult[name]);
@@ -111,7 +114,7 @@ console.log('생성후: ' + difficult.new);
 객체에 이미 키가 존재하는데, 다시 한 번 할당하면 값이 교체(수정)됩니다.
 <br>이전에 없던 키로 접근하면, 새로운 프로퍼티가 추가 됩니다.
 
-7. Method(메서드)
+####7. Method(메서드)
 객체에 저장된 값이 함수일 때, 메서드라고 부릅니다.
 ```js
 console.log(); //log는 console 객체에 저장된 함수인 것이다!
@@ -128,7 +131,7 @@ let methodObj = {
 ```js
 methodObj.do();
 ```
-8. Nested Object(중첩된 객체)
+####8. Nested Object(중첩된 객체)
 
 실무에서 사용되는 객체는 거의 중첩되어 있습니다.
 <br>프로퍼티 값이 객체일 수도 있고, 프로퍼티 값인 배열의 요소가 객체일 수도 있습니다.
@@ -148,9 +151,8 @@ let nestedObj = {
 console.log(nestedObje.type['comment-type'][0].name);
 ```
 
-9. 객체는 reference로 저장된다?
-
-(1)복제
+####9. 객체는 reference로 저장된다?
+1. 복제
 우선 원시데이터 타입이 변수에 어떻게 저장되는지 살펴볼게요.
 ```js
 let a = 1;
@@ -163,7 +165,7 @@ console.log(a); // 결과 1
 원시데이터 타입은 위에 방식 처럼 변수에 데이터가 저장됩니다.
 <br>**데이터를 복제해서 저장**하는 방식입니다. 그렇기 때문에 값을 변경한 것은 변수 b이기 때문에 변수 a에 담겨있는 값은 그대로인 것입니다.
 
-(2)참조
+2. 참조
 <br>객체는 reference가 저장됩니다.. 음 무슨말일까요?
 <br>객체를 변수에 저장하면 객체 리터럴 자체가 저장되는 것이 아니라 reference가 저장됩니다.
 
