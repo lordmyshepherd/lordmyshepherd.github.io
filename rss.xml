@@ -1,26 +1,309 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2019 04:41:23 GMT</lastBuildDate><item><title><![CDATA[<DAY 5> Javascript]]></title><description><![CDATA[#class]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Fri, 04 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-array-조작방법&quot;&gt;&lt;a href=&quot;#1-array-%EC%A1%B0%EC%9E%91%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;1 array 조작방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Array 조작방법&lt;/h2&gt;
-&lt;p&gt;빈 배열에 요소를 추가해주는 방법&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2019 04:46:36 GMT</lastBuildDate><item><title><![CDATA[<DAY 4> Javascript]]></title><description><![CDATA[#Object, #Object-다시 :)]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Fri, 04 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;object&quot;&gt;&lt;a href=&quot;#object&quot; aria-label=&quot;object permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Object&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;index로 접근하는 방법(수정,추가)&lt;/li&gt;
+&lt;li&gt;Object가 왜 필요할까요?
+배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
+&lt;br&gt;객체는 순서가 없이 데이터를 저장할 수 있고 원하는 데이터에 이름을 붙여서 필요할때마다 바로 불러올 수 있습니다.&lt;/li&gt;
+&lt;li&gt;객체는 어떻게 생겼는지 볼까요?
+객체가 저장한 데이터를 &lt;strong&gt;property&lt;/strong&gt;라고 합니다.&lt;br&gt;
+배열과 다른점에 이 property에 이름과 값을 지정해준다는 사실이에요.&lt;br&gt;
+아래에 보시는 것과 같이 &lt;u&gt;프로퍼티의 이름은 key&lt;/u&gt;라고 하며, &lt;u&gt;프로퍼티 값은 value&lt;/u&gt;라고 부릅니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 291px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b04d47d1db6821d52660e3f1bc71fcc1/7adc3/DAY4_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.3573883161512%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAB9UlEQVQoz42SeW/aQBDF+f7fpkqJSnEbkRAMSQoGAeFKZY4SKxw+8bW2f12bhBDlj3ak8Xq1s++9mbclIQSNhorabNFs3VG/bVCr3RT7i69lxuMJz2sDXV/wP1HKMhgNNYZdlWFPgl5/p31fo9VQqF2VmUzaTKYd5nqfOLQIw7BI3/eLNQgCPM/DsiwOhwOlI66L+D0iHQwl+oikP4DIYLnp05+r3DxWaI4UNsYEW160bVsq1ul2u1SrVRRFoVKp0Ol0joBxaHJYzwj0Gd5yivNnysIYsDOfiPxnHHshgXTiYPuhvVxhDp6rM00T13UloGyZzMbtPOBfqXh9ja05Rh0rUmwD0xjL851kNYi8NZvNhv3e5Gk2Q9O0Ql2el5eXtNttSkIkGOslmTgw0n6RxB4kvgSJCH2L7ctKduBA6pOKgDRNP2UemTQj/y/lLs/nRwdftluSJHstOLaVL5blEEvi4z77l8vvBbv9jiRNToxvZ1mW4joOiSQ/j7ea8yxMSVzZiisHvLdky6KQl71eyENIkr0rh29bRCImTgQiEZ+IC4X5J1pJl9tz7MoAtz4lDeNTcR5bz+JhPuReH/BFq/Gt32C5N4qzNPs4gpI/WBcgtjIs0u+tcH7KN+lHp2n1lhMuuteUe/UC7Ham8ePx7mwk76B/AfPQPeHe9/PDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/b04d47d1db6821d52660e3f1bc71fcc1/01472/DAY4_1.webp 240w,
+/static/b04d47d1db6821d52660e3f1bc71fcc1/71ea0/DAY4_1.webp 291w&quot;
+          sizes=&quot;(max-width: 291px) 100vw, 291px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/b04d47d1db6821d52660e3f1bc71fcc1/0783d/DAY4_1.png 240w,
+/static/b04d47d1db6821d52660e3f1bc71fcc1/7adc3/DAY4_1.png 291w&quot;
+          sizes=&quot;(max-width: 291px) 100vw, 291px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/b04d47d1db6821d52660e3f1bc71fcc1/7adc3/DAY4_1.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;  &lt;/li&gt;
+&lt;li&gt;객체의 규칙&lt;/li&gt;
+&lt;li&gt;property 이름은 중복될 수 없다.&lt;/li&gt;
+&lt;li&gt;property를 추가할 때는 ,(쉼표)를 붙여준다.&lt;/li&gt;
+&lt;li&gt;key와 value 사이에 :(콜론)으로 구분한다.&lt;/li&gt;
+&lt;li&gt;porperty value로는 어떤 data type도 가능하다.&lt;br&gt;(string, number, array, object, function ..)&lt;/li&gt;
+&lt;li&gt;객체 선언 및 사용법&lt;/li&gt;
+&lt;li&gt;객체 리터럴
+{}를 이용해서 객체를 만드는 방법입니다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; cities &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//빈 배열 할당&lt;/span&gt;
-cities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;서울&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-cities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;대전&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-cities&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;대구&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;push/unshift 함수 (추가)
-&lt;br&gt;: push와 unshift 함수는 요소를 추가해주는 함수입니다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; cities &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;경주&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;전주&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;unshift&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;인천&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol start=&quot;3&quot;&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
+  name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;jaehee&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 멤버명을 &apos;name&apos; 처럼 인용부호로 감싸는 것도 가능 &lt;/span&gt;
+  age &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+  &lt;span class=&quot;token function-variable function&quot;&gt;increaseAge&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;age &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;pop 함수 (제거)&lt;br&gt;
-: pop 함수를 사용하면  요소가 제거되고,  마지막 요소의 값을 반환합니다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Object 생성자
+아래 코드를 봐주세요.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// obj = {}와 같은 의미&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;new Object()를 선언하게되면 빈 객체가 만들어지고 그 만들어진 객체는 변수 obj에 담기게 됩니다. 그 후에 5번에서 배우겠지만, 아래와 같이 빈 객체에 property를 넣어줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;jaehee&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;age &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;increaseAge&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;age &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[<DAY 4> Javascript]]></title><description><![CDATA[#Object, #Object-다시 :)]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-object&quot;&gt;&lt;a href=&quot;#1-object&quot; aria-label=&quot;1 object permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Object&lt;/h2&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;Property에 접근하는 방법
+아래 예제를 통해서 알아보겠습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; difficult &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;숫자 형식도 되네&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//아래 (2)번에 설명&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&apos;my name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;스페이스 포함 가능&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;//아래 (2)번에 설명&lt;/span&gt;
+color&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;silver&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//아래 (1)번에 설명&lt;/span&gt;
+키&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;한글인 키는 따옴표가 없어도 되는군!!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&apos;!키&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;느낌표 있는 키는 따옴표가 필요하군&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+$special&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;$는 없어도 되는군&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;dot(.)과 대괄호([])로 접근하는 방법이 있습니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(1) dot(.)은 key로 바로 접글할 때 사용하는 것
+&lt;br&gt;dot으로 절근할 때는 따옴표 없이 key를 바로 써줘야 합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(2) 대괄호([])
+&lt;br&gt;프로퍼티에 space가 포함된 경우, 키는 객체에 저장할 때 키 이름을 따옴표로 감싸고 아래와 같이 대괄호로 접근하면 됩니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;my name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;프로퍼티가 숫자로 저장된 경우도 [”]로 접근하면 됩니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;33&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;변수로 접근하는 방법이 있을까요?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;키&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;dot(.)과 []을 이용해서 접근해보겠습니다.
+&lt;br&gt;console.log(difficult.name); —&gt; undefined
+&lt;br&gt;console.log(difficult[name]); —&gt; 한글인 키는 따옴표가 없어도 되는군 !!
+dot(.)으로 접근한다는 뜻은 실제 키이름을 쓸 때입니다. 변수로 접근할 때는 항상 대괄호로 접근해야 합니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;property를 할당하는 방법&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;값 바꾼다&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;difficult.color = ‘색깔’;
+console.log(difficult.color);&lt;/p&gt;
+&lt;p&gt;console.log(‘생성전: ’ + difficult.new);
+difficult.new = ‘새로 추가된 프로퍼티’;
+console.log(‘생성후: ’ + difficult.new);&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;객체에 이미 키가 존재하는데, 다시 한 번 할당하면 값이 교체(수정)됩니다.
+&amp;lt;br&amp;gt;이전에 없던 키로 접근하면, 새로운 프로퍼티가 추가 됩니다.
+
+7. Method(메서드)
+객체에 저장된 값이 함수일 때, 메서드라고 부릅니다.
+```js
+console.log(); //log는 console 객체에 저장된 함수인 것이다!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;객체에서 메서드를 정의하는 방법은 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; methodObj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;메서드 정의는 이렇게&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;호출방법은 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;methodObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;8&quot;&gt;
+&lt;li&gt;Nested Object(중첩된 객체)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;실무에서 사용되는 객체는 거의 중첩되어 있습니다.
+&lt;br&gt;프로퍼티 값이 객체일 수도 있고, 프로퍼티 값인 배열의 요소가 객체일 수도 있습니다.
+&lt;br&gt;예제를 살펴보겠습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; nestedObj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    year&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;2019&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;comment-type&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;simple&apos;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위에서 ‘simple’을 출력하려면 어떻게 해야 될까요?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nestedObje&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;type&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;comment-type&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;9&quot;&gt;
+&lt;li&gt;객체는 reference로 저장된다?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(1)복제
+우선 원시데이터 타입이 변수에 어떻게 저장되는지 살펴볼게요.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 결과 1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 958px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a941b75ffea6b5dd5c6b49424ef81a49/84566/DAY4_3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 124.00835073068892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEE0lEQVQ4y41UW0wcVRge9ME0VdPwpqkFbQzeLT7ooyY+kIZN2qRCL9aYyqugfWjapBqjMaFL05jUkrSx2iiJtEAFqgUxBQm9V6jQ7rId9s4u3WFvsLszO5edmc8zM7uzOztrdLJn58w5//nO9///9/8Uqh5VVauXIKXTyN28ATEaMW1q2WkPVQssm8thZmIC3vl5BGgakZkZ+McvI3P7umGnKP8DUC0D5uNxLE3/ifDQAEJ9P2H9t1HETvYg88fYfwOWNrS3Qgy1Zz0axfTgENzfnQY9fBHxc2cwe6IHoYGf9X1Fli1uV4JTNeOxlobCxIjvGcg+GhBFKCsRKKuMDaAa1HSZZVkUCgXIZLA8b01UKTlkwrGcPs+ROJc8sjEMh8PweDzo7j4G5zEnFt1uhIJBI1bFQ8lEAj6vFyPDIzj46UFMTU7B7/ODzbFlUPKjJEnCwvwCjhw+AoqisHHj4+j8uFNf0/ZKt0eWIzjffx4NWxpQV/cImpvfwOSVSTDMqhVQ+wgEAnDdd+G4swdOwlJjSz+gLe4kk0ndZmxsHF2dXbh29RrcLjc4jrMDCoKAe/fuY43LIxI3XEun12wi9ix6wMQYxFYTiEaiCPgDRtaLYbFkeT2bQ2D0Itz9fVjLcabWKgFFku1gKIS/p6fBrDyERBKIKhuqFHQQSayc+gbLzi+BoNciYH0U7QSfF7dPnoDw103TBtWA+nQlCn/f97hLANUHbmNNVWzi4Rfu4s7XR5E+e0oHqi1suXj7pVmwvZeNHYVUjiBDzokopPJQeMk4TL7zX5xF5tseiD6vLc6UQaQYI28G3J1V8zZu9iHSAy6kL7jAB9P6mpyVkB12Q1zyQPT7TNGXXa5AL8RZCEvJcm0LBZ2dxlLJGww1pjydhRj0kTlvd9mkrJVWLAd+MYFK1tYSVCGTMLA3whC8tH5GtWVZF6TxoTAcJE/KOCwrFkmYLIhS+OvLpruVSjAZasLkRR75RAbZcOJfO4kokYSweazPB8HR7tqy0f6YWAzbmpvR+MJL2PbmW5i4MmXJXqkSuro+QcPW5/FqUxPOfH4UeVGydCPNVgcMh5dRRxpDGxmf1T+K7a+8iN9J4etZJc20BLiz1aE3kAYy9jU+g68OHTJstP7J58sMl0gnefuJx/BO/ZNwbHkKO8iBH4d+MUJGyqsEuHfXLuyso9D98nN4j9i0tLYaofCQJjH+q85UB6QJoGPTBhzevAmnX2tEEzG+MHrJBriDAL5L9gZffxbvb6Cwva3dKIhbV8H1/0Bkx5RcDuuubCajngxtPjQ4aGfY0oKtGjPC8mny3uNwmN1GrdRhKpVCR0cH2j74EPsPfITd5Oa5ublyDIsZHDnuxN49+9B+oAP7d7fjXG9vuYkU5fMPP2Hv1VzBvAIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/a941b75ffea6b5dd5c6b49424ef81a49/01472/DAY4_3.webp 240w,
+/static/a941b75ffea6b5dd5c6b49424ef81a49/222bd/DAY4_3.webp 480w,
+/static/a941b75ffea6b5dd5c6b49424ef81a49/77d4f/DAY4_3.webp 958w&quot;
+          sizes=&quot;(max-width: 958px) 100vw, 958px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/a941b75ffea6b5dd5c6b49424ef81a49/0783d/DAY4_3.png 240w,
+/static/a941b75ffea6b5dd5c6b49424ef81a49/782f4/DAY4_3.png 480w,
+/static/a941b75ffea6b5dd5c6b49424ef81a49/84566/DAY4_3.png 958w&quot;
+          sizes=&quot;(max-width: 958px) 100vw, 958px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/a941b75ffea6b5dd5c6b49424ef81a49/84566/DAY4_3.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;원시데이터 타입은 위에 방식 처럼 변수에 데이터가 저장됩니다.
+&lt;br&gt;&lt;strong&gt;데이터를 복제해서 저장&lt;/strong&gt;하는 방식입니다. 그렇기 때문에 값을 변경한 것은 변수 b이기 때문에 변수 a에 담겨있는 값은 그대로인 것입니다.&lt;/p&gt;
+&lt;p&gt;(2)참조
+&lt;br&gt;객체는 reference가 저장됩니다.. 음 무슨말일까요?
+&lt;br&gt;객체를 변수에 저장하면 객체 리터럴 자체가 저장되는 것이 아니라 reference가 저장됩니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//는 결과 1이 아니라 2가 된다.. 복제와 다른 개념인 것 같다&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;아래 그림이 이해를 도와줄것입니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8eef7315962eae29e8a113b1c19ae6a4/1cbac/DAY4_4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.71317829457364%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAElEQVQ4y41Uz2sTQRgNRTz1IIpgL969ehbP5h8JWOnBg17N/6BWsIjXIAYRVKQ01iaLIEJsaCjSdtPNdjfRTWqbbnZ29sfM62x2k2w2u7QfLDMM37x9733fNzkkgnM+WQkhID0DrmXBchwY/WOcDAZgsZxk5OJA4y8I3/fR2G5g5/07tDcrUJtNNKtbOKjXQUxz5k4mYHxlAlBW2mjVquj8+gl5/SvYcT/MYexihlkJGP/IdUdbfkH+nOQgVFVFoVDA8sNlKIoSWiBYlctl5PN5lEolUJumKksF1HUdq6uv8PzFS2iaNjpzRFGkmoRisYiNSgWURoAJ0FTJrufhVPhldLtwhdTgFmei6qLahtHDSV94KRhzkceF15kMEWPZq36D9vkj/J1tgTf16lBYQPb34CmH8P524WnqjMI5hhOW+hFI9Qe4NYTbGcJRTsFMArrXFuT8KbNgnyV5rnqOD7elguom6NEZnMY+uGlPvEu7k8mQ+2GvMeO/0PkP/PcfOHJn2oexQeBRe6Uz5LPAlj2EtPIEzafPgvEJqxoUZKwiMS2Zklnk0e7Wd9y6ksPdm9cgvX0dsuZIBbsUYP3LJ9y5cR33F3IoPX4kKA9BWjIs8XAg0RmXApSlGh7cXsK9xav48GZtdEY7OszB2dyUZAJO5UTVpDZ8m8BxveyOiOIcMQrDMx3ezGkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/8eef7315962eae29e8a113b1c19ae6a4/01472/DAY4_4.webp 240w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/222bd/DAY4_4.webp 480w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/620b9/DAY4_4.webp 960w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/310dc/DAY4_4.webp 1032w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/8eef7315962eae29e8a113b1c19ae6a4/0783d/DAY4_4.png 240w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/782f4/DAY4_4.png 480w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/f570d/DAY4_4.png 960w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/1cbac/DAY4_4.png 1032w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/8eef7315962eae29e8a113b1c19ae6a4/f570d/DAY4_4.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+변수에 담겨 있는 값이 객체인 경우 b = a라고 했을 때, b와 a는 똑같은 객체를 바라보게 됩니다. 하지만 값이 원시데이터 타입인 경우 b =a라고 하면 순간 a에 담겨있던 값이 복제되어 새로만들어져 b에 담기게됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;다음 경우는 어떨까요?
+&lt;br&gt;아래 두 객체는 들어 있는 내용이 같은데 false라고 출력이 됩니다.
+&lt;br&gt;그 이유는 무엇일까요?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; hiObj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
+  name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;안녕&apos;&lt;/span&gt; 
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; helloObj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;안녕&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;객체비교 =&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; hiObj &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; helloObj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그 이유는 객체는 변수에 저장할 때, 객체 자체를 그대로 저장하는 것이 아니기 때문입니다. 객체가 담긴 어느 메모리의 reference 를 저장하기 때문입니다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 442px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b78ae32453f3b17909bf5bde2773a283/b9ee5/DAY4_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 94.11764705882352%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsSAAALEgHS3X78AAACZ0lEQVQ4y5WUa2+iQBSG+f9/p+ln90ObJtvNtlq0KopchGHkJgxXAd+dGSs1lprtJJMzkPDMe855D4o+X2G90GHpJqhLQWwX5tqUz8vpAizNINbxeJT7fP5uKb5hIZhOEW0MxIaBaOsgWCwRW5aMqeehPhwGoUNgpSEE5egXOv5xu9RwXOtgoxHK2QzZ4yOqzQae76Moiv6jM2xoK3rgglYZ9NiDm8XQQxfd1a0NV1jXNRhjOHyo/TZly3cRZwmsgIDEPlbUQtd1n0r4+XCRcp7nUm0aJ4j9UO6Q+qiKEm3TQBmbC0zdNTQOmhMDq52NyVbD1FmjFWBepmtVAuzzBj6PHqH+fpFxzRvYNu1JYdXUSMscuzRClKfI6xJZVfR1OQw0pcyFyj2KLJfqxHOf8l9rDjMkGNtLJEX2Rc0lUEa+LW2Dzbsm4/xFlQoDQqGQcCcLXlYlDvWp+Nf7MmVRX1nDfYLJ0x8sxzMOfMPqbY625SnjP9ZZmYBlWSY/ZPv00y7dpx8VYm5BLAd0S/qOiXd068JeGX1tBETAegd03eDFiqMbcDUdO9tB5FEEHEj5WURxEUtSmbKwy6WdhgwuFdZ8xNj9ParxBMXrK6o3FcXDA7LnZ+zv7sBUFV4Q9IqGRu9yBBXKzZwWDD63DOMdDhNunTRGywvflSWOPNUvXb71c9CIiR2L8E42J+twU8+I/q1tbsEkUKe2BDnxDgafaxHtyIPJR7E7dj8HqvYKNA1B9j7cD5jFL9jGVDZhyNg3geKHsORzTJMQM1eXY3e9fgR0Ag8h2yPJmYwFBwrPNW0jYzvQlFvrH1aMueWDdgKrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/b78ae32453f3b17909bf5bde2773a283/01472/DAY4_2.webp 240w,
+/static/b78ae32453f3b17909bf5bde2773a283/6cac2/DAY4_2.webp 442w&quot;
+          sizes=&quot;(max-width: 442px) 100vw, 442px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/b78ae32453f3b17909bf5bde2773a283/0783d/DAY4_2.png 240w,
+/static/b78ae32453f3b17909bf5bde2773a283/b9ee5/DAY4_2.png 442w&quot;
+          sizes=&quot;(max-width: 442px) 100vw, 442px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/b78ae32453f3b17909bf5bde2773a283/b9ee5/DAY4_2.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+hiObj가 갖고 있는 진짜 값은 메모리 주소인 reference입니다.
+&lt;br&gt;하지만 hiObj를 불러올 때 메모리 주소를 반환하는 것이 아니라,
+&lt;br&gt;해당 메모리에 저장된 데이터를 반환해 줍니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[<DAY 4> Javascript]]></title><description><![CDATA[#Object, #Object-다시 :)]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;object&quot;&gt;&lt;a href=&quot;#object&quot; aria-label=&quot;object permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Object&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Object가 왜 필요할까요?
 배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
