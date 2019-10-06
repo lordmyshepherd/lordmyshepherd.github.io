@@ -1,6 +1,6 @@
 ---
 title: "<Day 1> HTML CSS"
-date: "2016-02-02T22:40:32.169Z"
+date: "2019-00-30T22:40:32.169Z"
 template: "post"
 draft: false
 slug: "/posts/a-brief-history-of-typography/"

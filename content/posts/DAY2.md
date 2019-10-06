@@ -1,6 +1,6 @@
 ---
-title: <DAY 2> Javascript
-date: "2016-09-01T23:46:37.121Z"
+title: "<DAY 2> Javascript"
+date: "2019-10-01T23:46:37.121Z"
 template: "post"
 draft: false
 slug: "/posts/perfecting-the-art-of-perfection/"

@@ -1,131 +1,201 @@
 ---
-title: "<DAY 3> Gatsby blog"
-date: "2017-08-18T22:12:03.284Z"
+title: "<DAY 4> Javascript"
+date: "2019-10-03T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "/posts/the-birth-of-movable-type/"
+slug: "/posts/humane-typography-in-the-digital-age/"
 category: "Typography"
 tags:
-  - "Open source"
-  - "Gatsby"
+  - "Design"
   - "Typography"
-description: "German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible."
-socialImage: "/media/gutenberg.jpg"
+  - "Web Development"
+description: "#Object, #Object-다시 :)"
+socialImage: "/media/42-line-bible.jpg"
 ---
+## 1. Object
 
-*The Lord is my shepherd, I lack nothing. PSLAM 23:1*
+객체는 
 
+1. Object가 왜 필요할까요?
+배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
+<br>객체는 순서가 없이 데이터를 저장할 수 있고 원하는 데이터에 이름을 붙여서 필요할때마다 바로 불러올 수 있습니다.
 
+2. 객체는 어떻게 생겼는지 볼까요?
+객체가 저장한 데이터를 **property**라고 합니다.  
+배열과 다른점에 이 property에 이름과 값을 지정해준다는 사실이에요.  
+아래에 보시는 것과 같이 <u>프로퍼티의 이름은 key</u>라고 하며, <u>프로퍼티 값은 value</u>라고 부릅니다.
+![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)  
 
-## 1.블로그 설치 필요한 용어
+3. 객체의 규칙
++ property 이름은 중복될 수 없다.
++ property를 추가할 때는 ,(쉼표)를 붙여준다.
++ key와 value 사이에 :(콜론)으로 구분한다.
++ porperty value로는 어떤 data type도 가능하다.
+(string, number, array, object, function ..)
 
-+ Domain(도메인)
-<br>원래는 110.13.109.111과 같은 숫자로 이루어진 ip주소인데, 사람들이 기억하기 쉽도록 영문주소로 변경한 것을 의미합니다.  
-나만의 블로그를 갖고 싶다면 도메인을 구입하고, 직접 ip 주소에 연결하는 과정을 거쳐야 하지만 **github에서 Github Pages 라는 서비스를 사용**할 예정입니다.   **username.github.io 라는 도메인**을 갖게됩니다. 개인적으로 도메인을 구매했다면 자신만의 도메인을 연결할 수 있습니다.
+4. 객체 선언 및 사용법
++ 객체 리터럴
+{}를 이용해서 객체를 만드는 방법입니다.
 
-+ Depoly(배포)
-<br>배포란, 그동안 개발하던 것을 인터넷상에 공개하고 local 컴퓨터 뿐만 아니라 다른 컴퓨터에서도 접근해서 볼 수 있게 하는 것을 의미합니다.
-
-+ localhost
-<br>웹상에 html, css, js를 작동시켜서 사이트를 보려면 서버가 필요합니다. aws, cafe24 등에서 서버를 빌려서 우리의 블로그 파일들을 올리고 어느 누구든지 접근할 수 있게 하는 것을 호스팅이라고 합니다. 서버를 빌렸으니 렌탈비용을 내야하는데 이런 것을 호스팅 비용이라고 하죠. (참고로 우리는 github의 서버를 통해 호스팅하고, 물론 무료입니다!)
-<br>그런데 markdown으로 작성된 포스팅이 잘 나오는지 매번 github에 올린 후, 내 사이트에 접속해서 확인하기는 번거롭습니다. 또는 블로그 css를 바꾸고 싶은데, 버튼 색 하나만 바꾸더라도 잘 나오는지 확인하려면 github에 올린 후, 사이트에 접속해서 확인을 해야겠죠.
-<br>이렇게 매번 복잡한 과정을 거쳐서 실제 사이트에 반영된 결과물을 보는 대신에, 수정 직후 내 컴퓨터에 서버를 띄워서 바로바로 확인할 수도 있습니다.
-<br>내 컴퓨터에 서버를 띄웠기 때문에 로컬환경 이라고 말합니다.
-
-
-+ git
-
-+ npm
-
-
-
-## 2. 블로그 설치 시작
-
-1. 사전준비
-<br>터미널에 **git**, **npm**이 설치되어 있어야 합니다.
-
-2. Gatsby 테마 선택
-<br><u>Gatsby Starter</u> 사이트에서 테마를 하나 선택해주세요. 저는 gatsby-starter-lumen 으로 하겠습니다. 테마가 다르면 설정이 조금 달라집니다. 다음의 스텝을 그대로 따라하지 못 할 수도 있습니다.
-
-3. Gatsby Starter로 블로그 설치<br>터미널을 열어서 gatsby 명령어를 사용할 수 있도록 <u>gatsby-cli를 전역에 설치</u>합니다. 터미널에서 아래 코드를 실행합니다.
-```css
-npm install -g gatsby-cli
+```js
+var obj = { 
+  name: 'jaehee', // 멤버명을 'name' 처럼 인용부호로 감싸는 것도 가능 
+  age : 10, 
+  increaseAge : function (i) {
+      this.age + i; 
+     } 
+};
 ```
-그다음에는 우리가 정한 theme의 source code를 가져오려고 합니다. 블로그를 만들고 싶은 directory에서 아래와 같이 실행합니다. <u>gatsby 명령어를 사용하여 blog라는 디렉토리에 블로그의 소스코드를 가져온다</u>는 의미입니다.
-starter-lumen이라는 theme의 github 주소입니다.
-```css
-gatsby new blog https://github.com/alxshelepenok/gatsby-starter-lumen
-pwd //현재 directory 위치 확인
-ls -l // blog directory가 만들어 졌는지 확인
-cd blog // blog directory로 이동
++ Object 생성자
+아래 코드를 봐주세요.
+```js
+var obj = new Object();  // obj = {}와 같은 의미
 ```
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY3_1.png)
-
-4. 내 컴퓨터(local 환경)에서 블로그 띄우기
-<br>설치가 제대로 되었는지 확인해봅시다. 앞으로 블로그 글을 작성할 때마다 중간 점검을 하기 위해서는 아래 명령어로 로컬 서버를 띄워줘야합니다.
-```CSS
-yarn develop // 또는 gatsby develop
+new Object()를 선언하게되면 빈 객체가 만들어지고 그 만들어진 객체는 변수 obj에 담기게 됩니다. 그 후에 5번에서 배우겠지만, 아래와 같이 빈 객체에 property를 넣어줍니다.
+```js
+var obj = {}; 
+obj.name = 'jaehee'; 
+obj.age = 10; 
+obj.increaseAge = function (i) {
+   this.age + i; 
+   };
 ```
-아래와 같이 나오면 성공!
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY3_2.png)
-이제 브라우저(크롬)를 열고 주소창에 localhost:8000으로 접속해보세요. 아래와 같은 화면이 떠야합니다. 제가 선택한 테마의 메인 화면입니다.
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY3_3.png)
+**객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.**
 
-<u>블로그를 작성하는 도중에 생각대로 markdown이 잘 적용됐는지, 아닌지를 확인하려면 내 컴퓨터에서 yarn develop 명령어로 서버를 띄워서 localhost:8000으로 접속하면 됩니다.</u>
-<br><br>위 방법으로 서버를 띄우지 않으면 localhost:8000 로 중간 결과물을 볼 수가 없습니다. 또한 로컬서버가 켜있는 터미널을 닫으면 서버가 종료되므로 더이상 localhost:8000에 접속할 수 없고요. 포스팅 작성 시작할때부터 배포 직전까지 로컬서버를 띄우고 터미널을 계속 열어두면 됩니다. <u>만약 멈추고 싶으면 서버를 실행한 터미널에서 ctrl c를 입력</u>해보세요.
+5. property에 접근하는 방법
+아래 예제를 통해서 알아보겠습니다.
 
-5. github.io repo 만들기
-<br>자신의 github에 소스코드를 올리기 위해서 github에 접속해서 새로운 repository(이하 repo)를 만들어 주세요. 그런데 <u>repo 이름에 유의하셔야 합니다!</u> 아래와 같이 github의 username 뒤에 .github.io 을 붙여서 만들어주세요. 제 github username은 **lordmyshepherd**이기 때문에 **lordmyshepherd**.github.io 으로 만들었습니다.
-<br><br> 이제 lormyshepherd@github.io의 도메인으로 접속할 수 있는 블로그 repository가 생성뵈었습니다!!
-
-<br>6. Gatsby config 파일 수정
-<br>**config.js** 파일 찾기 --> title,subtitle,author를 내 정보로 수정 --> url은 4번에서 만들어진 도메인 주소를 쓰면 되는데 https://깃헙유저네임.github.io/ 입니다.
-<br>**package.json** 파일 찾기 (src/package.json) --> script 아래 depoly 수정
-이렇게..
-```css
-"deploy": "yarn run clean && gatsby build && gh-pages -d public -b master",
+```js
+let difficult = {
+  33: '숫자 형식도 되네', //아래 (2)번에 설명
+  'my name': '스페이스 포함 가능',//아래 (2)번에 설명
+  color: 'silver', //아래 (1)번에 설명
+  키: '한글인 키는 따옴표가 없어도 되는군!!',
+  '!키': '느낌표 있는 키는 따옴표가 필요하군',
+  $special: '$는 없어도 되는군'
+};
 ```
-이제 포스팅 작성을 완료하고, 로컬에서 잘 확인했으면 <u>yarn deploy로 배포</u>합니다. 이때, 소스코드 빌드 후의 public 폴더를 github master 브랜치에 푸시한다는 뜻이고, 이 소스코드로 **lordmyshepherd**.github.io/에 배포됩니다.
++ dot(.)과 대괄호([])로 접근하는 방법이 있습니다.
 
-6. 배포하기
-<br>로컬에 있는 블로그 소스코드를 github에 올리겠습니다.
-<br>(1)blog root에서 git을 세팅합시다. lordmyshepherd 부분은 각자의 username으로 바꿔주세요.
-```css
-git init
-git remote add origin https://github.com/lordmyshepherd/lordmyshepherd.github.io.git
+(1) dot(.)은 key로 바로 접글할 때 사용하는 것
+<br>dot으로 절근할 때는 따옴표 없이 key를 바로 써줘야 합니다.
+```js
+console.log(difficult.color); 
+```
+(2) 대괄호([])
+<br>프로퍼티에 space가 포함된 경우, 키는 객체에 저장할 때 키 이름을 따옴표로 감싸고 아래와 같이 대괄호로 접근하면 됩니다.
+```js
+console.log(difficult['my name']);
 ``` 
-origin git과 잘 연결되어도 아무 반응이 없습니다. 아래의 명령어로 origin 주소가 제대로 나오는지 확인해주세요.
-```css
-git remote -v
+프로퍼티가 숫자로 저장된 경우도 ['']로 접근하면 됩니다.
+```js
+console.log(difficult['33']);
 ```
-(2)push 하기
-```css
-git add .
-git commit -m "first commit"
-git push origin master //master는 branch가 master로 되어있다는 의미.
++ 변수로 접근하는 방법이 있을까요?
+```js
+let name = '키';
 ```
-github에 가셔서 소스코드가 잘 올라왔는지 확인해보세요.
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY3_4.png)
-해당 소스는 포스팅을 작성할 수 있고, <u>커스터마이징 할 수 있는 개발 소스가 아니라 블로그 사이트에 배포될 수 있도록 md 파일이 모두 html, js로 바뀐 빌드된 파일</u>입니다.
-(3)depoly 하기
-```css
-yarn deploy
-```
-yarn deploy 라는 명령어가 알아서 build도 해주고, git의 master에 push도 해주고 배포도 해준것입니다.
+dot(.)과 []을 이용해서 접근해보겠습니다.
+<br>console.log(difficult.name); --> undefined
+<br>console.log(difficult[name]); --> 한글인 키는 따옴표가 없어도 되는군 !!
+dot(.)으로 접근한다는 뜻은 실제 키이름을 쓸 때입니다. 변수로 접근할 때는 항상 대괄호로 접근해야 합니다.
 
-(3)브랜치 생성 및 이동
-앞으로 항상 deploy만 해도 되지만, 혹시 컴퓨터를 바꾸거나 다른데서 포스팅 작성을 할 경우를 대비하여 <u>개발코드도 보존하기로 하죠. develop이라는 브랜치를 따로 만들어서 여기에다만 올리도록 하겠습니다.</u>
-```css
-git branch develop // 브랜치 생성
-git checkout develop // 브랜치 이동
-```
-소스코드를 git에 올리는 과정
-```css
-git add .
-git commit -m “blog posting~~”
-git push -u origin develop //branch가 develop으로 바뀜
-```
-내 github 의 develop repo에 들어가서 소스코드가 모두 잘 올라갔는지 확인해주세요.
-<br>잘 올라갔다면 github default 브랜치를 develop으로 바꾸겠습니다. 어차피 빌드 결과물인 master 브랜치의 빌드 파일들을 파악할 필요도 없으니까요. github의 해당 블로그 repo 페이지에 들어가서 Settings -> Branches 메뉴에서 Default branch 를 develop으로 바꾸고 update 버튼을 눌러주세요!
+6. property를 할당하는 방법
+```js
+difficult[name] = '값 바꾼다';
+console.log(difficult[name]);
 
+difficult.color = '색깔';
+console.log(difficult.color);
+
+console.log('생성전: ' + difficult.new);
+difficult.new = '새로 추가된 프로퍼티';
+console.log('생성후: ' + difficult.new);
+```
+객체에 이미 키가 존재하는데, 다시 한 번 할당하면 값이 교체(수정)됩니다.
+<br>이전에 없던 키로 접근하면, 새로운 프로퍼티가 추가 됩니다.
+
+7. Method(메서드)
+객체에 저장된 값이 함수일 때, 메서드라고 부릅니다.
+```js
+console.log(); //log는 console 객체에 저장된 함수인 것이다!
+```
+객체에서 메서드를 정의하는 방법은 다음과 같습니다.
+```js
+let methodObj = {
+  do: function() {
+    console.log('메서드 정의는 이렇게');
+  }
+}
+```
+호출방법은 다음과 같습니다.
+```js
+methodObj.do();
+```
+8. Nested Object(중첩된 객체)
+
+실무에서 사용되는 객체는 거의 중첩되어 있습니다.
+<br>프로퍼티 값이 객체일 수도 있고, 프로퍼티 값인 배열의 요소가 객체일 수도 있습니다.
+<br>예제를 살펴보겠습니다.
+```js
+let nestedObj = {
+  type: {
+    year: '2019',
+    'comment-type': [{
+      name: 'simple'
+    }]
+  }
+}
+```
+위에서 'simple'을 출력하려면 어떻게 해야 될까요?
+```js
+console.log(nestedObje.type['comment-type'][0].name);
+```
+
+9. 객체는 reference로 저장된다?
+
+(1)복제
+우선 원시데이터 타입이 변수에 어떻게 저장되는지 살펴볼게요.
+```js
+let a = 1;
+let b = a;
+b = 2;
+console.log(a); // 결과 1
+```
+![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_3.png) 
+
+원시데이터 타입은 위에 방식 처럼 변수에 데이터가 저장됩니다.
+<br>**데이터를 복제해서 저장**하는 방식입니다. 그렇기 때문에 값을 변경한 것은 변수 b이기 때문에 변수 a에 담겨있는 값은 그대로인 것입니다.
+
+(2)참조
+<br>객체는 reference가 저장됩니다.. 음 무슨말일까요?
+<br>객체를 변수에 저장하면 객체 리터럴 자체가 저장되는 것이 아니라 reference가 저장됩니다.
+
+```js
+let a = {'id':1};
+let b = a;
+b.id = 2;
+console.log(a.id); //는 결과 1이 아니라 2가 된다.. 복제와 다른 개념인 것 같다
+```
+아래 그림이 이해를 도와줄것입니다.
+![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_4.png)
+변수에 담겨 있는 값이 객체인 경우 b = a라고 했을 때, b와 a는 똑같은 객체를 바라보게 됩니다. 하지만 값이 원시데이터 타입인 경우 b =a라고 하면 순간 a에 담겨있던 값이 복제되어 새로만들어져 b에 담기게됩니다.
+
+<br><br>다음 경우는 어떨까요?
+<br>아래 두 객체는 들어 있는 내용이 같은데 false라고 출력이 됩니다.
+<br>그 이유는 무엇일까요?
+```js
+const hiObj = { 
+  name: '안녕' 
+};
+const helloObj = {
+  name: '안녕'
+};
+console.log('객체비교 =>', hiObj === helloObj);
+```
+그 이유는 객체는 변수에 저장할 때, 객체 자체를 그대로 저장하는 것이 아니기 때문입니다. 객체가 담긴 어느 메모리의 reference 를 저장하기 때문입니다.
+![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_2.png)
+hiObj가 갖고 있는 진짜 값은 메모리 주소인 reference입니다.
+<br>하지만 hiObj를 불러올 때 메모리 주소를 반환하는 것이 아니라,
+<br>해당 메모리에 저장된 데이터를 반환해 줍니다.
 
