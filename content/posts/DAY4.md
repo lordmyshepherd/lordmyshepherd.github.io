@@ -14,8 +14,6 @@ socialImage: "/media/42-line-bible.jpg"
 ---
 ## 1. Object
 
-객체는 
-
 1. Object가 왜 필요할까요?
 배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
 <br>객체는 순서가 없이 데이터를 저장할 수 있고 원하는 데이터에 이름을 붙여서 필요할때마다 바로 불러올 수 있습니다.
@@ -27,14 +25,13 @@ socialImage: "/media/42-line-bible.jpg"
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)  
 
 3. 객체의 규칙
-+ property 이름은 중복될 수 없다.
-+ property를 추가할 때는 ,(쉼표)를 붙여준다.
-+ key와 value 사이에 :(콜론)으로 구분한다.
-+ porperty value로는 어떤 data type도 가능하다.
-(string, number, array, object, function ..)
+- property 이름은 중복될 수 없다.
+- property를 추가할 때는 ,(쉼표)를 붙여준다.
+- key와 value 사이에 :(콜론)으로 구분한다.
+- porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
 
 4. 객체 선언 및 사용법
-+ 객체 리터럴
+- 객체 리터럴
 {}를 이용해서 객체를 만드는 방법입니다.
 
 ```js
@@ -46,7 +43,7 @@ var obj = {
      } 
 };
 ```
-+ Object 생성자
+- Object 생성자
 아래 코드를 봐주세요.
 ```js
 var obj = new Object();  // obj = {}와 같은 의미
@@ -60,11 +57,11 @@ obj.increaseAge = function (i) {
    this.age + i; 
    };
 ```
+
 **객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.**
 
-5. property에 접근하는 방법
+4. Property에 접근하는 방법
 아래 예제를 통해서 알아보겠습니다.
-
 ```js
 let difficult = {
   33: '숫자 형식도 되네', //아래 (2)번에 설명
