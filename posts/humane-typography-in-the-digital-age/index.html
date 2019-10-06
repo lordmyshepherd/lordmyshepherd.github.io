@@ -50,26 +50,309 @@
 
         gtag('config', 'UA-73379983-2', {"send_page_view":false});
       }
-      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=65aaa7d3b73029855a426143ba7a44cc"/><title data-react-helmet="true">&lt;DAY 5&gt; Javascript - Blog by John Doe</title><meta data-react-helmet="true" name="description" content="#class, #arrow function"/><meta data-react-helmet="true" property="og:site_name" content="&lt;DAY 5&gt; Javascript - Blog by John Doe"/><meta data-react-helmet="true" property="og:image" content="https://lordmyshepherd.github.io/media/42-line-bible.jpg"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="&lt;DAY 5&gt; Javascript - Blog by John Doe"/><meta data-react-helmet="true" name="twitter:description" content="#class, #arrow function"/><meta data-react-helmet="true" name="twitter:image" content="https://lordmyshepherd.github.io/media/42-line-bible.jpg"/><link as="script" rel="preload" href="/webpack-runtime-7d5725d4ffc29e68ee72.js"/><link as="script" rel="preload" href="/app-ae9c914085b684cfcc16.js"/><link as="script" rel="preload" href="/styles-9b510088787be4c4e10e.js"/><link as="script" rel="preload" href="/commons-0a631e4fe2d278e1698e.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-e093df2f3804d28b873b.js"/><link as="fetch" rel="preload" href="/page-data/posts/humane-typography-in-the-digital-age/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">&lt;DAY 5&gt; Javascript</h1><div class="Content-module--content__body--2TrQ-"><h2 id="1-array-조작방법"><a href="#1-array-%EC%A1%B0%EC%9E%91%EB%B0%A9%EB%B2%95" aria-label="1 array 조작방법 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Array 조작방법</h2>
-<p>빈 배열에 요소를 추가해주는 방법</p>
+      </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#F7A046"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=65aaa7d3b73029855a426143ba7a44cc"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=65aaa7d3b73029855a426143ba7a44cc"/><title data-react-helmet="true">&lt;DAY 4&gt; Javascript - Blog by John Doe</title><meta data-react-helmet="true" name="description" content="#Object, #Object-다시 :)"/><meta data-react-helmet="true" property="og:site_name" content="&lt;DAY 4&gt; Javascript - Blog by John Doe"/><meta data-react-helmet="true" property="og:image" content="https://lordmyshepherd.github.io/media/42-line-bible.jpg"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="&lt;DAY 4&gt; Javascript - Blog by John Doe"/><meta data-react-helmet="true" name="twitter:description" content="#Object, #Object-다시 :)"/><meta data-react-helmet="true" name="twitter:image" content="https://lordmyshepherd.github.io/media/42-line-bible.jpg"/><link as="script" rel="preload" href="/webpack-runtime-7d5725d4ffc29e68ee72.js"/><link as="script" rel="preload" href="/app-ae9c914085b684cfcc16.js"/><link as="script" rel="preload" href="/styles-29a50a6d3bca7ec88d2f.js"/><link as="script" rel="preload" href="/commons-0a631e4fe2d278e1698e.js"/><link as="script" rel="preload" href="/component---src-templates-post-template-js-e093df2f3804d28b873b.js"/><link as="fetch" rel="preload" href="/page-data/posts/humane-typography-in-the-digital-age/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="Layout-module--layout--3Pyz6"><div><a class="Post-module--post__home-button--16Kl0" href="/">All Articles</a><div><div class="Content-module--content--3p512"><h1 class="Content-module--content__title--2BDW9">&lt;DAY 4&gt; Javascript</h1><div class="Content-module--content__body--2TrQ-"><h2 id="1-object"><a href="#1-object" aria-label="1 object permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Object</h2>
 <ol>
-<li>index로 접근하는 방법(수정,추가)</li>
+<li>Object가 왜 필요할까요?
+배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
+<br>객체는 순서가 없이 데이터를 저장할 수 있고 원하는 데이터에 이름을 붙여서 필요할때마다 바로 불러올 수 있습니다.</li>
+<li>객체는 어떻게 생겼는지 볼까요?
+객체가 저장한 데이터를 <strong>property</strong>라고 합니다.<br>
+배열과 다른점에 이 property에 이름과 값을 지정해준다는 사실이에요.<br>
+아래에 보시는 것과 같이 <u>프로퍼티의 이름은 key</u>라고 하며, <u>프로퍼티 값은 value</u>라고 부릅니다.
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 291px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b04d47d1db6821d52660e3f1bc71fcc1/7adc3/DAY4_1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.3573883161512%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAB9UlEQVQoz42SeW/aQBDF+f7fpkqJSnEbkRAMSQoGAeFKZY4SKxw+8bW2f12bhBDlj3ak8Xq1s++9mbclIQSNhorabNFs3VG/bVCr3RT7i69lxuMJz2sDXV/wP1HKMhgNNYZdlWFPgl5/p31fo9VQqF2VmUzaTKYd5nqfOLQIw7BI3/eLNQgCPM/DsiwOhwOlI66L+D0iHQwl+oikP4DIYLnp05+r3DxWaI4UNsYEW160bVsq1ul2u1SrVRRFoVKp0Ol0joBxaHJYzwj0Gd5yivNnysIYsDOfiPxnHHshgXTiYPuhvVxhDp6rM00T13UloGyZzMbtPOBfqXh9ja05Rh0rUmwD0xjL851kNYi8NZvNhv3e5Gk2Q9O0Ql2el5eXtNttSkIkGOslmTgw0n6RxB4kvgSJCH2L7ctKduBA6pOKgDRNP2UemTQj/y/lLs/nRwdftluSJHstOLaVL5blEEvi4z77l8vvBbv9jiRNToxvZ1mW4joOiSQ/j7ea8yxMSVzZiisHvLdky6KQl71eyENIkr0rh29bRCImTgQiEZ+IC4X5J1pJl9tz7MoAtz4lDeNTcR5bz+JhPuReH/BFq/Gt32C5N4qzNPs4gpI/WBcgtjIs0u+tcH7KN+lHp2n1lhMuuteUe/UC7Ham8ePx7mwk76B/AfPQPeHe9/PDAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/b04d47d1db6821d52660e3f1bc71fcc1/01472/DAY4_1.webp 240w,
+/static/b04d47d1db6821d52660e3f1bc71fcc1/71ea0/DAY4_1.webp 291w"
+          sizes="(max-width: 291px) 100vw, 291px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/b04d47d1db6821d52660e3f1bc71fcc1/0783d/DAY4_1.png 240w,
+/static/b04d47d1db6821d52660e3f1bc71fcc1/7adc3/DAY4_1.png 291w"
+          sizes="(max-width: 291px) 100vw, 291px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/b04d47d1db6821d52660e3f1bc71fcc1/7adc3/DAY4_1.png"
+          alt="Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus"
+          title="Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>  </li>
+<li>객체의 규칙</li>
+<li>property 이름은 중복될 수 없다.</li>
+<li>property를 추가할 때는 ,(쉼표)를 붙여준다.</li>
+<li>key와 value 사이에 :(콜론)으로 구분한다.</li>
+<li>porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)</li>
+<li>객체 선언 및 사용법</li>
+<li>객체 리터럴
+{}를 이용해서 객체를 만드는 방법입니다.</li>
 </ol>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> cities <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//빈 배열 할당</span>
-cities<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"서울"</span><span class="token punctuation">;</span>
-cities<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"대전"</span><span class="token punctuation">;</span>
-cities<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"대구"</span><span class="token punctuation">;</span></code></pre></div>
-<ol start="2">
-<li>push/unshift 함수 (추가)
-<br>: push와 unshift 함수는 요소를 추가해주는 함수입니다.</li>
-</ol>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> cities <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-cities<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"경주"</span><span class="token punctuation">,</span> <span class="token string">"전주"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-cities<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token string">"인천"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<ol start="3">
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> 
+  name<span class="token punctuation">:</span> <span class="token string">'jaehee'</span><span class="token punctuation">,</span> <span class="token comment">// 멤버명을 'name' 처럼 인용부호로 감싸는 것도 가능 </span>
+  age <span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span> 
+  <span class="token function-variable function">increaseAge</span> <span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">+</span> i<span class="token punctuation">;</span> 
+     <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
 <li>
-<p>pop 함수 (제거)<br>
-: pop 함수를 사용하면  요소가 제거되고,  마지막 요소의 값을 반환합니다.</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">cities<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Object 생성자
+아래 코드를 봐주세요.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// obj = {}와 같은 의미</span></code></pre></div>
+<p>new Object()를 선언하게되면 빈 객체가 만들어지고 그 만들어진 객체는 변수 obj에 담기게 됩니다. 그 후에 5번에서 배우겠지만, 아래와 같이 빈 객체에 property를 넣어줍니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'jaehee'</span><span class="token punctuation">;</span> 
+obj<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> 
+obj<span class="token punctuation">.</span><span class="token function-variable function">increaseAge</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">+</span> i<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 </li>
-</ol></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->5 Oct 2019</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/design/">Design</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/typography/">Typography</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/web-development/">Web Development</a></li></ul></div><div class="Author-module--author--2Yefr"><p>Christian developer<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/#" rel="noopener noreferrer" target="_blank"><strong>LIMS</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/humane-typography-in-the-digital-age/";window.webpackCompilationHash="5caf148c87aab38420e9";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-ae9c914085b684cfcc16.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-78ebc6c0804f2d225cf3.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-4eb36a9645e942a52df1.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-645285ddf40fad54d2dc.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-ef8076a2d1976b3ce7f8.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-e093df2f3804d28b873b.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-86f4cc6a0cfdaa9665cc.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-64c624febd3790907971.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-b7290006fd56cdb0dcaa.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-b574c1b4a328d945df0a.js"]};/*]]>*/</script><script src="/component---src-templates-post-template-js-e093df2f3804d28b873b.js" async=""></script><script src="/commons-0a631e4fe2d278e1698e.js" async=""></script><script src="/styles-9b510088787be4c4e10e.js" async=""></script><script src="/app-ae9c914085b684cfcc16.js" async=""></script><script src="/webpack-runtime-7d5725d4ffc29e68ee72.js" async=""></script></body></html>
+</ul>
+<p><strong>객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.</strong></p>
+<ol start="4">
+<li>
+<p>Property에 접근하는 방법
+아래 예제를 통해서 알아보겠습니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> difficult <span class="token operator">=</span> <span class="token punctuation">{</span>
+<span class="token number">33</span><span class="token punctuation">:</span> <span class="token string">'숫자 형식도 되네'</span><span class="token punctuation">,</span> <span class="token comment">//아래 (2)번에 설명</span>
+<span class="token string">'my name'</span><span class="token punctuation">:</span> <span class="token string">'스페이스 포함 가능'</span><span class="token punctuation">,</span><span class="token comment">//아래 (2)번에 설명</span>
+color<span class="token punctuation">:</span> <span class="token string">'silver'</span><span class="token punctuation">,</span> <span class="token comment">//아래 (1)번에 설명</span>
+키<span class="token punctuation">:</span> <span class="token string">'한글인 키는 따옴표가 없어도 되는군!!'</span><span class="token punctuation">,</span>
+<span class="token string">'!키'</span><span class="token punctuation">:</span> <span class="token string">'느낌표 있는 키는 따옴표가 필요하군'</span><span class="token punctuation">,</span>
+$special<span class="token punctuation">:</span> <span class="token string">'$는 없어도 되는군'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+</li>
+<li>dot(.)과 대괄호([])로 접근하는 방법이 있습니다.</li>
+</ol>
+<p>(1) dot(.)은 key로 바로 접글할 때 사용하는 것
+<br>dot으로 절근할 때는 따옴표 없이 key를 바로 써줘야 합니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>difficult<span class="token punctuation">.</span>color<span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre></div>
+<p>(2) 대괄호([])
+<br>프로퍼티에 space가 포함된 경우, 키는 객체에 저장할 때 키 이름을 따옴표로 감싸고 아래와 같이 대괄호로 접근하면 됩니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>difficult<span class="token punctuation">[</span><span class="token string">'my name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>프로퍼티가 숫자로 저장된 경우도 [”]로 접근하면 됩니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>difficult<span class="token punctuation">[</span><span class="token string">'33'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p>변수로 접근하는 방법이 있을까요?</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'키'</span><span class="token punctuation">;</span></code></pre></div>
+<p>dot(.)과 []을 이용해서 접근해보겠습니다.
+<br>console.log(difficult.name); —> undefined
+<br>console.log(difficult[name]); —> 한글인 키는 따옴표가 없어도 되는군 !!
+dot(.)으로 접근한다는 뜻은 실제 키이름을 쓸 때입니다. 변수로 접근할 때는 항상 대괄호로 접근해야 합니다.</p>
+</li>
+<li>
+<p>property를 할당하는 방법</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">difficult<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'값 바꾼다'</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>difficult<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+</li>
+</ul>
+<p>difficult.color = ‘색깔’;
+console.log(difficult.color);</p>
+<p>console.log(‘생성전: ’ + difficult.new);
+difficult.new = ‘새로 추가된 프로퍼티’;
+console.log(‘생성후: ’ + difficult.new);</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">객체에 이미 키가 존재하는데, 다시 한 번 할당하면 값이 교체(수정)됩니다.
+&lt;br&gt;이전에 없던 키로 접근하면, 새로운 프로퍼티가 추가 됩니다.
+
+7. Method(메서드)
+객체에 저장된 값이 함수일 때, 메서드라고 부릅니다.
+```js
+console.log(); //log는 console 객체에 저장된 함수인 것이다!</code></pre></div>
+<p>객체에서 메서드를 정의하는 방법은 다음과 같습니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> methodObj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">do</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'메서드 정의는 이렇게'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>호출방법은 다음과 같습니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">methodObj<span class="token punctuation">.</span><span class="token function">do</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<ol start="8">
+<li>Nested Object(중첩된 객체)</li>
+</ol>
+<p>실무에서 사용되는 객체는 거의 중첩되어 있습니다.
+<br>프로퍼티 값이 객체일 수도 있고, 프로퍼티 값인 배열의 요소가 객체일 수도 있습니다.
+<br>예제를 살펴보겠습니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> nestedObj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    year<span class="token punctuation">:</span> <span class="token string">'2019'</span><span class="token punctuation">,</span>
+    <span class="token string">'comment-type'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> <span class="token string">'simple'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>위에서 ‘simple’을 출력하려면 어떻게 해야 될까요?</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>nestedObje<span class="token punctuation">.</span>type<span class="token punctuation">[</span><span class="token string">'comment-type'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<ol start="9">
+<li>객체는 reference로 저장된다?</li>
+</ol>
+<p>(1)복제
+우선 원시데이터 타입이 변수에 어떻게 저장되는지 살펴볼게요.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 결과 1</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 958px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a941b75ffea6b5dd5c6b49424ef81a49/84566/DAY4_3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 124.00835073068892%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEE0lEQVQ4y41UW0wcVRge9ME0VdPwpqkFbQzeLT7ooyY+kIZN2qRCL9aYyqugfWjapBqjMaFL05jUkrSx2iiJtEAFqgUxBQm9V6jQ7rId9s4u3WFvsLszO5edmc8zM7uzOztrdLJn58w5//nO9///9/8Uqh5VVauXIKXTyN28ATEaMW1q2WkPVQssm8thZmIC3vl5BGgakZkZ+McvI3P7umGnKP8DUC0D5uNxLE3/ifDQAEJ9P2H9t1HETvYg88fYfwOWNrS3Qgy1Zz0axfTgENzfnQY9fBHxc2cwe6IHoYGf9X1Fli1uV4JTNeOxlobCxIjvGcg+GhBFKCsRKKuMDaAa1HSZZVkUCgXIZLA8b01UKTlkwrGcPs+ROJc8sjEMh8PweDzo7j4G5zEnFt1uhIJBI1bFQ8lEAj6vFyPDIzj46UFMTU7B7/ODzbFlUPKjJEnCwvwCjhw+AoqisHHj4+j8uFNf0/ZKt0eWIzjffx4NWxpQV/cImpvfwOSVSTDMqhVQ+wgEAnDdd+G4swdOwlJjSz+gLe4kk0ndZmxsHF2dXbh29RrcLjc4jrMDCoKAe/fuY43LIxI3XEun12wi9ix6wMQYxFYTiEaiCPgDRtaLYbFkeT2bQ2D0Itz9fVjLcabWKgFFku1gKIS/p6fBrDyERBKIKhuqFHQQSayc+gbLzi+BoNciYH0U7QSfF7dPnoDw103TBtWA+nQlCn/f97hLANUHbmNNVWzi4Rfu4s7XR5E+e0oHqi1suXj7pVmwvZeNHYVUjiBDzokopPJQeMk4TL7zX5xF5tseiD6vLc6UQaQYI28G3J1V8zZu9iHSAy6kL7jAB9P6mpyVkB12Q1zyQPT7TNGXXa5AL8RZCEvJcm0LBZ2dxlLJGww1pjydhRj0kTlvd9mkrJVWLAd+MYFK1tYSVCGTMLA3whC8tH5GtWVZF6TxoTAcJE/KOCwrFkmYLIhS+OvLpruVSjAZasLkRR75RAbZcOJfO4kokYSweazPB8HR7tqy0f6YWAzbmpvR+MJL2PbmW5i4MmXJXqkSuro+QcPW5/FqUxPOfH4UeVGydCPNVgcMh5dRRxpDGxmf1T+K7a+8iN9J4etZJc20BLiz1aE3kAYy9jU+g68OHTJstP7J58sMl0gnefuJx/BO/ZNwbHkKO8iBH4d+MUJGyqsEuHfXLuyso9D98nN4j9i0tLYaofCQJjH+q85UB6QJoGPTBhzevAmnX2tEEzG+MHrJBriDAL5L9gZffxbvb6Cwva3dKIhbV8H1/0Bkx5RcDuuubCajngxtPjQ4aGfY0oKtGjPC8mny3uNwmN1GrdRhKpVCR0cH2j74EPsPfITd5Oa5ublyDIsZHDnuxN49+9B+oAP7d7fjXG9vuYkU5fMPP2Hv1VzBvAIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/a941b75ffea6b5dd5c6b49424ef81a49/01472/DAY4_3.webp 240w,
+/static/a941b75ffea6b5dd5c6b49424ef81a49/222bd/DAY4_3.webp 480w,
+/static/a941b75ffea6b5dd5c6b49424ef81a49/77d4f/DAY4_3.webp 958w"
+          sizes="(max-width: 958px) 100vw, 958px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/a941b75ffea6b5dd5c6b49424ef81a49/0783d/DAY4_3.png 240w,
+/static/a941b75ffea6b5dd5c6b49424ef81a49/782f4/DAY4_3.png 480w,
+/static/a941b75ffea6b5dd5c6b49424ef81a49/84566/DAY4_3.png 958w"
+          sizes="(max-width: 958px) 100vw, 958px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/a941b75ffea6b5dd5c6b49424ef81a49/84566/DAY4_3.png"
+          alt="Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus"
+          title="Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span> </p>
+<p>원시데이터 타입은 위에 방식 처럼 변수에 데이터가 저장됩니다.
+<br><strong>데이터를 복제해서 저장</strong>하는 방식입니다. 그렇기 때문에 값을 변경한 것은 변수 b이기 때문에 변수 a에 담겨있는 값은 그대로인 것입니다.</p>
+<p>(2)참조
+<br>객체는 reference가 저장됩니다.. 음 무슨말일까요?
+<br>객체를 변수에 저장하면 객체 리터럴 자체가 저장되는 것이 아니라 reference가 저장됩니다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'id'</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+b<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//는 결과 1이 아니라 2가 된다.. 복제와 다른 개념인 것 같다</span></code></pre></div>
+<p>아래 그림이 이해를 도와줄것입니다.
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8eef7315962eae29e8a113b1c19ae6a4/1cbac/DAY4_4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.71317829457364%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAElEQVQ4y41Uz2sTQRgNRTz1IIpgL969ehbP5h8JWOnBg17N/6BWsIjXIAYRVKQ01iaLIEJsaCjSdtPNdjfRTWqbbnZ29sfM62x2k2w2u7QfLDMM37x9733fNzkkgnM+WQkhID0DrmXBchwY/WOcDAZgsZxk5OJA4y8I3/fR2G5g5/07tDcrUJtNNKtbOKjXQUxz5k4mYHxlAlBW2mjVquj8+gl5/SvYcT/MYexihlkJGP/IdUdbfkH+nOQgVFVFoVDA8sNlKIoSWiBYlctl5PN5lEolUJumKksF1HUdq6uv8PzFS2iaNjpzRFGkmoRisYiNSgWURoAJ0FTJrufhVPhldLtwhdTgFmei6qLahtHDSV94KRhzkceF15kMEWPZq36D9vkj/J1tgTf16lBYQPb34CmH8P524WnqjMI5hhOW+hFI9Qe4NYTbGcJRTsFMArrXFuT8KbNgnyV5rnqOD7elguom6NEZnMY+uGlPvEu7k8mQ+2GvMeO/0PkP/PcfOHJn2oexQeBRe6Uz5LPAlj2EtPIEzafPgvEJqxoUZKwiMS2Zklnk0e7Wd9y6ksPdm9cgvX0dsuZIBbsUYP3LJ9y5cR33F3IoPX4kKA9BWjIs8XAg0RmXApSlGh7cXsK9xav48GZtdEY7OszB2dyUZAJO5UTVpDZ8m8BxveyOiOIcMQrDMx3ezGkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/8eef7315962eae29e8a113b1c19ae6a4/01472/DAY4_4.webp 240w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/222bd/DAY4_4.webp 480w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/620b9/DAY4_4.webp 960w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/310dc/DAY4_4.webp 1032w"
+          sizes="(max-width: 960px) 100vw, 960px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/8eef7315962eae29e8a113b1c19ae6a4/0783d/DAY4_4.png 240w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/782f4/DAY4_4.png 480w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/f570d/DAY4_4.png 960w,
+/static/8eef7315962eae29e8a113b1c19ae6a4/1cbac/DAY4_4.png 1032w"
+          sizes="(max-width: 960px) 100vw, 960px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/8eef7315962eae29e8a113b1c19ae6a4/f570d/DAY4_4.png"
+          alt="Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus"
+          title="Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+변수에 담겨 있는 값이 객체인 경우 b = a라고 했을 때, b와 a는 똑같은 객체를 바라보게 됩니다. 하지만 값이 원시데이터 타입인 경우 b =a라고 하면 순간 a에 담겨있던 값이 복제되어 새로만들어져 b에 담기게됩니다.</p>
+<p><br><br>다음 경우는 어떨까요?
+<br>아래 두 객체는 들어 있는 내용이 같은데 false라고 출력이 됩니다.
+<br>그 이유는 무엇일까요?</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> hiObj <span class="token operator">=</span> <span class="token punctuation">{</span> 
+  name<span class="token punctuation">:</span> <span class="token string">'안녕'</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> helloObj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">'안녕'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'객체비교 =>'</span><span class="token punctuation">,</span> hiObj <span class="token operator">===</span> helloObj<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>그 이유는 객체는 변수에 저장할 때, 객체 자체를 그대로 저장하는 것이 아니기 때문입니다. 객체가 담긴 어느 메모리의 reference 를 저장하기 때문입니다.
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 442px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b78ae32453f3b17909bf5bde2773a283/b9ee5/DAY4_2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 94.11764705882352%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsSAAALEgHS3X78AAACZ0lEQVQ4y5WUa2+iQBSG+f9/p+ln90ObJtvNtlq0KopchGHkJgxXAd+dGSs1lprtJJMzkPDMe855D4o+X2G90GHpJqhLQWwX5tqUz8vpAizNINbxeJT7fP5uKb5hIZhOEW0MxIaBaOsgWCwRW5aMqeehPhwGoUNgpSEE5egXOv5xu9RwXOtgoxHK2QzZ4yOqzQae76Moiv6jM2xoK3rgglYZ9NiDm8XQQxfd1a0NV1jXNRhjOHyo/TZly3cRZwmsgIDEPlbUQtd1n0r4+XCRcp7nUm0aJ4j9UO6Q+qiKEm3TQBmbC0zdNTQOmhMDq52NyVbD1FmjFWBepmtVAuzzBj6PHqH+fpFxzRvYNu1JYdXUSMscuzRClKfI6xJZVfR1OQw0pcyFyj2KLJfqxHOf8l9rDjMkGNtLJEX2Rc0lUEa+LW2Dzbsm4/xFlQoDQqGQcCcLXlYlDvWp+Nf7MmVRX1nDfYLJ0x8sxzMOfMPqbY625SnjP9ZZmYBlWSY/ZPv00y7dpx8VYm5BLAd0S/qOiXd068JeGX1tBETAegd03eDFiqMbcDUdO9tB5FEEHEj5WURxEUtSmbKwy6WdhgwuFdZ8xNj9ParxBMXrK6o3FcXDA7LnZ+zv7sBUFV4Q9IqGRu9yBBXKzZwWDD63DOMdDhNunTRGywvflSWOPNUvXb71c9CIiR2L8E42J+twU8+I/q1tbsEkUKe2BDnxDgafaxHtyIPJR7E7dj8HqvYKNA1B9j7cD5jFL9jGVDZhyNg3geKHsORzTJMQM1eXY3e9fgR0Ag8h2yPJmYwFBwrPNW0jYzvQlFvrH1aMueWDdgKrAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          srcset="/static/b78ae32453f3b17909bf5bde2773a283/01472/DAY4_2.webp 240w,
+/static/b78ae32453f3b17909bf5bde2773a283/6cac2/DAY4_2.webp 442w"
+          sizes="(max-width: 442px) 100vw, 442px"
+          type="image/webp"
+        />
+        <source
+          srcset="/static/b78ae32453f3b17909bf5bde2773a283/0783d/DAY4_2.png 240w,
+/static/b78ae32453f3b17909bf5bde2773a283/b9ee5/DAY4_2.png 442w"
+          sizes="(max-width: 442px) 100vw, 442px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image"
+          src="/static/b78ae32453f3b17909bf5bde2773a283/b9ee5/DAY4_2.png"
+          alt="Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus"
+          title="Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+hiObj가 갖고 있는 진짜 값은 메모리 주소인 reference입니다.
+<br>하지만 hiObj를 불러올 때 메모리 주소를 반환하는 것이 아니라,
+<br>해당 메모리에 저장된 데이터를 반환해 줍니다.</p></div></div></div><div class="Post-module--post__footer--3WzWU"><div><p class="Meta-module--meta__date--29eD7">Published <!-- -->4 Oct 2019</p></div><div class="Tags-module--tags--1L_ct"><ul class="Tags-module--tags__list--91FqN"><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/design/">Design</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/typography/">Typography</a></li><li class="Tags-module--tags__list-item--1M30P"><a class="Tags-module--tags__list-item-link--3SL_8" href="/tag/web-development/">Web Development</a></li></ul></div><div class="Author-module--author--2Yefr"><p>Christian developer<a class="Author-module--author__bio-twitter--n-O9n" href="https://www.twitter.com/#" rel="noopener noreferrer" target="_blank"><strong>LIMS</strong> on Twitter</a></p></div></div><div class="Post-module--post__comments--25y6I"></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/humane-typography-in-the-digital-age/";window.webpackCompilationHash="7bb68c0ff3a3438aff1c";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-ae9c914085b684cfcc16.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-78ebc6c0804f2d225cf3.js"],"component---src-templates-not-found-template-js":["/component---src-templates-not-found-template-js-4eb36a9645e942a52df1.js"],"component---src-templates-tags-list-template-js":["/component---src-templates-tags-list-template-js-645285ddf40fad54d2dc.js"],"component---src-templates-categories-list-template-js":["/component---src-templates-categories-list-template-js-ef8076a2d1976b3ce7f8.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-e093df2f3804d28b873b.js"],"component---src-templates-page-template-js":["/component---src-templates-page-template-js-86f4cc6a0cfdaa9665cc.js"],"component---src-templates-tag-template-js":["/component---src-templates-tag-template-js-64c624febd3790907971.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-b7290006fd56cdb0dcaa.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-b574c1b4a328d945df0a.js"]};/*]]>*/</script><script src="/component---src-templates-post-template-js-e093df2f3804d28b873b.js" async=""></script><script src="/commons-0a631e4fe2d278e1698e.js" async=""></script><script src="/styles-29a50a6d3bca7ec88d2f.js" async=""></script><script src="/app-ae9c914085b684cfcc16.js" async=""></script><script src="/webpack-runtime-7d5725d4ffc29e68ee72.js" async=""></script></body></html>
