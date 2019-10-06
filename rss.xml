@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2019 04:28:33 GMT</lastBuildDate><item><title><![CDATA[<DAY 5> Javascript]]></title><description><![CDATA[#class, #arrow function]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Fri, 04 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-array-조작방법&quot;&gt;&lt;a href=&quot;#1-array-%EC%A1%B0%EC%9E%91%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;1 array 조작방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Array 조작방법&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2019 04:35:50 GMT</lastBuildDate><item><title><![CDATA[<DAY 5> Javascript]]></title><description><![CDATA[#class, #arrow function]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Fri, 04 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-array-조작방법&quot;&gt;&lt;a href=&quot;#1-array-%EC%A1%B0%EC%9E%91%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;1 array 조작방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Array 조작방법&lt;/h2&gt;
 &lt;p&gt;빈 배열에 요소를 추가해주는 방법&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;index로 접근하는 방법(수정,추가)&lt;/li&gt;
@@ -21,7 +21,6 @@ cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</content:encoded></item><item><title><![CDATA[<DAY 4> Javascript]]></title><description><![CDATA[#Object, #Object-다시 :)]]></description><link>https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/humane-typography-in-the-digital-age/</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-object&quot;&gt;&lt;a href=&quot;#1-object&quot; aria-label=&quot;1 object permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Object&lt;/h2&gt;
-&lt;p&gt;객체는 &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Object가 왜 필요할까요?
 배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
@@ -72,8 +71,7 @@ cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;li&gt;property 이름은 중복될 수 없다.&lt;/li&gt;
 &lt;li&gt;property를 추가할 때는 ,(쉼표)를 붙여준다.&lt;/li&gt;
 &lt;li&gt;key와 value 사이에 :(콜론)으로 구분한다.&lt;/li&gt;
-&lt;li&gt;porperty value로는 어떤 data type도 가능하다.
-(string, number, array, object, function ..)&lt;/li&gt;
+&lt;li&gt;porperty value로는 어떤 data type도 가능하다.&lt;br&gt;(string, number, array, object, function ..)&lt;/li&gt;
 &lt;li&gt;객체 선언 및 사용법&lt;/li&gt;
 &lt;li&gt;객체 리터럴
 {}를 이용해서 객체를 만드는 방법입니다.&lt;/li&gt;
@@ -97,22 +95,24 @@ obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;age &lt;span cl
 obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;increaseAge&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;age &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;property에 접근하는 방법
-아래 예제를 통해서 알아보겠습니다.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;Property에 접근하는 방법
+아래 예제를 통해서 알아보겠습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; difficult &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;숫자 형식도 되네&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//아래 (2)번에 설명&lt;/span&gt;
-  &lt;span class=&quot;token string&quot;&gt;&apos;my name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;스페이스 포함 가능&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;//아래 (2)번에 설명&lt;/span&gt;
-  color&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;silver&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//아래 (1)번에 설명&lt;/span&gt;
-  키&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;한글인 키는 따옴표가 없어도 되는군!!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token string&quot;&gt;&apos;!키&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;느낌표 있는 키는 따옴표가 필요하군&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  $special&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;$는 없어도 되는군&apos;&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;숫자 형식도 되네&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//아래 (2)번에 설명&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&apos;my name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;스페이스 포함 가능&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;//아래 (2)번에 설명&lt;/span&gt;
+color&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;silver&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//아래 (1)번에 설명&lt;/span&gt;
+키&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;한글인 키는 따옴표가 없어도 되는군!!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&apos;!키&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;느낌표 있는 키는 따옴표가 필요하군&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+$special&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;$는 없어도 되는군&apos;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
+&lt;/li&gt;
 &lt;li&gt;dot(.)과 대괄호([])로 접근하는 방법이 있습니다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 &lt;p&gt;(1) dot(.)은 key로 바로 접글할 때 사용하는 것
 &lt;br&gt;dot으로 절근할 때는 따옴표 없이 key를 바로 써줘야 합니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
