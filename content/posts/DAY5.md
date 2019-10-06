@@ -9,7 +9,7 @@ tags:
   - "Design"
   - "Typography"
   - "Web Development"
-description: "#class, #arrow function"
+description: "#class"
 socialImage: "/media/42-line-bible.jpg"
 ---
 ## 1. Array 조작방법
