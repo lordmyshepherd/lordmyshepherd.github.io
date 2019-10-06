@@ -1,10 +1,10 @@
 ---
-title: "<DAY 2> Javascript"
+title: "DAY 2"
 date: "2019-10-01T23:46:37.121Z"
 template: "post"
 draft: false
-slug: "/posts/perfecting-the-art-of-perfection/"
-category: "Design Inspiration"
+slug: "/posts/DAY2/"
+category: "JavaScript"
 tags:
   - "Handwriting"
   - "Learning to write"

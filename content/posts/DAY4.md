@@ -1,10 +1,10 @@
 ---
-title: "<DAY 4> Javascript"
+title: "DAY 4"
 date: "2019-10-03T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "/posts/humane-typography-in-the-digital-age/"
-category: "Typography"
+slug: "/posts/DAY4"
+category: "JavaScript"
 tags:
   - "Design"
   - "Typography"
@@ -12,6 +12,8 @@ tags:
 description: "#Object, #Object-다시 :)"
 socialImage: "/media/42-line-bible.jpg"
 ---
+*The Lord is my shepherd, I lack nothing. PSLAM 23:1*
+
 ## Object
 
 1. Object가 왜 필요할까요?
@@ -25,12 +27,13 @@ socialImage: "/media/42-line-bible.jpg"
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)
 
 3. 객체의 규칙
-+ property 이름은 중복될 수 없다.
-+ property를 추가할 때는 ,(쉼표)를 붙여준다.
-+ key와 value 사이에 :(콜론)으로 구분한다.
-+ porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
+<br>property 이름은 중복될 수 없다.
+<br>property를 추가할 때는 ,(쉼표)를 붙여준다.
+<br>key와 value 사이에 :(콜론)으로 구분한다.
+<br>porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
 
 4. 객체 선언 및 사용법
+
 + 객체 리터럴
 {}를 이용해서 객체를 만드는 방법입니다.
 
@@ -43,6 +46,7 @@ var obj = {
      } 
 };
 ```
+
 + Object 생성자
 아래 코드를 봐주세요.
 ```js
@@ -60,7 +64,7 @@ obj.increaseAge = function (i) {
 
 **객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.**
 
-4. Property에 접근하는 방법
+5. Property에 접근하는 방법
 아래 예제를 통해서 알아보겠습니다.
 ```js
 let difficult = {

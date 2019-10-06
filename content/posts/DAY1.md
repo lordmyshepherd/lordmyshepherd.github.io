@@ -1,10 +1,10 @@
 ---
-title: "<Day 1> HTML CSS"
+title: "<Day 1>"
 date: "2019-00-30T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "/posts/a-brief-history-of-typography/"
-category: "Design Inspiration"
+slug: "/posts/DAY1/"
+category: "CSS"
 tags:
   - "Linotype"
   - "Monotype"
@@ -52,8 +52,7 @@ relative 자체로는 특별한 의미가 없습니다. 딱히 어느 위치로 
 
 - absolute<br>
 position의 속성값 중에 하나인 absolute는 이름과 같이 요소를 절대적인 위치에 둘 수 있다. 어떤 기준으로 절대적이냐 하면, **특정 부모에 대해 절대적으로** 움직이게 됩니다.<br>
-<br>
-부모 중에 position이 relative, fixed, absolute 하나라도 있으면 그 부모에 대해 절대적으로 움직이게 됩니다. <u>일반적으로 absolute를 쓸 경우, 절대적으로 움직이고 싶은 부모에게 position: relative; 를 부여</u>하면 됩니다.
+<br>부모 중에 position이 relative, fixed, absolute 하나라도 있으면 그 부모에 대해 절대적으로 움직이게 됩니다. <u>일반적으로 absolute를 쓸 경우, 절대적으로 움직이고 싶은 부모에게 position: relative; 를 부여</u>하면 됩니다.
 
 ```html
 <div class="relative">
@@ -137,12 +136,11 @@ display : inline-block;
 
 + float 속성 사용법<br>
 : element의 float 속성값(property value)이 left이면 그 요소는 부모 요소의 가장 좌측에 배치됩니다.
-<br>1)
+(1)
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY1_3.png)
 (2)
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY1_4.png)
-
-<br>+ float 속성에 대한 궁굼증..<br>
++ float 속성에 대한 궁굼증..<br>
 2번 그림에서 float 속성이 적용된 element의 <u>부모 element의 높이가 왜 0이 되는걸까요??</u>
 그것은 float이 만들어진 목적에 따로 있기 때문이다.<br>
 float는 본질적으로 가로배치 전용 속성이 아니다. 원래는 아래 사진과 같이 이미지와 내용이 어우러지게  하기 위해서 만들어진 속성이다.

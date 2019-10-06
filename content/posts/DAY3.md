@@ -1,21 +1,19 @@
 ---
-title: "<DAY 3> Gatsby blog"
+title: "DAY 3"
 date: "2019-10-02T22:12:03.284Z"
 template: "post"
 draft: false
-slug: "/posts/the-birth-of-movable-type/"
-category: "Typography"
+slug: "/posts/DAY3"
+category: ""
 tags:
   - "Open source"
   - "Gatsby"
   - "Typography"
-description: "German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible."
+description: "#Gatsby를 이용한 blog 만드는 방법 정리"
 socialImage: "/media/gutenberg.jpg"
 ---
 
 *The Lord is my shepherd, I lack nothing. PSLAM 23:1*
-
-
 
 ## 1.블로그 설치 필요한 용어
 
