@@ -23,14 +23,15 @@ socialImage: "/media/42-line-bible.jpg"
 배열과 다른점에 이 property에 이름과 값을 지정해준다는 사실이에요.  
 아래에 보시는 것과 같이 <u>프로퍼티의 이름은 key</u>라고 하며, <u>프로퍼티 값은 value</u>라고 부릅니다.
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)
+
 3. 객체의 규칙
 + property 이름은 중복될 수 없다.
-- property를 추가할 때는 ,(쉼표)를 붙여준다.
-- key와 value 사이에 :(콜론)으로 구분한다.
-- porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
++ property를 추가할 때는 ,(쉼표)를 붙여준다.
++ key와 value 사이에 :(콜론)으로 구분한다.
++ porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
 
 4. 객체 선언 및 사용법
-- 객체 리터럴
++ 객체 리터럴
 {}를 이용해서 객체를 만드는 방법입니다.
 
 ```js
@@ -42,7 +43,7 @@ var obj = {
      } 
 };
 ```
-- Object 생성자
++ Object 생성자
 아래 코드를 봐주세요.
 ```js
 var obj = new Object();  // obj = {}와 같은 의미
