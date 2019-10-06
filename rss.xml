@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2019 10:40:29 GMT</lastBuildDate><item><title><![CDATA[DAY 5]]></title><description><![CDATA[#class]]></description><link>https://lordmyshepherd.github.io/posts/DAY5/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY5/</guid><pubDate>Fri, 04 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Oct 2019 10:54:22 GMT</lastBuildDate><item><title><![CDATA[DAY 5]]></title><description><![CDATA[#class]]></description><link>https://lordmyshepherd.github.io/posts/DAY5/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY5/</guid><pubDate>Fri, 04 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#the-first-transition&quot;&gt;The first transition&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#the-digital-age&quot;&gt;The digital age&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#loss-of-humanity-through-transitions&quot;&gt;Loss of humanity through transitions&lt;/a&gt;&lt;/li&gt;
@@ -130,23 +130,22 @@
       &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;객체의 규칙
-&lt;br&gt;property 이름은 중복될 수 없다.
-&lt;br&gt;property를 추가할 때는 ,(쉼표)를 붙여준다.
-&lt;br&gt;key와 value 사이에 :(콜론)으로 구분한다.
-&lt;br&gt;porperty value로는 어떤 data type도 가능하다.&lt;br&gt;(string, number, array, object, function ..)&lt;/li&gt;
+&lt;li&gt;객체의 규칙&lt;/li&gt;
+&lt;li&gt;property 이름은 중복될 수 없다.&lt;/li&gt;
+&lt;li&gt;property를 추가할 때는 ,(쉼표)를 붙여준다.&lt;/li&gt;
+&lt;li&gt;key와 value 사이에 :(콜론)으로 구분한다.&lt;/li&gt;
+&lt;li&gt;porperty value로는 어떤 data type도 가능하다.&lt;br&gt;(string, number, array, object, function ..)&lt;/li&gt;
 &lt;li&gt;객체 선언 및 사용법&lt;/li&gt;
-&lt;li&gt;객체 리터럴
-{}를 이용해서 객체를 만드는 방법입니다.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;
+&lt;p&gt;객체 리터럴 {}를 이용해서 객체를 만드는 방법입니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
-  name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;jaehee&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 멤버명을 &apos;name&apos; 처럼 인용부호로 감싸는 것도 가능 &lt;/span&gt;
-  age &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
-  &lt;span class=&quot;token function-variable function&quot;&gt;increaseAge&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;age &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
-     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; 
+name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;jaehee&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 멤버명을 &apos;name&apos; 처럼 인용부호로 감싸는 것도 가능 &lt;/span&gt;
+age &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+&lt;span class=&quot;token function-variable function&quot;&gt;increaseAge&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;age &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+ &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; 
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Object 생성자
 아래 코드를 봐주세요.&lt;/p&gt;
@@ -159,7 +158,7 @@ obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;age &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;객체 리터럴을 사용해 객체를 생성하는 방법은 내부적으로 new Object를 수행한 후 멤버를 구성하는 방법과 동일한 과정을 따른다.&lt;/strong&gt;&lt;/p&gt;
 &lt;ol start=&quot;5&quot;&gt;
 &lt;li&gt;
@@ -176,11 +175,10 @@ $special&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span 
 &lt;/li&gt;
 &lt;li&gt;dot(.)과 대괄호([])로 접근하는 방법이 있습니다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;(1) dot(.)은 key로 바로 접글할 때 사용하는 것
+&lt;p&gt;&lt;br&gt;dot(.)은 key로 바로 접글할 때 사용하는 것
 &lt;br&gt;dot으로 절근할 때는 따옴표 없이 key를 바로 써줘야 합니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;color&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;(2) 대괄호([])
-&lt;br&gt;프로퍼티에 space가 포함된 경우, 키는 객체에 저장할 때 키 이름을 따옴표로 감싸고 아래와 같이 대괄호로 접근하면 됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;대괄호([])는 프로퍼티에 space가 포함된 경우, 키는 객체에 저장할 때 키 이름을 따옴표로 감싸고 아래와 같이 대괄호로 접근하면 됩니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;my name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;프로퍼티가 숫자로 저장된 경우도 [”]로 접근하면 됩니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;difficult&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;33&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
