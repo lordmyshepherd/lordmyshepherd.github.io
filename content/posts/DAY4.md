@@ -22,8 +22,7 @@ socialImage: "/media/42-line-bible.jpg"
 객체가 저장한 데이터를 **property**라고 합니다.  
 배열과 다른점에 이 property에 이름과 값을 지정해준다는 사실이에요.  
 아래에 보시는 것과 같이 <u>프로퍼티의 이름은 key</u>라고 하며, <u>프로퍼티 값은 value</u>라고 부릅니다.
-![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)  
-
+![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)
 3. 객체의 규칙
 + property 이름은 중복될 수 없다.
 - property를 추가할 때는 ,(쉼표)를 붙여준다.
