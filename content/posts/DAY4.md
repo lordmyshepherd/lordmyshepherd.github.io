@@ -27,16 +27,13 @@ socialImage: "/media/42-line-bible.jpg"
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)
 
 3. 객체의 규칙
-<br>property 이름은 중복될 수 없다.
-<br>property를 추가할 때는 ,(쉼표)를 붙여준다.
-<br>key와 value 사이에 :(콜론)으로 구분한다.
-<br>porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
++ property 이름은 중복될 수 없다.
++ property를 추가할 때는 ,(쉼표)를 붙여준다.
++ key와 value 사이에 :(콜론)으로 구분한다.
++ porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
 
 4. 객체 선언 및 사용법
-
-+ 객체 리터럴
-{}를 이용해서 객체를 만드는 방법입니다.
-
++ 객체 리터럴 {}를 이용해서 객체를 만드는 방법입니다.
 ```js
 var obj = { 
   name: 'jaehee', // 멤버명을 'name' 처럼 인용부호로 감싸는 것도 가능 
@@ -46,7 +43,6 @@ var obj = {
      } 
 };
 ```
-
 + Object 생성자
 아래 코드를 봐주세요.
 ```js
@@ -78,13 +74,12 @@ let difficult = {
 ```
 + dot(.)과 대괄호([])로 접근하는 방법이 있습니다.
 
-(1) dot(.)은 key로 바로 접글할 때 사용하는 것
+<br>dot(.)은 key로 바로 접글할 때 사용하는 것
 <br>dot으로 절근할 때는 따옴표 없이 key를 바로 써줘야 합니다.
 ```js
 console.log(difficult.color); 
 ```
-(2) 대괄호([])
-<br>프로퍼티에 space가 포함된 경우, 키는 객체에 저장할 때 키 이름을 따옴표로 감싸고 아래와 같이 대괄호로 접근하면 됩니다.
+<br>대괄호([])는 프로퍼티에 space가 포함된 경우, 키는 객체에 저장할 때 키 이름을 따옴표로 감싸고 아래와 같이 대괄호로 접근하면 됩니다.
 ```js
 console.log(difficult['my name']);
 ``` 
