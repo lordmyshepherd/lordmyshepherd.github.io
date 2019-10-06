@@ -12,7 +12,7 @@ tags:
 description: "#Object, #Object-다시 :)"
 socialImage: "/media/42-line-bible.jpg"
 ---
-## 1. Object
+## Object
 
 1. Object가 왜 필요할까요?
 배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
@@ -25,7 +25,7 @@ socialImage: "/media/42-line-bible.jpg"
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/DAY4_1.png)  
 
 3. 객체의 규칙
-- property 이름은 중복될 수 없다.
++ property 이름은 중복될 수 없다.
 - property를 추가할 때는 ,(쉼표)를 붙여준다.
 - key와 value 사이에 :(콜론)으로 구분한다.
 - porperty value로는 어떤 data type도 가능하다.<br>(string, number, array, object, function ..)
