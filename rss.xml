@@ -1,88 +1,364 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Nov 2019 06:54:23 GMT</lastBuildDate><item><title><![CDATA[please]]></title><description><![CDATA[#class]]></description><link>https://lordmyshepherd.github.io/posts/DAY5/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY5/</guid><pubDate>Fri, 04 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#the-first-transition&quot;&gt;The first transition&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#the-digital-age&quot;&gt;The digital age&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#loss-of-humanity-through-transitions&quot;&gt;Loss of humanity through transitions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#chasing-perfection&quot;&gt;Chasing perfection&lt;/a&gt;&lt;/li&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Nov 2019 13:58:41 GMT</lastBuildDate><item><title><![CDATA[Django Restful API 개발(3)]]></title><description><![CDATA[#API 엔드포인트 architecher]]></description><link>https://lordmyshepherd.github.io/posts/API_architecher</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/API_architecher</guid><pubDate>Sat, 09 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;django&quot;&gt;&lt;a href=&quot;#django&quot; aria-label=&quot;django permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django&lt;/h2&gt;
+&lt;h4 id=&quot;1-django는-무엇이며-웹-개발을-왜-django라는-api-프레임워크를-사용하는가&quot;&gt;&lt;a href=&quot;#1-django%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9D%84-%EC%99%9C-django%EB%9D%BC%EB%8A%94-api-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80&quot; aria-label=&quot;1 django는 무엇이며 웹 개발을 왜 django라는 api 프레임워크를 사용하는가 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Django는 무엇이며, 웹 개발을 왜 Django라는 API 프레임워크를 사용하는가?&lt;/h4&gt;
+&lt;p&gt;Backend 구성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;웹서버 : Apachem Nginix 등..&lt;/li&gt;
+&lt;li&gt;데이터베이스 : MySQL, Orcle, PostgreSQL, Mongo DB 등..&lt;/li&gt;
+&lt;li&gt;스크립트 엔진 : 스크립트 언어(javascript, python 등..) 위에서 웹프레임워크가 동작할 수 있게 해주는 통역사&lt;/li&gt;
+&lt;li&gt;웹 프레임워크 : PHP, JSP, ASP, Django, Ruby on Rails, Node.js, Flask 등..&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts.&lt;/p&gt;
-&lt;p&gt;The typography of this industrial age was no longer handcrafted. Mass production and profit became more important. Quantity mattered more than the quality. The books and printed works in general lost a part of its humanity. The typefaces were not produced by craftsmen anymore. It was the machines printing and tying the books together now. The craftsmen had to let go of their craft and became a cog in the process. An extension of the industrial machine.&lt;/p&gt;
-&lt;p&gt;But the victory of the industrialism didn’t mean that the craftsmen were completely extinct. The two worlds continued to coexist independently. Each recognising the good in the other — the power of industrialism and the humanity of craftsmanship. This was the second transition that would strip typography of a part of its humanity. We have to go 500 years back in time to meet the first one.&lt;/p&gt;
-&lt;h2 id=&quot;the-first-transition&quot;&gt;&lt;a href=&quot;#the-first-transition&quot; aria-label=&quot;the first transition permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The first transition&lt;/h2&gt;
-&lt;p&gt;A similar conflict emerged after the invention of the first printing press in Europe. Johannes Gutenberg invented movable type and used it to produce different compositions. His workshop could print up to 240 impressions per hour. Until then, the books were being copied by hand. All the books were handwritten and decorated with hand drawn ornaments and figures. A process of copying a book was long but each book, even a copy, was a work of art.&lt;/p&gt;
-&lt;p&gt;The first printed books were, at first, perceived as inferior to the handwritten ones. They were smaller and cheaper to produce. Movable type provided the printers with flexibility that allowed them to print books in languages other than Latin. Gill describes the transition to industrialism as something that people needed and wanted. Something similar happened after the first printed books emerged. People wanted books in a language they understood and they wanted books they could take with them. They were hungry for knowledge and printed books satisfied this hunger.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/media/42-line-bible.jpg&quot; alt=&quot;42-line-bible.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The 42–Line Bible, printed by Gutenberg.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;But, through this transition, the book lost a large part of its humanity. The machine took over most of the process but craftsmanship was still a part of it. The typefaces were cut manually by the first punch cutters. The paper was made by hand. The illustrations and ornaments were still being hand drawn. These were the remains of the craftsmanship that went almost extinct in the times of Eric Gill.&lt;/p&gt;
-&lt;h2 id=&quot;the-digital-age&quot;&gt;&lt;a href=&quot;#the-digital-age&quot; aria-label=&quot;the digital age permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The digital age&lt;/h2&gt;
-&lt;p&gt;The first transition took away a large part of humanity from written communication. Industrialisation, the second transition described by Eric Gill, took away most of what was left. But it’s the third transition that stripped it naked. Typefaces are faceless these days. They’re just fonts on our computers. Hardly anyone knows their stories. Hardly anyone cares. Flicking through thousands of typefaces and finding the “right one” is a matter of minutes.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In the new computer age the proliferation of typefaces and type manipulations represents a new level of visual pollution threatening our culture. Out of thousands of typefaces, all we need are a few basic ones, and trash the rest.&lt;/p&gt;
-&lt;p&gt;— Massimo Vignelli&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Typography is not about typefaces. It’s not about what looks best, it’s about what feels right. What communicates the message best. Typography, in its essence, is about the message. “Typographical design should perform optically what the speaker creates through voice and gesture of his thoughts.”, as El Lissitzky, a famous Russian typographer, put it.&lt;/p&gt;
-&lt;h2 id=&quot;loss-of-humanity-through-transitions&quot;&gt;&lt;a href=&quot;#loss-of-humanity-through-transitions&quot; aria-label=&quot;loss of humanity through transitions permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Loss of humanity through transitions&lt;/h2&gt;
-&lt;p&gt;Each transition took away a part of humanity from written language. Handwritten books being the most humane form and the digital typefaces being the least. Overuse of Helvetica is a good example. Messages are being told in a typeface just because it’s a safe option. It’s always there. Everyone knows it but yet, nobody knows it. Stop someone on the street and ask him what Helvetica is? Ask a designer the same question. Ask him where it came from, when, why and who designed it. Most of them will fail to answer these questions. Most of them used it in their precious projects but they still don’t spot it in the street.&lt;/p&gt;
-&lt;figure&gt;
-	&lt;blockquote&gt;
-		&lt;p&gt;Knowledge of the quality of a typeface is of the greatest importance for the functional, aesthetic and psychological effect.&lt;/p&gt;
-		&lt;footer&gt;
-			&lt;cite&gt;— Josef Mueller-Brockmann&lt;/cite&gt;
-		&lt;/footer&gt;
-	&lt;/blockquote&gt;
-&lt;/figure&gt;
-&lt;p&gt;Typefaces don’t look handmade these days. And that’s all right. They don’t have to. Industrialism took that away from them and we’re fine with it. We’ve traded that part of humanity for a process that produces more books that are easier to read. That can’t be bad. And it isn’t.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Humane typography will often be comparatively rough and even uncouth; but while a certain uncouthness does not seriously matter in humane works, uncouthness has no excuse whatever in the productions of the machine.&lt;/p&gt;
-&lt;p&gt;— Eric Gill&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;We’ve come close to “perfection” in the last five centuries. The letters are crisp and without rough edges. We print our compositions with high–precision printers on a high quality, machine made paper.&lt;/p&gt;
-&lt;p&gt;&lt;span
+&lt;p&gt;여기서, 웹 프레임워크는 client의 다양한 요청에 대해서 Database에 있는 data를 동적으로 만들어주기 위해 필요한 프로그램이다.&lt;br&gt;
+   Django의 장점은 굉장히 쉽게 배울 수 있는 프로그램 언어인 Python을 기반으로 했고, adim 기능을 같이 제공해준다 점이다. 요즘 대부분 AWS, Google Cloud를 사용한 다는 점으로만 봐도 AWS, Google Cloud에서 전폭적으로 초기 단계부터 지원한 프레임워크인 Django는 서비스 운용에 큰 도움이 될 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Django Restful API 개발(2)]]></title><description><![CDATA[#RESTful HTTP API, #REST, #GraphQL]]></description><link>https://lordmyshepherd.github.io/posts/Django_framwork/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/Django_framwork/</guid><pubDate>Sat, 09 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;api-앤드포인트-아키텍처-패턴&quot;&gt;&lt;a href=&quot;#api-%EC%95%A4%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%A8%ED%84%B4&quot; aria-label=&quot;api 앤드포인트 아키텍처 패턴 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API 앤드포인트 아키텍처 패턴&lt;/h1&gt;
+&lt;h3 id=&quot;api-엔드포인트-구조를-구현하는-방법&quot;&gt;&lt;a href=&quot;#api-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EA%B5%AC%EC%A1%B0%EB%A5%BC-%EA%B5%AC%ED%98%84%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;api 엔드포인트 구조를 구현하는 방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API 엔드포인트 구조를 구현하는 방법&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;REST 방식&lt;/li&gt;
+&lt;li&gt;GraphQL 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;restful-http-api&quot;&gt;&lt;a href=&quot;#restful-http-api&quot; aria-label=&quot;restful http api permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful HTTP API&lt;/h3&gt;
+&lt;p&gt;REST(Representation State Transfer)ful의 약자로 REST 기반으로 API 시스템을 구현하기 위한 아키텍처의 한 방식이다.&lt;br&gt;
+&lt;br&gt;HTTP URI(Uniform Resource Idntifier)를 통해 특정 Resurce(Database에 저장되어 있는 정보)의 위치를 나타내고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 행위(CRUD Operation)를 정의하고 Payload로 데이터를 주고 받는다.&lt;br&gt;
+&lt;br&gt;
+&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/eaa988471fd2b61a1d4d313d0d9a5d23/313cc/type-through-time.jpg&quot;
+    href=&quot;/static/7fee2ed35703622cba379211064b599f/05bc5/restful_api.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 20%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAEABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABtoJaRR//xAAWEAEBAQAAAAAAAAAAAAAAAAAAAjH/2gAIAQEAAQUClOv/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwEn/8QAFhAAAwAAAAAAAAAAAAAAAAAAAAEQ/9oACAEBAAY/Ahz/xAAYEAACAwAAAAAAAAAAAAAAAAABIQAQUf/aAAgBAQABPyEi2Zsr/9oADAMBAAIAAwAAABAID//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQMf/aAAgBAgEBPxCD/8QAGRABAAMBAQAAAAAAAAAAAAAAAQARQSEx/9oACAEBAAE/EAerusaDZp1lz//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 62.7906976744186%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABVElEQVQ4y4WSW0/CQBCFS4vgcmkRRKQFBLmIIt71yTdN/P//yDPkW7M0qJN8abvdPTNzZqMoiiYiExeiEDMxEEm0H070RUf0+I6jA/EgbsS1uBUv4knkpX0mMhdr8Sy2JB/zrPqNK1GjSh9W3VFJsCWG4oxucsQmdOT8xkcxqlQqC+dcQ+/16PcIbdhS8X5I6MQqLIpikGXZRu/LOI5bZF3jq3VxzhHr5lN8iHc83Ul5TRN0SZI42jax+6CCMS06DpvXX/hoibplwTc2vYo7JjljUAurGL9yqjoFS7oJBH+iT/YaFQyYtK/QTL8iSZth5dwIE50yrIYXrJJlShuXImWaUzamwRSr/LO1JkWkWLWLDdlHZDoU/mAbjllrkrAZXvIcsaRsbhATPJ0ziCXfK9bm4ZUaMck+B3v42AkEuyQecn0clXrv9+5uhgcpYvU/Kv03vgF5lxNplT+RHwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
-          srcset=&quot;/static/eaa988471fd2b61a1d4d313d0d9a5d23/01472/type-through-time.webp 240w,
-/static/eaa988471fd2b61a1d4d313d0d9a5d23/222bd/type-through-time.webp 480w,
-/static/eaa988471fd2b61a1d4d313d0d9a5d23/620b9/type-through-time.webp 960w,
-/static/eaa988471fd2b61a1d4d313d0d9a5d23/6db13/type-through-time.webp 1250w&quot;
+          srcset=&quot;/static/7fee2ed35703622cba379211064b599f/01472/restful_api.webp 240w,
+/static/7fee2ed35703622cba379211064b599f/222bd/restful_api.webp 480w,
+/static/7fee2ed35703622cba379211064b599f/620b9/restful_api.webp 960w,
+/static/7fee2ed35703622cba379211064b599f/28063/restful_api.webp 1440w,
+/static/7fee2ed35703622cba379211064b599f/ad6cc/restful_api.webp 1720w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/eaa988471fd2b61a1d4d313d0d9a5d23/3bc27/type-through-time.jpg 240w,
-/static/eaa988471fd2b61a1d4d313d0d9a5d23/98431/type-through-time.jpg 480w,
-/static/eaa988471fd2b61a1d4d313d0d9a5d23/b3ee8/type-through-time.jpg 960w,
-/static/eaa988471fd2b61a1d4d313d0d9a5d23/313cc/type-through-time.jpg 1250w&quot;
+          srcset=&quot;/static/7fee2ed35703622cba379211064b599f/0783d/restful_api.png 240w,
+/static/7fee2ed35703622cba379211064b599f/782f4/restful_api.png 480w,
+/static/7fee2ed35703622cba379211064b599f/f570d/restful_api.png 960w,
+/static/7fee2ed35703622cba379211064b599f/8d0ff/restful_api.png 1440w,
+/static/7fee2ed35703622cba379211064b599f/05bc5/restful_api.png 1720w&quot;
           sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-          type=&quot;image/jpeg&quot;
+          type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/eaa988471fd2b61a1d4d313d0d9a5d23/b3ee8/type-through-time.jpg&quot;
-          alt=&quot;type-through-time.jpg&quot;
-          title=&quot;type-through-time.jpg&quot;
+          src=&quot;/static/7fee2ed35703622cba379211064b599f/f570d/restful_api.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
           loading=&quot;lazy&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Type through 5 centuries.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;We lost a part of ourselves because of this chase after perfection. We forgot about the craftsmanship along the way. And the worst part is that we don’t care. The transition to the digital age made that clear. We choose typefaces like clueless zombies. There’s no meaning in our work. Type sizes, leading, margins… It’s all just a few clicks or lines of code. The message isn’t important anymore. There’s no more “why” behind the “what”.&lt;/p&gt;
-&lt;h2 id=&quot;chasing-perfection&quot;&gt;&lt;a href=&quot;#chasing-perfection&quot; aria-label=&quot;chasing perfection permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Chasing perfection&lt;/h2&gt;
-&lt;p&gt;Human beings aren’t perfect. Perfection is something that will always elude us. There will always be a small part of humanity in everything we do. No matter how small that part, we should make sure that it transcends the limits of the medium. We have to think about the message first. What typeface should we use and why? Does the typeface match the message and what we want to communicate with it? What will be the leading and why? Will there be more typefaces in our design? On what ground will they be combined? What makes our design unique and why? This is the part of humanity that is left in typography. It might be the last part. Are we really going to give it up?&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Originally published by &lt;a href=&quot;http://matejlatin.co.uk/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Matej Latin&lt;/a&gt; on &lt;a href=&quot;https://medium.com/design-notes/humane-typography-in-the-digital-age-9bd5c16199bd?ref=webdesignernews.com#.lygo82z0x&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Medium&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DAY 4]]></title><description><![CDATA[#Object, #Object-다시 :)]]></description><link>https://lordmyshepherd.github.io/posts/DAY4</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY4</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;rset-구성-요소&quot;&gt;&lt;a href=&quot;#rset-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;rset 구성 요소 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RSET 구성 요소&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;자원(Resource): URI  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.  &lt;/li&gt;
+&lt;li&gt;자원을 구별하는 ID는 ‘/groups/:group_id’와 같은 HTTP URI 다.  &lt;/li&gt;
+&lt;li&gt;Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;행위(Verb): HTTP Method  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 프로토콜의 Method를 사용한다.  &lt;/li&gt;
+&lt;li&gt;HTTP 프로토콜은 GET, POST, PUT, DELETE 와 같은 메서드를 제공한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;표현(Representation of Resource)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Client가 자원의 상태(정보)에 대한 조작을 요청하면 Server는 이에 적절한 응답(Representation)을 보낸다.&lt;/li&gt;
+&lt;li&gt;REST에서 하나의 자원은 JSON, XML, TEXT, RSS 등 여러 형태의 Representation으로 나타내어 질 수 있다.&lt;/li&gt;
+&lt;li&gt;JSON 혹은 XML를 통해 데이터를 주고 받는 것이 일반적이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;restful-api-개발시-주의사항&quot;&gt;&lt;a href=&quot;#restful-api-%EA%B0%9C%EB%B0%9C%EC%8B%9C-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD&quot; aria-label=&quot;restful api 개발시 주의사항 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful API 개발시 주의사항&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;/는 계층관계를 나타낼때 사용된다.&lt;br&gt;
+예) &lt;a href=&quot;https://stackoverflow.com/c/wecode/questions/197&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://stackoverflow.com/c/wecode/questions/197&lt;/a&gt; 라는 구조라면, wecode에 속해있는 questions중에 197을 나타내는 구조이다.&lt;br&gt;
+예) &lt;a href=&quot;https://api.shopping.com/books/novel/stephenking&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://api.shopping.com/books/novel/stephenking&lt;/a&gt; 라는 구조라면, 책들중 소설 그리고 소설중 Stephen King의 소설을 나타내는 구조이다.&lt;/li&gt;
+&lt;li&gt;URI에 _(underscore)는 주로 포함하지 않고 또한 영어 대문자보다 소문자를 쓴다. 가독성을 높이기 위해서 긴 단어는 사용하지 않는다.&lt;/li&gt;
+&lt;li&gt;URI는 명사를 사용한다.&lt;br&gt;
+예) books/novel/stephenking 라고 하지 books/novel/stephenking 라고 잘 하지 않는다. 그 이유는 이미 HTTP Method에서 행위를 결정하지 때문이다.&lt;br&gt;
+한 문장에 동사가 두 번 들어지 못하는 것처럼~&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;restful-api의-장점&quot;&gt;&lt;a href=&quot;#restful-api%EC%9D%98-%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;restful api의 장점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful API의 장점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;자기 설명력(self-descriptiveness) : 엔트포인트의 구조만 보더라도 해당 엔드포인트가 제공하는 리소스와 기능을 파악할 수 있다.&lt;/li&gt;
+&lt;li&gt;API를 구현하다 보면 엔드포인트 수가 많아지면서 역할과 기능을 파악하기가 쉽지 않은데 REST 방식은 직관적이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;restful-api의-단점&quot;&gt;&lt;a href=&quot;#restful-api%EC%9D%98-%EB%8B%A8%EC%A0%90&quot; aria-label=&quot;restful api의 단점 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful API의 단점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;사용할 수 있는 메소드가 4가지 밖에 없다.(HTTP Method 형태가 제한적)&lt;/li&gt;
+&lt;li&gt;구형 브라우저에서는 PUT, DELETE를 사용하지 못한다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Django Restful API 개발(1)]]></title><description><![CDATA[#웹 시스템의 발전 역사, #HTTP]]></description><link>https://lordmyshepherd.github.io/posts/web_system/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/web_system/</guid><pubDate>Fri, 08 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;웹-시스템들의-발전-역사&quot;&gt;&lt;a href=&quot;#%EC%9B%B9-%EC%8B%9C%EC%8A%A4%ED%85%9C%EB%93%A4%EC%9D%98-%EB%B0%9C%EC%A0%84-%EC%97%AD%EC%82%AC&quot; aria-label=&quot;웹 시스템들의 발전 역사 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;웹 시스템들의 발전 역사&lt;/h1&gt;
+&lt;h3 id=&quot;1세대-웹&quot;&gt;&lt;a href=&quot;#1%EC%84%B8%EB%8C%80-%EC%9B%B9&quot; aria-label=&quot;1세대 웹 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1세대 웹&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;1989년에 팀 버너스 리(Time Berners_Lee)가 WWW(World Wide Web)을 발명했다.&lt;/li&gt;
+&lt;li&gt;웹 브라우저가 요청하면 HTML 페이지를 보내주고, 웹 브라우저는 전달받은 HTML 파일을 렌더링하여 사용자에게 보여주는 정도(static).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;2세대-웹&quot;&gt;&lt;a href=&quot;#2%EC%84%B8%EB%8C%80-%EC%9B%B9&quot; aria-label=&quot;2세대 웹 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2세대 웹&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Javascript의 역할이 커지기 시작했다.&lt;/li&gt;
+&lt;li&gt;웹 서버가 적적인 HTML뿐만 아니라 동적인 기능을 구현하는 Javascript code까지 같이 웹브라우저에 전송하면서 동적인 기능을 구현하게 되었다.
+서비스가 정적(static)에서 동적(dynamic)으로 변화되어 가면서 커져 갔지만, 동일한 서버에서 HTML, Javascript data가 전부 웹 브라우저로 XML의 구조로 전송되고 있었다.&lt;/li&gt;
+&lt;li&gt;여전히 동일한 서버에서 HML, Javascript 그리고 데이터가 전부 웹브라우저 등의 클라이언트로 전송되고 있었다. 참고로 XML(Extensible Markup Language)는 데이터를 전송하기 위한 markup language로 HTML과 비슷하지만 데이터를 표현하기 위해 사용됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;3세대-웹&quot;&gt;&lt;a href=&quot;#3%EC%84%B8%EB%8C%80-%EC%9B%B9&quot; aria-label=&quot;3세대 웹 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3세대 웹&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SPA(Single Page Application) 방식의 프론트엔드 개발이 인기를 끌기 시작했다.&lt;/li&gt;
+&lt;li&gt;단일 페이지로 모든 웹사이트의 기능을 구현하게 된 것이다.  이렇게 단일 페이지의 자바스크립트를 통해 모든 페이지를 동적으로 구현하게 되다보니 자연스럽게 웹 브라우저가 필요한 서버와의 통신은 데이터 전송이나 생성 및 수정에 과한 것이 대부분이 되었다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;사이트의 페이지를 rendering하는데 필요한 HTML,Javascript 코드는 최초의 통신에서 Frontend Server에서 받아오고, 다음부터는 Backend Server에서 데이터만 주고 받는다.&lt;/strong&gt; 참고로 Data 형식은 Json, XML 등으로 주고 받는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;현대-웹-시스템들의-구조-및-아키텍처&quot;&gt;&lt;a href=&quot;#%ED%98%84%EB%8C%80-%EC%9B%B9-%EC%8B%9C%EC%8A%A4%ED%85%9C%EB%93%A4%EC%9D%98-%EA%B5%AC%EC%A1%B0-%EB%B0%8F-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98&quot; aria-label=&quot;현대 웹 시스템들의 구조 및 아키텍처 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;현대 웹 시스템들의 구조 및 아키텍처&lt;/h3&gt;
+&lt;p&gt;현대에 들어와서 웹 시스템의 규모가 더욱더 커지고 무엇보다 처리해야 하는 동시 요청 수와 데이터의 규모가 기하학적으로 증가하면서 웹 시스템들의 구조 또한 더욱 방대해지고 복잡해지고 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MSA(Micro Servie Architechure) : 수 많은 동시 요청의 문제를 해결하기 위한 아키텍처 개념&lt;/li&gt;
+&lt;li&gt;ETL(Extract, Transfer, Load) : 분석해야 하는 데이터의 양이 늘어나면서 등장&lt;/li&gt;
+&lt;li&gt;Hadoop : 대용량 분석 프레임워크로서 “Big Data” 분석 시스템이 많은 회사들의 백엔드 시스템에 도입&lt;/li&gt;
+&lt;li&gt;현대 웹 시스템에서 백앤드 개발자의 역할&lt;br&gt;
+클라이언트 시스템과 데이터를 실시간으로 주고받을 수 있는 기능을 구현하는 역할을 담당해야 한다.특히 많은 수의 동시 요청을 장애 없이 실시간으로, 최대한 빠른 속도로 처리할 수 있는 시스템을 구현하는 것이 중요하다.&lt;br&gt;
+그러므로 백엔드 개발에는 주로 안정적이고 확장성이 높으며 실행 속도도 높은 시스템을 구현하기 유리한 언어를 사용한다. 대표적으로 Java, Scala, Rust, Python이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;http&quot;&gt;&lt;a href=&quot;#http&quot; aria-label=&quot;http permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP&lt;/h1&gt;
+&lt;h3 id=&quot;http란-무엇인가&quot;&gt;&lt;a href=&quot;#http%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80&quot; aria-label=&quot;http란 무엇인가 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP란 무엇인가?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HyperText Transfer Protocol의 약자로서, 웹상에서 서로 다른 서버 간에 통신할 때 &lt;strong&gt;서로 이해할 수 있는 형식&lt;/strong&gt;으로 통신하자고 규정해 놓은 통신 규약이다.&lt;/li&gt;
+&lt;li&gt;웹 초기에는 정말 단순하게 HTML(하이퍼텍스트)를 전송하는데 주로 쓰였지만, 기술이 발전함에 따라서 다양한 데이터를 주고 받는데 사용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;http-통신-방식&quot;&gt;&lt;a href=&quot;#http-%ED%86%B5%EC%8B%A0-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;http 통신 방식 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP 통신 방식&lt;/h3&gt;
+&lt;p&gt;HTTP 통신 방식에는 요청(request)과 응답(response) 2가지가 있고, 각 각의 통신은 stateless라는 틍징을 가지고 있다.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Request
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 497px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c9d11f484139c49bfef6f9d49c7bc19a/a4e6a/request3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.25754527162978%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABcSAAAXEgFnn9JSAAADJklEQVQ4y2VSu3LbRhTlZFQ5DO3CslRYfvBNSRRfIACCBAHiSQB8ghQlipI8nky6lCn8C+4ykyp1ivxF0KVMOleZ0P8RYE7uriKOOdmZM7tL3j0499yTOjo6+phJP/0gbIKf60vz9wtx8Ju+fB8pk02kjNZRb/Eu6mjzyBvcR9ZgFcmSHzUbRpQrNqLyqchRqrR359Th4fMfMunM95I3+0uZLKG4S3T0MaZX7+FN1gjCW/jjNUwzhGWHsJ0FGi0dSs/F6XkHlTOJIO+QYuvilXYgm/O/e8ENusHVP0LXjYfTdWzPNrHuLWPdGMVewPYgtpxpPPSX/C6Ig7hYFmJSxlGqiDEnfH5QOei4i8/qdMMIE8W/gkhquk4Id3EPzRhhHm7gDkNIsglV86DpAdqSASIEke2Qevbs6fTFi+OJZM8/aeE9euN1IhOZbM+hGmNM5jcIRpfo6z666pA/epurEerIF5v8Th5ycMJsNvvLycuTH2Vn8WefK7xOWqoHxV+hH75DQ3HguDNQe/xBvdlHrdEjH/s4v1B2RDuFbB2k0k9I0ZbUoeuvEqHvQaVzx5pCJ2XrzbcYja/g+Uv4oxVMewo/uOSDKZRa/ycsF+ppUrZVxzdoCFriuHN6eIlwcQsaAMbTa2zuvkO1pnACpop596hur2W28vnaNzSMbZeGwYZCOYRoTNAjz8LlHabkozYIMDDHMKwJzqqdPbJHdezMCc+rSpou2/8ylZxWlS/aaFPeJILMM8fOlTORg/3/uFNkeG3qYWW+FmVze0ZBzZeaSa5YR7Ei8KJiqY1svoVc4QFvc01+ZyiUBP5bvihwMlafOj4+/vXV6zc/VWvdP5gCSRwmurqA2HapNZmMV+F4NnTTgG4Y5KkD27VhORbEjkoWmOj1WQKkh5ZPTl4Gr99kA/rapxJJH/SXydC8g9YLoauUx44NwzYxC32O2/sZVtdjWK6Fi3qHws0i1N338Mnh7VeUq89MYatlJULLBgNTeV7tkVIJstInJTrfFVWjDMq8ZdYu2/emXCw1M01B2zLjC+RhoUz+MJSaVPhQzB5+iWJ5P9CPCv8FNujLnJFqIAgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/c9d11f484139c49bfef6f9d49c7bc19a/01472/request3.webp 240w,
+/static/c9d11f484139c49bfef6f9d49c7bc19a/222bd/request3.webp 480w,
+/static/c9d11f484139c49bfef6f9d49c7bc19a/aa2ee/request3.webp 497w&quot;
+          sizes=&quot;(max-width: 497px) 100vw, 497px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/c9d11f484139c49bfef6f9d49c7bc19a/0783d/request3.png 240w,
+/static/c9d11f484139c49bfef6f9d49c7bc19a/782f4/request3.png 480w,
+/static/c9d11f484139c49bfef6f9d49c7bc19a/a4e6a/request3.png 497w&quot;
+          sizes=&quot;(max-width: 497px) 100vw, 497px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/c9d11f484139c49bfef6f9d49c7bc19a/a4e6a/request3.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Start line&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 메소드
+해당 HTTP 요청이 의도하는 액션(동사)을 정의하는 부분이다.&lt;br&gt;
+POST, GET, PUT, DELETE, OPTIONS 등이 있다.&lt;/li&gt;
+&lt;li&gt;Request target
+해당 HTTP 요청이 전송되는 목표 주소 (엔드포인트의 target 주소) &lt;/li&gt;
+&lt;li&gt;HTTP version
+해당 요청의 HTTP 버전을 나타낸다. 명시하는 이유는 버전에 따라 HTTP 요청 메시지의 구조나 데이터가 약간씩 다를 수 있기 때문이다.       &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Headers&lt;br&gt;
+요청 자체에 대한 정보를 담고 있다. 예) 요청 메시지의 전체 크기(Content length)&lt;br&gt;
+헤더는 파이썬의 dictionary처럼 Key와 Value로 되어 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Host
+요청이 전송되는 target의 호스트의 URL 주소를 알려주는 헤더
+예)localhost:8000&lt;/li&gt;
+&lt;li&gt;User-Agent
+요청을 보내는 클라이언트에 대한 정보
+예)Httpie&lt;/li&gt;
+&lt;li&gt;Accept
+해당 요청이 받을 수 있는 response body의 데이터 타입을 알려주는 헤더
+API에서 자주 사용되는 MIME(Multipurpose Internet Mail Extionsions) type은 application/json&lt;/li&gt;
+&lt;li&gt;Connection
+통신 상태를 유지할 것인지 중단할 것인지 알려주는 헤더
+Connection:Keep-alive 연결 유지
+Connection:close 연결 해제&lt;/li&gt;
+&lt;li&gt;Content-Type
+HTTP 요청이 보내는 메시지 body의 타입을 알려주는 헤더
+얘)application/json
++Content-Length
+HTTP 요청이 보내는 메시지의 body의 총 크기를 알려주는 헤더&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Body
+HTTP 요청이 전송하는 데이터를 담고 있는 부분
+현재 로그인을 위해서 email과 password 정보를 body에 담아서 보내고 있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Response
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 516px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fd2e9e17432044eb49bc84b49889cae5/34b4f/response3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.15503875968993%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABcSAAAXEgFnn9JSAAACx0lEQVQ4y52SXWvTYBiGo8JABAVh63CCujb9zlfbpGnSNGmSfiZts26r3fwE2ZngkfgjPBA8EE9EcNsf8FjoT/DvCCncPnm3FgeCYODiefO+4c59P+/DpVKpDxsbN47VWvd1VXF/SpL1o1jSF6JoLWoVfyGq7UWhrC/4bGWRK2qL/D/gtrZSbzmOczx3/nUUnsDrzKA3AljWHkbBCVrRUyh1D7JioVjWUSjViT/rVbjVU3WCUyOcwwhmv2pOuNR7+8vm5HhZs4Ol2ewtw/F8SQ6WhZLGakKuoK5Zva8Ftfb43Jm+IEfPYrU9gjmcoRkewbR6OHryCr3BPobhIcLRY3R6EUaTOVx/jGy+xtySGEgUXGp7+93tmxueGcw/+/OTJF7c709huyHMVp9EZvA7E/jdCHv7T6klEwyGBxgEBxhHRwhGM/YTPle9EEynM+83796ZNnoHn5rBHHp3GktVm30UTZ+AopKjPSbgkSPLHrD9hP5wH7YTwG4HkKjHidt15LoXndt7z1HRvbjdHmJCkQaDKUoUpyQ06GOVuUhI4pVFA6JssotKzlexOa3V3bgUPGM9HB/H1vAQ3cOXcOmGNT+CfOl49vglRuQ46V+94SPNK0xkBYu8ywtMsCA0ToWKDUlz4zJVQXUhai5kzYMgN6HVXTTMDgl5rCbu8kWVnGmMRIwJrsdGdc4F0USGl+M0L2M3I65JZ2Xm5lFawcNdGQ8eSbSu0F6Vzi/IZGsMbnNzy7rOcdsk+KUkGJBkO9bUHprGGGZjxNDrQ4iShYpq0qU4aHse4V6uXfZuNG1y3gK3s7Pz/f79e28kpfWxRI2WZSc29BAtM2JYRsREE8GqZtLYeHTrPo2Rz9Ye1W6/w4RbThtcWVBuJZF1o/NNkJrg89WYz1GcrLImk1PYSPC52pWYf42cF3rXEkEah7NiuZE0Nl41+H/4DZS2o8AmZwkKAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/fd2e9e17432044eb49bc84b49889cae5/01472/response3.webp 240w,
+/static/fd2e9e17432044eb49bc84b49889cae5/222bd/response3.webp 480w,
+/static/fd2e9e17432044eb49bc84b49889cae5/e715f/response3.webp 516w&quot;
+          sizes=&quot;(max-width: 516px) 100vw, 516px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/fd2e9e17432044eb49bc84b49889cae5/0783d/response3.png 240w,
+/static/fd2e9e17432044eb49bc84b49889cae5/782f4/response3.png 480w,
+/static/fd2e9e17432044eb49bc84b49889cae5/34b4f/response3.png 516w&quot;
+          sizes=&quot;(max-width: 516px) 100vw, 516px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/fd2e9e17432044eb49bc84b49889cae5/34b4f/response3.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Status line&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 메소드
+POST, GET, PUT, DELETE, OPTIONS 등이 있다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;status code&lt;/strong&gt;&lt;br&gt;
+HTTP 응답 상태를 미리 지정되어 있는 숫자로 된 코드로 나타내준다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;200 OK
+성공적으로 잘 처리됨&lt;/li&gt;
+&lt;li&gt;301 Move Permanently
+HTTP 요청을 보낸 엔드포인트의 URL 주소가 바뀌었다는 것을 나타내는 status code이다.
+301 status code의 HTTP 응답은 Location(새로운 엔드포인트의 주소가 포함되어 나온다.) 헤더가 포함된다.&lt;/li&gt;
+&lt;li&gt;400 Bad Request
+잘못된 요청일 때 보내는 응답 코드로, 주로 input으로 잘못된 값들이 보내졌을 때 사용된다.
+예)사용자의 전화번호를 저장하는 요청인데, 숫자가 아니라 스트링이 보내지는 경우&lt;/li&gt;
+&lt;li&gt;401 Unathorized
+HTTP 요청을 처리하기 위해서는 요청을 보낸 사람의 인증이 필요할 때, 인증에 실패 했을 경우에 보내는 응답 코드이다.
+얘)신분(credential) 확인이 필요한 경우!&lt;/li&gt;
+&lt;li&gt;403 Forbidden
+HTTP 요청을 보내는 사용자가 해당 요청에 대한 권한이 없을 때 나타내는 status code이다.
+예) 인터넷 강의를 결제한 사용자만 볼 수 있는데 아직 결제하지 않은 사용자가 접근할 경우 &lt;/li&gt;
+&lt;li&gt;404 Not Found
+HTTP 요청을 보내고자 하는 URI가 존재하지 않을 경우 보내는 status code이다.&lt;/li&gt;
+&lt;li&gt;500 Internal Server Error
+해당 요청을 처리하던 과정에서 서버에서 오류가 발생해서 요청을 처리할 수 없을 경우 사용되는 응답코드이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Headers&lt;br&gt;
+HTTP 요청의 heares와 동일하게 응답에 대한 정보를 담고 있는 부분이다.&lt;/li&gt;
+&lt;li&gt;Body&lt;br&gt;
+HTTP 요청 메시지의 body와 동일하다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stateless
+HTTP 프로토콜에서는 동일한 클라이언트와 서버가 주고받은 HTTP 통신들이라도 서로 연결되어 있지 않다. 즉, 각각의 HTTP 통신은 독립적이며 그 전에 처리된 HTTP 통신에 대해서 전혀 알지 못한는 특징을 가지고 있다.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장점 : 이전에 보냈던 HTTP 통신들의 상태를 서버에 저장할 필요가 없어서 관리하지 않아도 된다.&lt;/li&gt;
+&lt;li&gt;단점 : HTTP 요청을 보낼 때는 해당 요청을 처리하기 위해 필요한 모든 데이터를 매번 포함시켜서 요청을 보내야 한다.
+예)로그인한 상태일 경우에만 열람할 수 있는 페이지가 있다고 할 때, 이전 통신을 통해서 이미 로그인할 상태라고 하더라도 새로 보내는 HTTP 통신의 경우 사용자의 로그인 사실 여부를 포함시켜서 보내야된다.  &lt;/li&gt;
+&lt;li&gt;해결방법 : 쿠키(coockie)나 세션(sesstion)을 사용하여 HTTP 요청을 처리할 때 필요한 데이터를 저장해 놓으면 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;api-엔드포인트-아키텍처-패턴architecure-pattern에-대해서-알아보고-django-framework를-이용해서-api를-만들어보자&quot;&gt;&lt;a href=&quot;#api-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%A8%ED%84%B4architecure-pattern%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B3%A0-django-framework%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-api%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90&quot; aria-label=&quot;api 엔드포인트 아키텍처 패턴architecure pattern에 대해서 알아보고 django framework를 이용해서 api를 만들어보자 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API 엔드포인트 아키텍처 패턴(architecure pattern)에 대해서 알아보고 Django framework를 이용해서 API를 만들어보자.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[First Project 정리]]></title><description><![CDATA[#API 엔드포인트 architecher]]></description><link>https://lordmyshepherd.github.io/posts/wewantedu_1</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/wewantedu_1</guid><pubDate>Thu, 07 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;web-http&quot;&gt;&lt;a href=&quot;#web-http&quot; aria-label=&quot;web http permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Web, HTTP&lt;/h2&gt;
+&lt;h2 id=&quot;restful-api&quot;&gt;&lt;a href=&quot;#restful-api&quot; aria-label=&quot;restful api permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Restful API&lt;/h2&gt;
+&lt;h2 id=&quot;관계형-데이터-모델링&quot;&gt;&lt;a href=&quot;#%EA%B4%80%EA%B3%84%ED%98%95-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81&quot; aria-label=&quot;관계형 데이터 모델링 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;관계형 데이터 모델링&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;업무파악&lt;/li&gt;
+&lt;li&gt;개념적 데이터 모델링&lt;/li&gt;
+&lt;li&gt;논리적 데이터 모델링&lt;/li&gt;
+&lt;li&gt;물리적 데이터 모델링&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;관계형-데이터베이스&quot;&gt;&lt;a href=&quot;#%EA%B4%80%EA%B3%84%ED%98%95-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4&quot; aria-label=&quot;관계형 데이터베이스 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;관계형 데이터베이스&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mysql&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;django-기본&quot;&gt;&lt;a href=&quot;#django-%EA%B8%B0%EB%B3%B8&quot; aria-label=&quot;django 기본 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django 기본&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Django란?&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Django documentation&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;설정  &lt;/li&gt;
+&lt;li&gt;model 설계  &lt;/li&gt;
+&lt;li&gt;view 설계  &lt;/li&gt;
+&lt;li&gt;url 설계  &lt;/li&gt;
+&lt;li&gt;대화식 Python shell에 뛰어 들어서 Django API 가지고 노는 방법&lt;/li&gt;
+&lt;li&gt;genetic view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;django-orm-sql&quot;&gt;&lt;a href=&quot;#django-orm-sql&quot; aria-label=&quot;django orm sql permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django ORM, SQL&lt;/h2&gt;
+&lt;h2 id=&quot;회원가입-엔드포인트&quot;&gt;&lt;a href=&quot;#%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8&quot; aria-label=&quot;회원가입 엔드포인트 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;회원가입 엔드포인트&lt;/h2&gt;
+&lt;h2 id=&quot;인증-엔드포인트-인가decorator&quot;&gt;&lt;a href=&quot;#%EC%9D%B8%EC%A6%9D-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EC%9D%B8%EA%B0%80decorator&quot; aria-label=&quot;인증 엔드포인트 인가decorator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;인증 엔드포인트, 인가(decorator)&lt;/h2&gt;
+&lt;h2 id=&quot;데이터-크롤링&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%81%AC%EB%A1%A4%EB%A7%81&quot; aria-label=&quot;데이터 크롤링 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터 크롤링&lt;/h2&gt;
+&lt;h2 id=&quot;채용&quot;&gt;&lt;a href=&quot;#%EC%B1%84%EC%9A%A9&quot; aria-label=&quot;채용 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;채용&lt;/h2&gt;
+&lt;h2 id=&quot;팔로우와-언팔로우-엔드포인트&quot;&gt;&lt;a href=&quot;#%ED%8C%94%EB%A1%9C%EC%9A%B0%EC%99%80-%EC%96%B8%ED%8C%94%EB%A1%9C%EC%9A%B0-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8&quot; aria-label=&quot;팔로우와 언팔로우 엔드포인트 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;팔로우와 언팔로우 엔드포인트&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Javascript Object]]></title><description><![CDATA[#Object, #Object 심화]]></description><link>https://lordmyshepherd.github.io/posts/DAY4</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY4</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;object&quot;&gt;&lt;a href=&quot;#object&quot; aria-label=&quot;object permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Object&lt;/h2&gt;
 &lt;h4 id=&quot;1-object가-왜-필요할까요&quot;&gt;&lt;a href=&quot;#1-object%EA%B0%80-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%A0%EA%B9%8C%EC%9A%94&quot; aria-label=&quot;1 object가 왜 필요할까요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Object가 왜 필요할까요?&lt;/h4&gt;
 &lt;p&gt;배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.
@@ -386,7 +662,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &lt;/span&gt;
 hiObj가 갖고 있는 진짜 값은 메모리 주소인 reference입니다.
 &lt;br&gt;하지만 hiObj를 불러올 때 메모리 주소를 반환하는 것이 아니라,
-&lt;br&gt;해당 메모리에 저장된 데이터를 반환해 줍니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DAY 3]]></title><description><![CDATA[#Gatsby를 이용한 blog 만드는 방법 정리]]></description><link>https://lordmyshepherd.github.io/posts/DAY3</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY3</guid><pubDate>Wed, 02 Oct 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;해당 메모리에 저장된 데이터를 반환해 줍니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby blog]]></title><description><![CDATA[#Gatsby를 이용한 blog 만드는 방법 정리]]></description><link>https://lordmyshepherd.github.io/posts/DAY3</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY3</guid><pubDate>Wed, 02 Oct 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1블로그-설치-필요한-용어&quot;&gt;&lt;a href=&quot;#1%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%84%A4%EC%B9%98-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9A%A9%EC%96%B4&quot; aria-label=&quot;1블로그 설치 필요한 용어 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.블로그 설치 필요한 용어&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Domain(도메인)
@@ -642,7 +918,7 @@ git checkout develop // 브랜치 이동&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 git commit -m “blog posting~~”
 git push -u origin develop //branch가 develop으로 바뀜&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;내 github 의 develop repo에 들어가서 소스코드가 모두 잘 올라갔는지 확인해주세요.
-&lt;br&gt;잘 올라갔다면 github default 브랜치를 develop으로 바꾸겠습니다. 어차피 빌드 결과물인 master 브랜치의 빌드 파일들을 파악할 필요도 없으니까요. github의 해당 블로그 repo 페이지에 들어가서 Settings -&gt; Branches 메뉴에서 Default branch 를 develop으로 바꾸고 update 버튼을 눌러주세요!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[DAY 2]]></title><description><![CDATA[#Array 조작하는 방법, #예제 관련 Error]]></description><link>https://lordmyshepherd.github.io/posts/DAY2/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY2/</guid><pubDate>Tue, 01 Oct 2019 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;잘 올라갔다면 github default 브랜치를 develop으로 바꾸겠습니다. 어차피 빌드 결과물인 master 브랜치의 빌드 파일들을 파악할 필요도 없으니까요. github의 해당 블로그 repo 페이지에 들어가서 Settings -&gt; Branches 메뉴에서 Default branch 를 develop으로 바꾸고 update 버튼을 눌러주세요!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Javascript array]]></title><description><![CDATA[#Array 조작하는 방법, #예제 관련 Error]]></description><link>https://lordmyshepherd.github.io/posts/DAY2/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY2/</guid><pubDate>Tue, 01 Oct 2019 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-array-조작방법&quot;&gt;&lt;a href=&quot;#1-array-%EC%A1%B0%EC%9E%91%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;1 array 조작방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Array 조작방법&lt;/h2&gt;
 &lt;p&gt;빈 배열에 요소를 추가해주는 방법&lt;/p&gt;
 &lt;ol&gt;
@@ -765,7 +1041,7 @@ cities&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[<Day 1>]]></title><description><![CDATA[#Position, #Block and inline, #float]]></description><link>https://lordmyshepherd.github.io/posts/DAY1/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY1/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[CSS Position]]></title><description><![CDATA[#Position, #Block and inline, #float]]></description><link>https://lordmyshepherd.github.io/posts/DAY1/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY1/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-position-br--relative-absolute-fixed&quot;&gt;&lt;a href=&quot;#1-position-br--relative-absolute-fixed&quot; aria-label=&quot;1 position br  relative absolute fixed permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Position &lt;br&gt;  relative, absolute, fixed&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;왜 position property을 배울까요?&lt;br&gt;
