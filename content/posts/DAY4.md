@@ -1,5 +1,5 @@
 ---
-title: "DAY 4"
+title: "Javascript Object"
 date: "2019-10-03T22:40:32.169Z"
 template: "post"
 draft: false
@@ -9,7 +9,7 @@ tags:
   - "Design"
   - "Typography"
   - "Web Development"
-description: "#Object, #Object-다시 :)"
+description: "#Object, #Object 심화"
 socialImage: "/media/42-line-bible.jpg"
 ---
 *The Lord is my shepherd, I lack nothing. PSLAM 23:1*

@@ -19,14 +19,14 @@ module.exports = {
     {
       label: 'Coding',
       path: '/'
-    }
+    },
     /*,{
       label: 'Contact me',
       path: '/pages/contacts'
     }*/
   ],
   author: {
-    name: 'LIMS',
+    name: 'LIMSs',
     photo: 'cross.png',
     bio: 'Christian developer',
     contacts: {

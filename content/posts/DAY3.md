@@ -1,5 +1,5 @@
 ---
-title: "DAY 3"
+title: "Gatsby blog"
 date: "2019-10-02T22:12:03.284Z"
 template: "post"
 draft: false
