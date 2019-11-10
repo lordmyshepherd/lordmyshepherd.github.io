@@ -1,15 +1,474 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Nov 2019 13:58:41 GMT</lastBuildDate><item><title><![CDATA[Django Restful API 개발(3)]]></title><description><![CDATA[#API 엔드포인트 architecher]]></description><link>https://lordmyshepherd.github.io/posts/API_architecher</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/API_architecher</guid><pubDate>Sat, 09 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;django&quot;&gt;&lt;a href=&quot;#django&quot; aria-label=&quot;django permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django&lt;/h2&gt;
-&lt;h4 id=&quot;1-django는-무엇이며-웹-개발을-왜-django라는-api-프레임워크를-사용하는가&quot;&gt;&lt;a href=&quot;#1-django%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%9B%B9-%EA%B0%9C%EB%B0%9C%EC%9D%84-%EC%99%9C-django%EB%9D%BC%EB%8A%94-api-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80&quot; aria-label=&quot;1 django는 무엇이며 웹 개발을 왜 django라는 api 프레임워크를 사용하는가 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Django는 무엇이며, 웹 개발을 왜 Django라는 API 프레임워크를 사용하는가?&lt;/h4&gt;
-&lt;p&gt;Backend 구성&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 10 Nov 2019 14:12:42 GMT</lastBuildDate><item><title><![CDATA[Django initial setting]]></title><description><![CDATA[Django Restful API 개발(2) - 기본 개념]]></description><link>https://lordmyshepherd.github.io/posts/Django_initial_setting</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/Django_initial_setting</guid><pubDate>Mon, 11 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;secrets_genpy&quot;&gt;&lt;a href=&quot;#secrets_genpy&quot; aria-label=&quot;secrets_genpy permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;secrets_gen.py&lt;/h2&gt;
+&lt;p&gt;access token 만들 때 사용할 SECRET&lt;em&gt;KEY 생성&lt;br&gt;
+print된 SECRET&lt;/em&gt;KEY를 my_settings.py 파일에 추가해주면 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; string
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; random
+​
+&lt;span class=&quot;token comment&quot;&gt;# Get ascii Characters numbers and punctuation (minus quote characters as they could terminate string).&lt;/span&gt;
+chars &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ascii_letters&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;digits&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;punctuation&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;replace&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;\&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;replace&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&quot;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;replace&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;\\&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+​
+SECRET_KEY &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;random&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SystemRandom&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;choice&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;chars&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+​
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;SECRET_KEY&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;my_settingspy&quot;&gt;&lt;a href=&quot;#my_settingspy&quot; aria-label=&quot;my_settingspy permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;my_settings.py&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; datetime &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; datetime&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; timedelta
+​
+DATABASES &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;default&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;ENGINE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;mysql.connector.django&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;NAME&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;soogo&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;USER&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;PASSWORD&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;pass1423&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;HOST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;localhost&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;PORT&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;3306&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+​
+SOOGO_SECRET &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;secret&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;j.&gt;#ZM3ebFZfHbT4.Sa31V$R&amp;lt;/k~S7#2gzL)Ow&gt;5C2!?]k!A+I&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;exp_time&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; datetime&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;now&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; timedelta&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;seconds &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;settingspy&quot;&gt;&lt;a href=&quot;#settingspy&quot; aria-label=&quot;settingspy permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;settings.py&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+Django settings for soogo project.
+​
+Generated by &apos;django-admin startproject&apos; using Django 2.2.2.
+​
+For more information on this file, see
+https://docs.djangoproject.com/en/2.2/topics/settings/
+​
+For the full list of settings and their values, see
+https://docs.djangoproject.com/en/2.2/ref/settings/
+&quot;&quot;&quot;&lt;/span&gt;
+​
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; my_settings
+​
+&lt;span class=&quot;token comment&quot;&gt;# Build paths inside the project like this: os.path.join(BASE_DIR, ...)&lt;/span&gt;
+BASE_DIR &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;abspath&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+​
+​
+&lt;span class=&quot;token comment&quot;&gt;# Quick-start development settings - unsuitable for production&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/&lt;/span&gt;
+​
+&lt;span class=&quot;token comment&quot;&gt;# SECURITY WARNING: keep the secret key used in production secret!&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#SECRET_KEY = &apos;i(d(w4ab_hxe2zvm383k61572=mlg&amp;amp;b^&amp;amp;_py%8%s)!ouaw3-0j&apos;&lt;/span&gt;
+SECRET_KEY &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; my_settings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SOOGO_SECRET&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;secret&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+EXP_TIME &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; my_settings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;SOOGO_SECRET&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;exp_time&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+​
+&lt;span class=&quot;token comment&quot;&gt;# SECURITY WARNING: don&apos;t run with debug turned on in production!&lt;/span&gt;
+DEBUG &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+​
+ALLOWED_HOSTS &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;*&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;localhost&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;localhost:8000&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;10.58.3.239:8000&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;10.58.3.239&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;127.0.0.1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+​
+&lt;span class=&quot;token comment&quot;&gt;# Application definition&lt;/span&gt;
+​
+INSTALLED_APPS &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+   &lt;span class=&quot;token comment&quot;&gt;# &apos;django.contrib.admin&apos;,&lt;/span&gt;
+   &lt;span class=&quot;token comment&quot;&gt;# &apos;django.contrib.auth&apos;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.contenttypes&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.sessions&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.messages&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.staticfiles&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;corsheaders&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;user&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;product&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+​
+MIDDLEWARE &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.middleware.security.SecurityMiddleware&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.sessions.middleware.SessionMiddleware&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.middleware.common.CommonMiddleware&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token comment&quot;&gt;# &apos;user.middleware.DisableCsrfCheck&apos;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;corsheaders.middleware.CorsMiddleware&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;#&apos;django.middleware.csrf.CsrfViewMiddleware&apos;,&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;#&apos;django.contrib.auth.middleware.AuthenticationMiddleware&apos;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.messages.middleware.MessageMiddleware&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;django.middleware.clickjacking.XFrameOptionsMiddleware&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+​
+ROOT_URLCONF &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;soogo.urls&apos;&lt;/span&gt;
+​
+TEMPLATES &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;BACKEND&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;django.template.backends.django.DjangoTemplates&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;DIRS&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;APP_DIRS&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;OPTIONS&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;context_processors&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&apos;django.template.context_processors.debug&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&apos;django.template.context_processors.request&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.auth.context_processors.auth&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.messages.context_processors.messages&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+​
+WSGI_APPLICATION &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;soogo.wsgi.application&apos;&lt;/span&gt;
+​
+​
+&lt;span class=&quot;token comment&quot;&gt;# Database&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# https://docs.djangoproject.com/en/2.2/ref/settings/#databases&lt;/span&gt;
+​
+DATABASES &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; my_settings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DATABASES
+​
+​
+&lt;span class=&quot;token comment&quot;&gt;# Password validation&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators&lt;/span&gt;
+​
+AUTH_PASSWORD_VALIDATORS &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;NAME&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.auth.password_validation.UserAttributeSimilarityValidator&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;NAME&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.auth.password_validation.MinimumLengthValidator&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;NAME&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.auth.password_validation.CommonPasswordValidator&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;NAME&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;django.contrib.auth.password_validation.NumericPasswordValidator&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+​
+​
+&lt;span class=&quot;token comment&quot;&gt;# Internationalization&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# https://docs.djangoproject.com/en/2.2/topics/i18n/&lt;/span&gt;
+​
+LANGUAGE_CODE &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;en-us&apos;&lt;/span&gt;
+​
+TIME_ZONE &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Asia/Seoul&apos;&lt;/span&gt;
+​
+USE_I18N &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+​
+USE_L10N &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+​
+USE_TZ &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+​
+​
+&lt;span class=&quot;token comment&quot;&gt;# Static files (CSS, JavaScript, Images)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# https://docs.djangoproject.com/en/2.2/howto/static-files/&lt;/span&gt;
+​
+STATIC_URL &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/static/&apos;&lt;/span&gt;
+​
+​
+&lt;span class=&quot;token comment&quot;&gt;##Stop Warning about &apos;/&apos;&lt;/span&gt;
+APPEND_SLASH&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;
+​
+&lt;span class=&quot;token comment&quot;&gt;##CORS&lt;/span&gt;
+CORS_ORIGIN_ALLOW_ALL&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+CORS_ALLOW_CREDENTIALS &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+​
+CORS_ALLOW_METHODS &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;DELETE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;GET&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;OPTIONS&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;PATCH&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;POST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;PUT&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+​
+CORS_ALLOW_HEADERS &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;accept&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;accept-encoding&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;authorization&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;content-type&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;dnt&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;origin&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;user-agent&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;x-csrftoken&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;x-requested-with&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;requirementtxt&quot;&gt;&lt;a href=&quot;#requirementtxt&quot; aria-label=&quot;requirementtxt permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;requirement.txt&lt;/h2&gt;
+&lt;p&gt;project에 필요한 프로그램 목록을 표시해준다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;bcrypt&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.1&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.7&lt;/span&gt;
+beautifulsoup4&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4.8&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.1&lt;/span&gt;
+bs4&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.1&lt;/span&gt;
+certifi&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2019.9&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.11&lt;/span&gt;
+cffi&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.13&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.1&lt;/span&gt;
+chardet&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.0&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.4&lt;/span&gt;
+Django&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2.2&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.6&lt;/span&gt;
+django&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;cors&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;headers&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.1&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.1&lt;/span&gt;
+idna&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2.8&lt;/span&gt;
+mysql&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;connector&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;python&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8.0&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.18&lt;/span&gt;
+protobuf&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.10&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.0&lt;/span&gt;
+pycparser&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2.19&lt;/span&gt;
+PyJWT&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.7&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.1&lt;/span&gt;
+pytz&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2019.3&lt;/span&gt;
+requests&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2.22&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.0&lt;/span&gt;
+selenium&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.141&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.0&lt;/span&gt;
+six&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.12&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.0&lt;/span&gt;
+soupsieve&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.9&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.4&lt;/span&gt;
+sqlparse&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.0&lt;/span&gt;
+urllib3&lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1.25&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.6&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;gitignore&quot;&gt;&lt;a href=&quot;#gitignore&quot; aria-label=&quot;gitignore permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;.gitignore&lt;/h2&gt;
+&lt;p&gt;my&lt;em&gt;settings.py Database password, Secret&lt;/em&gt;key와 같은 파일은 공개되면 안되는 정보를 포함하고 있기 때문에 .gitignore에 등록해야 된다. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;#my_settings.py&lt;/span&gt;
+my_settings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;py
+
+&lt;span class=&quot;token comment&quot;&gt;#parser.py&lt;/span&gt;
+parser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;py
+
+&lt;span class=&quot;token comment&quot;&gt;# Created by https://www.gitignore.io/api/vim,macos,python,django&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Edit at https://www.gitignore.io/?templates=vim,macos,python,django&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;### Django ###&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;log
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pot
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pyc
+__pycache__&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+local_settings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;py
+db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sqlite3
+db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sqlite3&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;journal
+media
+
+&lt;span class=&quot;token comment&quot;&gt;# If your build process includes running collectstatic, then you probably don&apos;t need or want to include staticfiles/&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# in your Git repository. Update and uncomment the following line accordingly.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# &amp;lt;django-project-name&gt;/staticfiles/&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;### Django.Python Stack ###&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Byte-compiled / optimized / DLL files&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;py&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cod&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;$py&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# C extensions&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;so
+
+&lt;span class=&quot;token comment&quot;&gt;# Distribution / packaging&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Python
+build&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+develop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;eggs&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+dist&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+downloads&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+eggs&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;eggs&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+lib&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+lib64&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+parts&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+sdist&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+var&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+wheels&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+pip&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;wheel&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;metadata&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+share&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;python&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;wheels&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;egg&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;info&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;installed&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cfg
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;egg
+MANIFEST
+
+&lt;span class=&quot;token comment&quot;&gt;# PyInstaller&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#  Usually these files are written by a python script from a template&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#  before PyInstaller builds the exe, so as to inject date/other infos into it.&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;manifest
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;spec
+
+&lt;span class=&quot;token comment&quot;&gt;# Installer logs&lt;/span&gt;
+pip&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;log&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;txt
+pip&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;delete&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;this&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;directory&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;txt
+
+&lt;span class=&quot;token comment&quot;&gt;# Unit test / coverage reports&lt;/span&gt;
+htmlcov&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tox&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nox&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;coverage
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;coverage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cache
+nosetests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xml
+coverage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;xml
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cover
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hypothesis&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pytest_cache&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Translations&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mo
+
+&lt;span class=&quot;token comment&quot;&gt;# Scrapy stuff:&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;scrapy
+
+&lt;span class=&quot;token comment&quot;&gt;# Sphinx documentation&lt;/span&gt;
+docs&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;_build&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# PyBuilder&lt;/span&gt;
+target&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# pyenv&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;python&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;version
+
+&lt;span class=&quot;token comment&quot;&gt;# pipenv&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#   However, in case of collaboration, if having platform-specific dependencies or dependencies&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#   having no cross-platform support, pipenv may install dependencies that don&apos;t work, or not&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#   install all needed dependencies.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#Pipfile.lock&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# celery beat schedule file&lt;/span&gt;
+celerybeat&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;schedule
+
+&lt;span class=&quot;token comment&quot;&gt;# SageMath parsed files&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;py
+
+&lt;span class=&quot;token comment&quot;&gt;# Spyder project settings&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;spyderproject
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;spyproject
+
+&lt;span class=&quot;token comment&quot;&gt;# Rope project settings&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ropeproject
+
+&lt;span class=&quot;token comment&quot;&gt;# Mr Developer&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;developer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cfg
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;project
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pydevproject
+
+&lt;span class=&quot;token comment&quot;&gt;# mkdocs documentation&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;site
+
+&lt;span class=&quot;token comment&quot;&gt;# mypy&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mypy_cache&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dmypy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;json
+dmypy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;json
+
+&lt;span class=&quot;token comment&quot;&gt;# Pyre type checker&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pyre&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;### macOS ###&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# General&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DS_Store
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;AppleDouble
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;LSOverride
+
+&lt;span class=&quot;token comment&quot;&gt;# Icon must end with two \r&lt;/span&gt;
+Icon
+
+&lt;span class=&quot;token comment&quot;&gt;# Thumbnails&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Files that might appear in the root of a volume&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DocumentRevisions&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;V100
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fseventsd
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Spotlight&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;V100
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;TemporaryItems
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Trashes
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;VolumeIcon&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;icns
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;apple&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;timemachine&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;donotpresent
+
+&lt;span class=&quot;token comment&quot;&gt;# Directories potentially created on remote AFP share&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;AppleDB
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;AppleDesktop
+Network Trash Folder
+Temporary Items
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;apdisk
+
+&lt;span class=&quot;token comment&quot;&gt;### Python ###&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Byte-compiled / optimized / DLL files&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# C extensions&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Distribution / packaging&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# PyInstaller&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#  Usually these files are written by a python script from a template&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#  before PyInstaller builds the exe, so as to inject date/other infos into it.&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Installer logs&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Unit test / coverage reports&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Translations&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Scrapy stuff:&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Sphinx documentation&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# PyBuilder&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# pyenv&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# pipenv&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#   However, in case of collaboration, if having platform-specific dependencies or dependencies&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#   having no cross-platform support, pipenv may install dependencies that don&apos;t work, or not&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#   install all needed dependencies.&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# celery beat schedule file&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# SageMath parsed files&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Spyder project settings&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Rope project settings&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Mr Developer&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# mkdocs documentation&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# mypy&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Pyre type checker&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;### Vim ###&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Swap&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;v&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sw&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;p&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;rt&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;v&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;ss&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;gi&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;z&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;sw&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;p&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Session&lt;/span&gt;
+Session&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;vim
+Sessionx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;vim
+
+&lt;span class=&quot;token comment&quot;&gt;# Temporary&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;netrwhist
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Auto-generated tag files&lt;/span&gt;
+tags
+&lt;span class=&quot;token comment&quot;&gt;# Persistent undo&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;un&lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# End of https://www.gitignore.io/api/vim,macos,python,django&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;mysql&quot;&gt;&lt;a href=&quot;#mysql&quot; aria-label=&quot;mysql permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Mysql&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQL 5.7 버젼 설치&lt;/li&gt;
+&lt;li&gt;MySQL 클라이언트(sequelpro) 설치&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL에 접속해서 database 생성&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;CREATE DATABASE mydatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql-connector-python 라이브러리 설치
+MySQL을 파이썬에서 사용하기 위함이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;pip install mysql&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;connector&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;python&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Django에서 데이터베이스 설정은 settings.py 파일에 DATABASES 변수를 다음과 같이 바꿔주면 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;DATABASES &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&apos;default&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;ENGINE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;mysql.connector.django&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+    &lt;span class=&quot;token string&quot;&gt;&apos;NAME&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;DB_NAME&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;USER&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;DB_USER&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;PASSWORD&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;DB_PASSWORD&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;HOST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;localhost&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;token comment&quot;&gt;# Or an IP Address that your DB is hosted on&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;PORT&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;3306&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;my_settings.py에서 이미 설정을 해줬기 때문에 아래와 같이 해주면 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;DATABASES &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; my_settings&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;DATABASES&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;aws&quot;&gt;&lt;a href=&quot;#aws&quot; aria-label=&quot;aws permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AWS&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Django]]></title><description><![CDATA[#Django Restful API 개발(3) - Django 이해]]></description><link>https://lordmyshepherd.github.io/posts/API_architecher</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/API_architecher</guid><pubDate>Sun, 10 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-django는-무엇이며-왜-django라는-api-프레임워크를-사용하는가&quot;&gt;&lt;a href=&quot;#1-django%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0-%EC%99%9C-django%EB%9D%BC%EB%8A%94-api-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EA%B0%80&quot; aria-label=&quot;1 django는 무엇이며 왜 django라는 api 프레임워크를 사용하는가 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Django는 무엇이며, 왜 Django라는 API 프레임워크를 사용하는가?&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Backend 구성&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;웹서버 : Apachem Nginix 등..&lt;/li&gt;
 &lt;li&gt;데이터베이스 : MySQL, Orcle, PostgreSQL, Mongo DB 등..&lt;/li&gt;
 &lt;li&gt;스크립트 엔진 : 스크립트 언어(javascript, python 등..) 위에서 웹프레임워크가 동작할 수 있게 해주는 통역사&lt;/li&gt;
 &lt;li&gt;웹 프레임워크 : PHP, JSP, ASP, Django, Ruby on Rails, Node.js, Flask 등..&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;여기서, 웹 프레임워크는 client의 다양한 요청에 대해서 Database에 있는 data를 동적으로 만들어주기 위해 필요한 프로그램이다.&lt;br&gt;
-   Django의 장점은 굉장히 쉽게 배울 수 있는 프로그램 언어인 Python을 기반으로 했고, adim 기능을 같이 제공해준다 점이다. 요즘 대부분 AWS, Google Cloud를 사용한 다는 점으로만 봐도 AWS, Google Cloud에서 전폭적으로 초기 단계부터 지원한 프레임워크인 Django는 서비스 운용에 큰 도움이 될 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Django Restful API 개발(2)]]></title><description><![CDATA[#RESTful HTTP API, #REST, #GraphQL]]></description><link>https://lordmyshepherd.github.io/posts/Django_framwork/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/Django_framwork/</guid><pubDate>Sat, 09 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;웹 프레임워크&lt;/strong&gt;는 client의 다양한 요청에 대해서 Database에 있는 data를 동적으로 만들어주기 위해 필요한 프로그램이다.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;백엔드 개발에는 주로 안정적이고 확장성이 높으며 실행 속도도 높은 시스템을 구현하기 유리한 언어인 Java, Scala, Rust 그리고 &lt;strong&gt;&lt;em&gt;Python&lt;/em&gt;&lt;/strong&gt;을 사용한다.
+&lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt;는 비교적 쉬운 프로그래밍 언어인 &lt;strong&gt;&lt;em&gt;python&lt;/em&gt;&lt;/strong&gt;을 기반으로 동작하고, adim 기능을 같이 제공해준다.&lt;br&gt;
+또한, 요즘 대부분 &lt;strong&gt;&lt;em&gt;AWS&lt;/em&gt;&lt;/strong&gt;, Google Cloud를 사용한다는 점으로만 봐도 AWS, Google Cloud에서 전폭적으로 초기 단계부터 지원한 프레임워크인 Django는 서비스 운용에 큰 도움이 될 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[RESTful HTTP API]]></title><description><![CDATA[Django Restful API 개발(2) - 기본 개념]]></description><link>https://lordmyshepherd.github.io/posts/Django_framwork/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/Django_framwork/</guid><pubDate>Sat, 09 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&quot;api-앤드포인트-아키텍처-패턴&quot;&gt;&lt;a href=&quot;#api-%EC%95%A4%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%A8%ED%84%B4&quot; aria-label=&quot;api 앤드포인트 아키텍처 패턴 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API 앤드포인트 아키텍처 패턴&lt;/h1&gt;
 &lt;h3 id=&quot;api-엔드포인트-구조를-구현하는-방법&quot;&gt;&lt;a href=&quot;#api-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EA%B5%AC%EC%A1%B0%EB%A5%BC-%EA%B5%AC%ED%98%84%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;api 엔드포인트 구조를 구현하는 방법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API 엔드포인트 구조를 구현하는 방법&lt;/h3&gt;
 &lt;ul&gt;
@@ -109,7 +568,7 @@
 &lt;ul&gt;
 &lt;li&gt;사용할 수 있는 메소드가 4가지 밖에 없다.(HTTP Method 형태가 제한적)&lt;/li&gt;
 &lt;li&gt;구형 브라우저에서는 PUT, DELETE를 사용하지 못한다.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Django Restful API 개발(1)]]></title><description><![CDATA[#웹 시스템의 발전 역사, #HTTP]]></description><link>https://lordmyshepherd.github.io/posts/web_system/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/web_system/</guid><pubDate>Fri, 08 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[WEB, HTTP]]></title><description><![CDATA[#Django Restful API 개발(1)- 기본 개념]]></description><link>https://lordmyshepherd.github.io/posts/web_system/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/web_system/</guid><pubDate>Fri, 08 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&quot;웹-시스템들의-발전-역사&quot;&gt;&lt;a href=&quot;#%EC%9B%B9-%EC%8B%9C%EC%8A%A4%ED%85%9C%EB%93%A4%EC%9D%98-%EB%B0%9C%EC%A0%84-%EC%97%AD%EC%82%AC&quot; aria-label=&quot;웹 시스템들의 발전 역사 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;웹 시스템들의 발전 역사&lt;/h1&gt;
 &lt;h3 id=&quot;1세대-웹&quot;&gt;&lt;a href=&quot;#1%EC%84%B8%EB%8C%80-%EC%9B%B9&quot; aria-label=&quot;1세대 웹 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1세대 웹&lt;/h3&gt;
 &lt;ul&gt;
@@ -194,12 +653,12 @@
 &lt;li&gt;
 &lt;p&gt;Start line&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;HTTP 메소드
+&lt;li&gt;HTTP 메소드&lt;br&gt;
 해당 HTTP 요청이 의도하는 액션(동사)을 정의하는 부분이다.&lt;br&gt;
 POST, GET, PUT, DELETE, OPTIONS 등이 있다.&lt;/li&gt;
-&lt;li&gt;Request target
+&lt;li&gt;Request target&lt;br&gt;
 해당 HTTP 요청이 전송되는 목표 주소 (엔드포인트의 target 주소) &lt;/li&gt;
-&lt;li&gt;HTTP version
+&lt;li&gt;HTTP version&lt;br&gt;
 해당 요청의 HTTP 버전을 나타낸다. 명시하는 이유는 버전에 따라 HTTP 요청 메시지의 구조나 데이터가 약간씩 다를 수 있기 때문이다.       &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -324,9 +783,24 @@ HTTP 프로토콜에서는 동일한 클라이언트와 서버가 주고받은 H
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;api-엔드포인트-아키텍처-패턴architecure-pattern에-대해서-알아보고-django-framework를-이용해서-api를-만들어보자&quot;&gt;&lt;a href=&quot;#api-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%A8%ED%84%B4architecure-pattern%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B3%A0-django-framework%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-api%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90&quot; aria-label=&quot;api 엔드포인트 아키텍처 패턴architecure pattern에 대해서 알아보고 django framework를 이용해서 api를 만들어보자 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API 엔드포인트 아키텍처 패턴(architecure pattern)에 대해서 알아보고 Django framework를 이용해서 API를 만들어보자.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[First Project 정리]]></title><description><![CDATA[#API 엔드포인트 architecher]]></description><link>https://lordmyshepherd.github.io/posts/wewantedu_1</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/wewantedu_1</guid><pubDate>Thu, 07 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;api-엔드포인트-아키텍처-패턴architecure-pattern에-대해서-알아보고-django-framework를-이용해서-api를-만들어보자&quot;&gt;&lt;a href=&quot;#api-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%A8%ED%84%B4architecure-pattern%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B3%A0-django-framework%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C-api%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90&quot; aria-label=&quot;api 엔드포인트 아키텍처 패턴architecure pattern에 대해서 알아보고 django framework를 이용해서 api를 만들어보자 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API 엔드포인트 아키텍처 패턴(architecure pattern)에 대해서 알아보고 Django framework를 이용해서 API를 만들어보자.&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[1st_project summary]]></title><description><![CDATA[Django framwork로 Restful API 만들기]]></description><link>https://lordmyshepherd.github.io/posts/wewantedu_1</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/wewantedu_1</guid><pubDate>Thu, 07 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;web-http&quot;&gt;&lt;a href=&quot;#web-http&quot; aria-label=&quot;web http permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Web, HTTP&lt;/h2&gt;
 &lt;h2 id=&quot;restful-api&quot;&gt;&lt;a href=&quot;#restful-api&quot; aria-label=&quot;restful api permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Restful API&lt;/h2&gt;
+&lt;h2 id=&quot;django&quot;&gt;&lt;a href=&quot;#django&quot; aria-label=&quot;django permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Django란?&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Django documentation&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;초기 설정  &lt;/li&gt;
+&lt;li&gt;model 설계  &lt;/li&gt;
+&lt;li&gt;view 설계  &lt;/li&gt;
+&lt;li&gt;url 설계  &lt;/li&gt;
+&lt;li&gt;대화식 Python shell에 뛰어 들어서 Django API 가지고 노는 방법&lt;/li&gt;
+&lt;li&gt;genetic view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&quot;관계형-데이터-모델링&quot;&gt;&lt;a href=&quot;#%EA%B4%80%EA%B3%84%ED%98%95-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81&quot; aria-label=&quot;관계형 데이터 모델링 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;관계형 데이터 모델링&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;업무파악&lt;/li&gt;
@@ -338,27 +812,14 @@ HTTP 프로토콜에서는 동일한 클라이언트와 서버가 주고받은 H
 &lt;ul&gt;
 &lt;li&gt;Mysql&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;django-기본&quot;&gt;&lt;a href=&quot;#django-%EA%B8%B0%EB%B3%B8&quot; aria-label=&quot;django 기본 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django 기본&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Django란?&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Django documentation&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;설정  &lt;/li&gt;
-&lt;li&gt;model 설계  &lt;/li&gt;
-&lt;li&gt;view 설계  &lt;/li&gt;
-&lt;li&gt;url 설계  &lt;/li&gt;
-&lt;li&gt;대화식 Python shell에 뛰어 들어서 Django API 가지고 노는 방법&lt;/li&gt;
-&lt;li&gt;genetic view&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&quot;django-orm-sql&quot;&gt;&lt;a href=&quot;#django-orm-sql&quot; aria-label=&quot;django orm sql permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django ORM, SQL&lt;/h2&gt;
 &lt;h2 id=&quot;회원가입-엔드포인트&quot;&gt;&lt;a href=&quot;#%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8&quot; aria-label=&quot;회원가입 엔드포인트 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;회원가입 엔드포인트&lt;/h2&gt;
 &lt;h2 id=&quot;인증-엔드포인트-인가decorator&quot;&gt;&lt;a href=&quot;#%EC%9D%B8%EC%A6%9D-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8-%EC%9D%B8%EA%B0%80decorator&quot; aria-label=&quot;인증 엔드포인트 인가decorator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;인증 엔드포인트, 인가(decorator)&lt;/h2&gt;
 &lt;h2 id=&quot;데이터-크롤링&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%81%AC%EB%A1%A4%EB%A7%81&quot; aria-label=&quot;데이터 크롤링 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터 크롤링&lt;/h2&gt;
-&lt;h2 id=&quot;채용&quot;&gt;&lt;a href=&quot;#%EC%B1%84%EC%9A%A9&quot; aria-label=&quot;채용 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;채용&lt;/h2&gt;
-&lt;h2 id=&quot;팔로우와-언팔로우-엔드포인트&quot;&gt;&lt;a href=&quot;#%ED%8C%94%EB%A1%9C%EC%9A%B0%EC%99%80-%EC%96%B8%ED%8C%94%EB%A1%9C%EC%9A%B0-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8&quot; aria-label=&quot;팔로우와 언팔로우 엔드포인트 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;팔로우와 언팔로우 엔드포인트&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Javascript Object]]></title><description><![CDATA[#Object, #Object 심화]]></description><link>https://lordmyshepherd.github.io/posts/DAY4</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY4</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;채용-리스트-엔드포인트&quot;&gt;&lt;a href=&quot;#%EC%B1%84%EC%9A%A9-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8&quot; aria-label=&quot;채용 리스트 엔드포인트 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;채용 리스트 엔드포인트&lt;/h2&gt;
+&lt;h2 id=&quot;상세-채용-정보-엔드포인트&quot;&gt;&lt;a href=&quot;#%EC%83%81%EC%84%B8-%EC%B1%84%EC%9A%A9-%EC%A0%95%EB%B3%B4-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8&quot; aria-label=&quot;상세 채용 정보 엔드포인트 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;상세 채용 정보 엔드포인트&lt;/h2&gt;
+&lt;h2 id=&quot;팔로우와-언팔로우-엔드포인트many-to-many&quot;&gt;&lt;a href=&quot;#%ED%8C%94%EB%A1%9C%EC%9A%B0%EC%99%80-%EC%96%B8%ED%8C%94%EB%A1%9C%EC%9A%B0-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8many-to-many&quot; aria-label=&quot;팔로우와 언팔로우 엔드포인트many to many permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;팔로우와 언팔로우 엔드포인트(Many-to-Many)&lt;/h2&gt;
+&lt;h2 id=&quot;면접-후기-엔드포인트&quot;&gt;&lt;a href=&quot;#%EB%A9%B4%EC%A0%91-%ED%9B%84%EA%B8%B0-%EC%97%94%EB%93%9C%ED%8F%AC%EC%9D%B8%ED%8A%B8&quot; aria-label=&quot;면접 후기 엔드포인트 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;면접 후기 엔드포인트&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Javascript Object]]></title><description><![CDATA[#Object, #Object 심화]]></description><link>https://lordmyshepherd.github.io/posts/DAY4</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/DAY4</guid><pubDate>Thu, 03 Oct 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&quot;object&quot;&gt;&lt;a href=&quot;#object&quot; aria-label=&quot;object permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Object&lt;/h2&gt;
 &lt;h4 id=&quot;1-object가-왜-필요할까요&quot;&gt;&lt;a href=&quot;#1-object%EA%B0%80-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%A0%EA%B9%8C%EC%9A%94&quot; aria-label=&quot;1 object가 왜 필요할까요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Object가 왜 필요할까요?&lt;/h4&gt;
 &lt;p&gt;배열에는 데이터를 저장할때 순서대로 데이터를 저장하게 됩니다. 하지만 배열은 여러가지 불편한 문제가 있습니다.

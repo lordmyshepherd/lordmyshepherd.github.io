@@ -6,12 +6,13 @@
 <url> <loc>https://lordmyshepherd.github.io/posts/DAY1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/DAY2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/DAY3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/posts/Django_framwork/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/DAY4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/posts/wewantedu_1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/Django_framwork/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/Django_initial_setting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/web_system/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/wewantedu_1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/pages/contacts copy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/tag/design</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/tag/gatsby</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/tag/http</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -33,4 +34,5 @@
 <url> <loc>https://lordmyshepherd.github.io/category/기본-개념</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
