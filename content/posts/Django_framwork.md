@@ -1,5 +1,5 @@
 ---
-title: "Django Restful API 개발(2)"
+title: "RESTful HTTP API"
 date: "2019-11-09T22:40:32.169Z"
 template: "post"
 draft: false
@@ -7,7 +7,7 @@ slug: "/posts/Django_framwork/"
 category: "기본 개념"
 tags:
   - "Restful API"  
-description: "#RESTful HTTP API, #REST, #GraphQL"
+description: "Django Restful API 개발(2) - 기본 개념"
 socialImage: ""
 ---
 *The Lord is my shepherd, I lack nothing. PSLAM 23:1*

@@ -1,5 +1,5 @@
 ---
-title: "Django Restful API 개발(1)"
+title: "WEB, HTTP"
 date: "2019-11-08T22:40:32.169Z"
 template: "post"
 draft: false
@@ -8,7 +8,7 @@ category: "기본 개념"
 tags:
   - "Web History"
   - "HTTP"  
-description: "#웹 시스템의 발전 역사, #HTTP"
+description: "#Django Restful API 개발(1)- 기본 개념"
 socialImage: ""
 ---
 *The Lord is my shepherd, I lack nothing. PSLAM 23:1*
@@ -51,12 +51,12 @@ HTTP 통신 방식에는 요청(request)과 응답(response) 2가지가 있고, 
 + Request
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/Django/request3.png)
    1. Start line
-       + HTTP 메소드
+       + HTTP 메소드  
         해당 HTTP 요청이 의도하는 액션(동사)을 정의하는 부분이다.  
         POST, GET, PUT, DELETE, OPTIONS 등이 있다.
-       + Request target
+       + Request target  
        해당 HTTP 요청이 전송되는 목표 주소 (엔드포인트의 target 주소) 
-       + HTTP version
+       + HTTP version  
        해당 요청의 HTTP 버전을 나타낸다. 명시하는 이유는 버전에 따라 HTTP 요청 메시지의 구조나 데이터가 약간씩 다를 수 있기 때문이다.       
    2. Headers  
        요청 자체에 대한 정보를 담고 있다. 예) 요청 메시지의 전체 크기(Content length)  

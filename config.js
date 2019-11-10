@@ -26,7 +26,7 @@ module.exports = {
     }*/
   ],
   author: {
-    name: 'LIMSs',
+    name: 'LIMS',
     photo: 'cross.png',
     bio: 'Christian developer',
     contacts: {
