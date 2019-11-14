@@ -1,5 +1,5 @@
 ---
-title: "DoesNotExist"
+title: "Django Core Exceptions"
 date: "2019-11-12T22:40:32.169Z"
 template: "post"
 draft: false
@@ -10,8 +10,6 @@ description: "#DoesNotExist vs ObjectsDoesNotExist"
 socialImage: ""
 ---
 *The Lord is my shepherd, I lack nothing. PSLAM 23:1*
-# Django Core Exceptions
-
 
 ### 1. ObjectDoesNotExist and DoesNotExist
 + exception **DoesNotExist** --> 특정 모델에만 이용 가능  
