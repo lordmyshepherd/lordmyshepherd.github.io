@@ -20,7 +20,7 @@ socialImage: ""
 ### RESTful HTTP API
 REST(Representation State Transfer)ful의 약자로 REST 기반으로 API 시스템을 구현하기 위한 아키텍처의 한 방식이다.  
 <br>HTTP URI(Uniform Resource Idntifier)를 통해 특정 Resurce(Database에 저장되어 있는 정보)의 위치를 나타내고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 행위(CRUD Operation)를 정의하고 Payload로 데이터를 주고 받는다.  
-<br>
+
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/Django/restful_api.png)
 
 ### RSET 구성 요소

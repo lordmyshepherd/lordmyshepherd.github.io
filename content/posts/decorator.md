@@ -86,5 +86,33 @@ Factory에서 뭔가를 생성해 내기 위해서는 설정값이 필요할 것
         ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/Django/closure.png)          
 
 
-        
-    
+### *args, *kwargs
+
+자동차를 구입할때 기본 사양의 자동차를 살 수 도 있고, 원하면 여러 옵션을 추가 해서 구입할 수 있습니다. 예를 들어, 가죽 의자 옵션을 추가 한다던가 해서 자동차를 구입할 수 있습니다.  
+
+예를 들어, A라는 자동차는 옵션 사항이 40개 정도 된다고 가정해 보겠습니다.  
+A라는 자동차를 구입하는 함수를 구현한다고 했을때, 모든 옵션 사항을 parameter로 받을려면 parameter수가 40개나 되어야 하므로 함수의 정의 부분이 너무 길어질것입니다.  
+게다가 대부분의 옵션 사항은 설정이 안될 확률이 높습니다. 그렇다면 40개의 parameter가 사용되지 않는데도 불구하고 정의되어야 하는 상황이 됩니다.   
+또한, A라는 자동차는 계속해서 업그레이드 되므로 전에는 없던 옵션이 생길 수 있습니다. 혹은 있던 옵션이 사라질 수 도 있습니다. 하지만 이미 정의된 함수를 바꾸려면 코드를 수정하고 다시 재배포 해야 하기 때문에 옵션 사항들을 그때 그때 바꿀수 있는 유동성(flexibility)가 떨어집니다.  
+
+그렇다면 이렇게 사전에 정확히 필요한 parameter 수와 구조를 알수 없는 경우는 어떻게 해야할까요?
+
++ Dictionary를 paramter로 받아서 사용하는 방법
+```python
+def buy_A_car(options):
+    print(f"다음 사양의 자동차를 구입하십니다:")
+
+    for option in options:
+        print(f"{option} : {options[option]}")
+
+options = {"seat" : "가죽", "blackbox" : "최신"}
+buy_A_car(options)
+
+> 다음 사양의 자동차를 구입하십니다:
+seat : 가죽
+blackbox : 최신
+```
+이렇게 하면 원하는 옵션만 간단하게 설정 할 수 있다는 장점은 있지만 옵션을 dictionary로 받아야만 한다는 제약사항이 있습니다. 만일 옵션을 하나도 추가 안하고 기본사양으로 사는 경우에도 비어있는 dictionary를 넘겨줘야 하는것이죠. 게다가 dictionary가 아닌 다른 타입의 값 (예를 들어 string)을 넘겨주는 오류가 생길 확률도 있습니다.
+
+1. Keyworded variable length of arguments
+Keyworded variable length of arguments는 이름 그대로 keyword arguments 인데 그 수가 정해지지 않고 유동적으로 변할 수 있는 keyword arguments 이다.
