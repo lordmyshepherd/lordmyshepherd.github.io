@@ -2,20 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://lordmyshepherd.github.io/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/posts/DAY2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/AWS_S3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/API_architecher</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/DAY1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/posts/DAY3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/DAY4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/DAY2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/Django_framwork/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/posts/Django_initial_setting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/decorator/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/except/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/posts/wewantedu_1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/requests/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/DAY3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/pages/contacts copy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/Django_initial_setting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/unit_test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/posts/web_system/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://lordmyshepherd.github.io/pages/contacts copy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/posts/wewantedu_1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/tag/design</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/tag/gatsby</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/tag/http</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -33,10 +35,12 @@
 <url> <loc>https://lordmyshepherd.github.io/category/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/category/css</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/category/django</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/category/django/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/category/java-script</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/category/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/category/기본-개념</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lordmyshepherd.github.io/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lordmyshepherd.github.io/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

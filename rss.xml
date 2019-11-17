@@ -1,4 +1,325 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 14 Nov 2019 10:17:01 GMT</lastBuildDate><item><title><![CDATA[Decorator]]></title><description><![CDATA[#DoesNotExist vs ObjectsDoesNotExist]]></description><link>https://lordmyshepherd.github.io/posts/decorator/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/decorator/</guid><pubDate>Thu, 14 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by John Doe]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lordmyshepherd.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 17 Nov 2019 16:23:09 GMT</lastBuildDate><item><title><![CDATA[Django에서 AWS S3에 파일  업로드 엔드포인트 만들기]]></title><description><![CDATA[#DoesNotExist vs ObjectsDoesNotExist]]></description><link>https://lordmyshepherd.github.io/posts/AWS_S3</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/AWS_S3</guid><pubDate>Thu, 14 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;django에서-aws-s3에-파일-업로드-과정&quot;&gt;&lt;a href=&quot;#django%EC%97%90%EC%84%9C-aws-s3%EC%97%90-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EA%B3%BC%EC%A0%95&quot; aria-label=&quot;django에서 aws s3에 파일 업로드 과정 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django에서 AWS S3에 파일 업로드 과정&lt;/h3&gt;
+&lt;p&gt;AWS IAM setup—&gt; AWS bucket setup—&gt; 엔드포인트 using Django boto3&lt;/p&gt;
+&lt;h3 id=&quot;aws-iam-identity-and-access-management&quot;&gt;&lt;a href=&quot;#aws-iam-identity-and-access-management&quot; aria-label=&quot;aws iam identity and access management permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AWS IAM (Identity and Access Management)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;사용자와 정책&lt;br&gt;
+IAM 사용자는 서비스의 자격 증명입니다.  IAM 사용자를 생성할 경우, 권한을 부여하지 않는 한 사용자는 계정 내에서 어떠한 것으로도 액세스할 수 없습니다. 사용자 또는 사용자가 속한 그룹에 연결된 정책인 자격 증명 기반 정책을 생성하여 사용자에게 권한을 부여합니다. 다음 예는 사용자가 us-east-2 리전 내의 123456789012 계정에서 Books 테이블의 모든 Amazon DynamoDB 작업(dynamodb:*)을 수행할 수 있도록 허용하는 JSON 정책을 보여 줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&quot;Version&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2012-10-17&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&quot;Statement&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;Effect&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Allow&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;Action&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;dynamodb:*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;Resource&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;arn:aws:dynamodb:us-east-2:123456789012:table/Books&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 정책을 IAM 사용자에게 연결한 후에는 해당 사용자가 이러한 DynamoDB 권한만 부여받습니다. 대부분의 사용자는 해당 사용자의 권한을 함께 나타내는 여러 정책을 부여받습니다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SETTING&lt;br&gt;
+&lt;strong&gt;&amp;#x3C;정책&gt;&lt;/strong&gt;&lt;br&gt;
+[STEP 1] IAM 정책 페이지에서 새로운 정책 생성&lt;br&gt;
+[STEP 2] 새로운 permission policy를 추가하는 페이지에서 JSON 탭으로 이동해서 다음의 JSON을 입력  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&quot;Version&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2012-10-17&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&quot;Statement&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;Sid&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;VisualEditor0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;Effect&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Allow&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;Action&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;s3:GetObjectAcl&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;s3:GetObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;s3:ListBucket&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;s3:DeleteObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutObjectAcl&quot;&lt;/span&gt;
+                &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;Resource&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;arn:aws:s3:::example-bucket-name/*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&quot;arn:aws:s3:::example-bucket-name&quot;&lt;/span&gt;
+                &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;example-bucket-name&lt;/em&gt;&lt;/strong&gt; 부분은 나중에 S3 버켓을 생성했을때 해당 S3 버켓이름으로 바꾸어 주도록 한다.&lt;br&gt;
+[STEP 3] 정책 이름과 설명 추가&lt;br&gt;
+[STEP 4] 정책 생성 확인&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4868bb95d0382ea7bbb5f1998d93652a/cac38/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.77962577962577%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABcSAAAXEgFnn9JSAAADQ0lEQVQ4y4VSXW9UVRS9JpLw4L8w8ZXwgkJiTUrhAUONYcjUUB6b8CIQWoMzmCCJnVADZrAlRX0Zf4G+kAgEqAm1ohiBaZnOtNOBoXOdud/3nPtxvrfnzrREX+hOVvbe5+aus9fZy5j8/FLz1Onzdz84On58aGQsf2zP+/n9h3L590aO5Q8cOj62d2j04/GJs2cKF0udkxNnr+4/nDsy8tHJ/PDoidzw6Hhu+KjOR8ZyBz/8JHfgcD5nLC49jH/7/U+orbfgp1uP4PH9B1BvtqC+tgGrjSY09PlKrfHo5ctO7Lo+2I4Hziu44GRnAQIvRNA0PTA4Z56SggMACRAmpmWRKE4ISRMSYZwGvidxmj4Ax0bw6wLA4qLsY2lJwsKChFpNQpJICAMJgS8NVX0C0OnAdgjNHalBrdSg4Eo9Fq4XRE+rQBprjK2tc7beHGCjxVnrOWcv2pwur3ADIjQBlJzR/xWUZAXHcwvPHVqwES0gFBa1gin97UqfWUpQXIBkLLsZBCEgKQWpc1ZnYZw4dW7o7X0H3zFeE3fvL7775OmKt/ysftPsOjOtdudaz7LLXY2O2S3brld2PL/sB2HZuFT6RhW/vBxNflG6PXlh+k4fxUGeujB9+1zxq3sXS1dmv/3+B3f62twfpdnr3319/caPM3PzlZm5GxVdVwb1fOXy7HzFQBiHVGgp+rmyF9t6vn4WW03XR/cetmwvBQY7hWH3eig0NyH9+y9Og0AQFAqKkKBhyEkYMMkZ4JjcrK+3HS0NcJTQwPOZbdus1+0x13H72epZfRjBsxoOlquA6nWl2pug/ukCWBaAbSu9fW2HMLv4FxJ72O76ELkItKkgTZJXLsAYg+u54Ps+GEGjgYXelBUECtseyCjdlq4UYxIQyuqfqRDLycYLi7hBJ6HMpJSaUkpTk5ppmvZBCDENb3UVA+fACFVRtQGsY2kCNbBhmrLMHro7n21bn72lsfu/0MT/6w2vVsOgJ+SMK7LWBrbZ60tR24SZ9wCmMsLqp8U3jJ3CzybURo3jRMVdG6SPQNg+CB8pFccMlMym/Wxrwl1apvE6GL1qFeutaosoJbV0rsk51RBCiYxQ92KLUAjx5k4D/gvcRZwdqinDFQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/4868bb95d0382ea7bbb5f1998d93652a/01472/1.webp 240w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/222bd/1.webp 480w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/620b9/1.webp 960w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/28063/1.webp 1440w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/34ef4/1.webp 1920w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/869e6/1.webp 1924w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/4868bb95d0382ea7bbb5f1998d93652a/0783d/1.png 240w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/782f4/1.png 480w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/f570d/1.png 960w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/8d0ff/1.png 1440w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/a987b/1.png 1920w,
+/static/4868bb95d0382ea7bbb5f1998d93652a/cac38/1.png 1924w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/4868bb95d0382ea7bbb5f1998d93652a/f570d/1.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;#x3C;사용자&gt;&lt;/strong&gt;&lt;br&gt;
+[STEP 1] 사용자 생성&lt;br&gt;
+[STEP 2] 사용자 추가 페이지로 이동한다.&lt;br&gt;
+[STEP 3] Programmatic Access 항목을 체크한다.&lt;br&gt;
+[STEP 4] 만들어 놓은 정책을 선택하고 다음으로 넘어간다.&lt;br&gt;
+[STEP 5] PASS&lt;br&gt;
+[STEP 6] PASS&lt;br&gt;
+[STEP 7] 새로운 유저 생성이 완료되면 “Download. csv” 버튼을 클릭해서 유저의 “Access Key ID”와 “Secret Access Key”를 다운로드 받도록 한다. 지금 다운 받지 않으면 다시 다운 받거나 찾을 수 없음으로 꼭 다운 받도록 하자.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f67913cc7ecd7952eaac922f306710d2/6a87e/s3_user.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 137.78020776380538%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/f67913cc7ecd7952eaac922f306710d2/01472/s3_user.webp 240w,
+/static/f67913cc7ecd7952eaac922f306710d2/222bd/s3_user.webp 480w,
+/static/f67913cc7ecd7952eaac922f306710d2/620b9/s3_user.webp 960w,
+/static/f67913cc7ecd7952eaac922f306710d2/28063/s3_user.webp 1440w,
+/static/f67913cc7ecd7952eaac922f306710d2/81edd/s3_user.webp 1829w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/f67913cc7ecd7952eaac922f306710d2/0783d/s3_user.png 240w,
+/static/f67913cc7ecd7952eaac922f306710d2/782f4/s3_user.png 480w,
+/static/f67913cc7ecd7952eaac922f306710d2/f570d/s3_user.png 960w,
+/static/f67913cc7ecd7952eaac922f306710d2/8d0ff/s3_user.png 1440w,
+/static/f67913cc7ecd7952eaac922f306710d2/6a87e/s3_user.png 1829w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/f67913cc7ecd7952eaac922f306710d2/f570d/s3_user.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;aws-s3-bucket&quot;&gt;&lt;a href=&quot;#aws-s3-bucket&quot; aria-label=&quot;aws s3 bucket permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AWS S3 bucket&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;bucket?
+버킷은 Amazon S3에 저장된 객체에 대한 컨테이너입니다. 모든 객체는 어떤 버킷에 포함됩니다. 예를 들어, photos/puppy.jpg로 명명된 객체는 johnsmith 버킷에 저장되며, URL &lt;a href=&quot;http://johnsmith.s3.amazonaws.com/photos/puppy.jpg%EB%A5%BC&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;http://johnsmith.s3.amazonaws.com/photos/puppy.jpg를&lt;/a&gt; 사용하여 주소를 지정할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AWS S3 bucket setting&lt;br&gt;
+[STEP 1 ~ 2] AWS S3 페이지로 가서 “Create bucket” 버튼을 클릭한 후 버켓 이름과 region을 선택&lt;br&gt;
+[STEP 3] “Block all public access”를 uncheck&lt;br&gt;
+[STEP 4 ~ 5] 버켓 생성이 완료되면 해당 버켓을 클릭해서 버켓의 설정 페이지로 이동&lt;br&gt;
+[STEP 6] 상단의 “Permission(권한)” 탭에서 “Bucket Policy(버킷 정책)” 탭을 눌른 후 다음의 JSON을 입력  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;Version&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2012-10-17&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;Statement&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Sid&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Stmt1507637373230&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Effect&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Allow&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Principal&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;AWS&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;{user_arn}&quot;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Action&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;s3:GetObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;s3:DeleteObject&quot;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Resource&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;arn:aws:s3:::{bucket_name}/*&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Sid&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Stmt1507637391106&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Effect&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Allow&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Principal&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Action&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;s3:GetObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;Resource&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;arn:aws:s3:::{bucket_name}/*&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;    &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;{user_arn}&lt;/em&gt;&lt;/strong&gt; 은 IAM user의 ARN 이고, &lt;strong&gt;&lt;em&gt;{bucket_name}&lt;/em&gt;&lt;/strong&gt;은 각자 버켓의 이름이다.&lt;br&gt;
+I AM 유저의 ARN은 IAM 페이지에서 users 페이지에 해당 유저를 클릭하면 나오는 페이지에서 확인 할 수 있다.&lt;br&gt;
+그리고 save 버튼을 눌르자. Save 버튼을 눌르면 Public access를 주지 말라는 메세지의 warning이 뜬다. 지금은 무시해도 좋다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;원칙적으로는 S3는 public access를 주지 않는것이 보안상 좋다&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt; S3는 private하게 막고 S3 앞에 CloudFront를 붙혀서 CDN 기능을 구현하는것이 정석이긴 하다&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;[STEP 7] “CORS configuration” 버튼을 눌러서 아래와 같이 CORS 설정 후 save  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;?xml version&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;1.0&quot;&lt;/span&gt; encoding&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;?&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;CORSConfiguration xmlns&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;http://s3.amazonaws.com/doc/2006-03-01/&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;CORSRule&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;AllowedOrigin&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;AllowedOrigin&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;AllowedMethod&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;GET&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;AllowedMethod&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;MaxAgeSeconds&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;MaxAgeSeconds&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;ExposeHeader&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;ETag&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ExposeHeader&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;AllowedHeader&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;AllowedHeader&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;CORSRule&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;CORSConfiguration&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/42182da2f2276a805bbdbbf95790792d/600cc/s3_bucket.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 169.75145425700686%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/42182da2f2276a805bbdbbf95790792d/01472/s3_bucket.webp 240w,
+/static/42182da2f2276a805bbdbbf95790792d/222bd/s3_bucket.webp 480w,
+/static/42182da2f2276a805bbdbbf95790792d/620b9/s3_bucket.webp 960w,
+/static/42182da2f2276a805bbdbbf95790792d/28063/s3_bucket.webp 1440w,
+/static/42182da2f2276a805bbdbbf95790792d/9f0cb/s3_bucket.webp 1891w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/42182da2f2276a805bbdbbf95790792d/0783d/s3_bucket.png 240w,
+/static/42182da2f2276a805bbdbbf95790792d/782f4/s3_bucket.png 480w,
+/static/42182da2f2276a805bbdbbf95790792d/f570d/s3_bucket.png 960w,
+/static/42182da2f2276a805bbdbbf95790792d/8d0ff/s3_bucket.png 1440w,
+/static/42182da2f2276a805bbdbbf95790792d/600cc/s3_bucket.png 1891w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/42182da2f2276a805bbdbbf95790792d/f570d/s3_bucket.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;django에서-boto3를-사용하여-s3와-연결-및-파일-업로드&quot;&gt;&lt;a href=&quot;#django%EC%97%90%EC%84%9C-boto3%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-s3%EC%99%80-%EC%97%B0%EA%B2%B0-%EB%B0%8F-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C&quot; aria-label=&quot;django에서 boto3를 사용하여 s3와 연결 및 파일 업로드 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Django에서 boto3를 사용하여 S3와 연결 및 파일 업로드&lt;/h3&gt;
+&lt;p&gt;[STEP 1] python용 AWS 라이브러리인 boto3 설치&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;pip install boto3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;[STEP 2] boto3 라이브러리를 사용하여 S3에 파일 업로드 엔드포인트 코드&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FileView&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;View&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+
+    s3_client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; boto3&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;client&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;s3&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        aws_access_key_id&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;AKIASTLUR2MMQHRRSS6M&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        aws_secret_access_key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;OuAp9m9XoIN9FnjbwryQKJxzZS5ltNWsVdvhnKgO&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token builtin&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;FILES&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;filename&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;s3_client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;upload_fileobj&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;token builtin&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+            &lt;span class=&quot;token string&quot;&gt;&quot;weandb&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token builtin&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            ExtraArgs&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;ContentType&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;content_type
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; 
+
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; HttpResponse&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;status&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;aws&lt;em&gt;access&lt;/em&gt;key_id&lt;/em&gt;&lt;/strong&gt; 와 &lt;strong&gt;&lt;em&gt;aws&lt;em&gt;secret&lt;/em&gt;access_key&lt;/em&gt;&lt;/strong&gt; 값은 IAM user 생성후 다운 받았던 csv 파일에 나와있다.&lt;/li&gt;
+&lt;li&gt;‘filename’ : client에서 file을 FILES에 key : value 형식으로 보내므로 보내는 파일을 꺼낼 수 있는 key 값이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;upload_fileobj 함수&lt;/em&gt;&lt;/strong&gt;의 두번째 인자는 파일을 업로드 하기 희망하는 버켓의 이름이다.&lt;/li&gt;
+&lt;li&gt;client로부터 전달받은 파일을 &lt;strong&gt;&lt;em&gt;request.FILES&lt;/em&gt;&lt;/strong&gt;를 통해 AWS S3로 전달된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;database에-파일이-저장된-s3의-url-저장&quot;&gt;&lt;a href=&quot;#database%EC%97%90-%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EC%A0%80%EC%9E%A5%EB%90%9C-s3%EC%9D%98-url-%EC%A0%80%EC%9E%A5&quot; aria-label=&quot;database에 파일이 저장된 s3의 url 저장 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Database에 파일이 저장된 S3의 url 저장&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;host_image_url &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://s3.ap-northeast-2.amazonaws.com/weandb/&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;file_name&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ap-northeast-2 : 한국 &lt;/li&gt;
+&lt;li&gt;weandb : 해당 파일이 저장되는 버킷&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9d573e4b559a81cf25523272ab5e0389/84739/file_url.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 92.06219312602292%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABcSAAAXEgFnn9JSAAACGUlEQVQ4y6VU2XKbQBAExLUn92EQ6IiU01X5myh/YCeO/auRf0aPtIclsa2qpCIpD1MDbNEz3dsz1v52d6h5CMbFIBkHCwKwMIRSCpZlnR+Pd7tDwX2EXA6rxRpVVaJtW2itCJhjPf+ITX+N1fwDFs1bRCqF74UIAyoeSsxm7jHg/uHL4UoxeAEb8qJAXpZI0wxxHEFwibZcoas3Jo9R5z3SqEKeXNFzZ4CPAH/e7A59phH13ZDNe2RXDQKibNv2hZS/7w6lDMDLfKjbOWaOg6ZpsNlsUJaF6TLwGQRTcOhs+tE2YVt/KLp/GDX04PjhoJOENHGIbmx0HIHrqoGWKbK4orPZaR1WIhxfhqwokVc1pJDmlqWkUPJMyt/INpIZQBmlWCzev6J2QYy3XKmpw5Hyp+vP2L55R34U8ENGduLgjIFTPqnQ/u6Fskv6hXQBsc4RkW4BFxBKQxN9rfWJGt5+fQa8mOYR4P00KQHnQ9/36LoOeZ5h3izNzSoeo0galFmLRBcm53FN5i5RZx10lCEpK8Ngonz/m7I9dN0c2+0WBU3Mer024FLK06ge2UZOlH2ay9EunufBpecoiownXdc9A/AHUWY+PMGHejWZebVcgrHwP2wzUratwaMRFELQckhRZDWUGLvzzHbxXCrqBr+yT7Pu/Ns2rw8Cn9P8klUc1wCMErgz7zn+ujweb15sY9OHUa+LNw3FE8q7n66cMpCJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/9d573e4b559a81cf25523272ab5e0389/01472/file_url.webp 240w,
+/static/9d573e4b559a81cf25523272ab5e0389/222bd/file_url.webp 480w,
+/static/9d573e4b559a81cf25523272ab5e0389/620b9/file_url.webp 960w,
+/static/9d573e4b559a81cf25523272ab5e0389/22655/file_url.webp 1222w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/9d573e4b559a81cf25523272ab5e0389/0783d/file_url.png 240w,
+/static/9d573e4b559a81cf25523272ab5e0389/782f4/file_url.png 480w,
+/static/9d573e4b559a81cf25523272ab5e0389/f570d/file_url.png 960w,
+/static/9d573e4b559a81cf25523272ab5e0389/84739/file_url.png 1222w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/9d573e4b559a81cf25523272ab5e0389/f570d/file_url.png&quot;
+          alt=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          title=&quot;Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus&quot;
+          loading=&quot;lazy&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Decorator]]></title><description><![CDATA[#DoesNotExist vs ObjectsDoesNotExist]]></description><link>https://lordmyshepherd.github.io/posts/decorator/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/decorator/</guid><pubDate>Thu, 14 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&quot;nested-function중첩함수&quot;&gt;&lt;a href=&quot;#nested-function%EC%A4%91%EC%B2%A9%ED%95%A8%EC%88%98&quot; aria-label=&quot;nested function중첩함수 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Nested Function(중첩함수)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;함수도 함수 안에서 중첩되어 선언될 수 있다.&lt;/li&gt;
@@ -120,7 +441,79 @@ calculate_power_of_seven&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/sp
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Unit test]]></title><description><![CDATA[#DoesNotExist vs ObjectsDoesNotExist]]></description><link>https://lordmyshepherd.github.io/posts/unit_test/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/unit_test/</guid><pubDate>Wed, 13 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;args-kwargs&quot;&gt;&lt;a href=&quot;#args-kwargs&quot; aria-label=&quot;args kwargs permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;*args, *kwargs&lt;/h3&gt;
+&lt;p&gt;자동차를 구입할때 기본 사양의 자동차를 살 수 도 있고, 원하면 여러 옵션을 추가 해서 구입할 수 있습니다. 예를 들어, 가죽 의자 옵션을 추가 한다던가 해서 자동차를 구입할 수 있습니다.  &lt;/p&gt;
+&lt;p&gt;예를 들어, A라는 자동차는 옵션 사항이 40개 정도 된다고 가정해 보겠습니다.&lt;br&gt;
+A라는 자동차를 구입하는 함수를 구현한다고 했을때, 모든 옵션 사항을 parameter로 받을려면 parameter수가 40개나 되어야 하므로 함수의 정의 부분이 너무 길어질것입니다.&lt;br&gt;
+게다가 대부분의 옵션 사항은 설정이 안될 확률이 높습니다. 그렇다면 40개의 parameter가 사용되지 않는데도 불구하고 정의되어야 하는 상황이 됩니다.&lt;br&gt;
+또한, A라는 자동차는 계속해서 업그레이드 되므로 전에는 없던 옵션이 생길 수 있습니다. 혹은 있던 옵션이 사라질 수 도 있습니다. 하지만 이미 정의된 함수를 바꾸려면 코드를 수정하고 다시 재배포 해야 하기 때문에 옵션 사항들을 그때 그때 바꿀수 있는 유동성(flexibility)가 떨어집니다.  &lt;/p&gt;
+&lt;p&gt;그렇다면 이렇게 사전에 정확히 필요한 parameter 수와 구조를 알수 없는 경우는 어떻게 해야할까요?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Dictionary를 paramter로 받아서 사용하는 방법&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;buy_A_car&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;options&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;다음 사양의 자동차를 구입하십니다:&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; option &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; options&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;option&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; : &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;options&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;option&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;options = {“seat” : “가죽”, “blackbox” : “최신”}
+buy&lt;em&gt;A&lt;/em&gt;car(options)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;다음 사양의 자동차를 구입하십니다:
+seat : 가죽
+blackbox : 최신&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;이렇게 하면 원하는 옵션만 간단하게 설정 할 수 있다는 장점은 있지만 옵션을 dictionary로 받아야만 한다는 제약사항이 있습니다. 만일 옵션을 하나도 추가 안하고 기본사양으로 사는 경우에도 비어있는 dictionary를 넘겨줘야 하는것이죠. 게다가 dictionary가 아닌 다른 타입의 값 (예를 들어 string)을 넘겨주는 오류가 생길 확률도 있습니다.
+
+1. Keyworded variable length of arguments
+Keyworded variable length of arguments는 이름 그대로 keyword arguments 인데 그 수가 정해지지 않고 유동적으로 변할 수 있는 keyword arguments 이다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Requests module을 통해서 json 데이터를 요청하고 받아서 파싱하기]]></title><link>https://lordmyshepherd.github.io/posts/requests/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/requests/</guid><pubDate>Thu, 14 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;환경-및-선수조건&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD-%EB%B0%8F-%EC%84%A0%EC%88%98%EC%A1%B0%EA%B1%B4&quot; aria-label=&quot;환경 및 선수조건 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경 및 선수조건&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;requests module, json module&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;requests&quot;&gt;&lt;a href=&quot;#requests&quot; aria-label=&quot;requests permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Requests?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 통신을 위한 파이썬 라이브러리로 urllib.request 처럼 with문 없이 직관적으로 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;requests-기본-사용법&quot;&gt;&lt;a href=&quot;#requests-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9%EB%B2%95&quot; aria-label=&quot;requests 기본 사용법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Requests 기본 사용법&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;기본 예제&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; requests
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; requests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;https://api.github.com/user&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; auth&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;user&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;pass&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;status_code
+&lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;headers&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;content-type&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&apos;application/json; charset=utf8&apos;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;encoding
+&lt;span class=&quot;token string&quot;&gt;&apos;utf-8&apos;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;text
+&lt;span class=&quot;token string&quot;&gt;u&apos;{&quot;type&quot;:&quot;User&quot;...&apos;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;json&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;u&apos;private_gists&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;419&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;u&apos;total_private_repos&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;77&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;다른 Method를 사용할 때&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; requests
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; requests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;https://api.github.com/events&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; requests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;post&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;http://httpbin.org/post&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;key&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;value&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; requests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;put&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;http://httpbin.org/put&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;key&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;value&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; requests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;delete&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;http://httpbin.org/delete&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; requests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;http://httpbin.org/get&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; r &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; requests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;options&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;http://httpbin.org/get&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;.json() : json data를 HTTP 요청을 통해서 받아오고 그 data를 python에서 사용할 수 있는 dictionary 형태로 파싱하는 방법&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; requests
+url &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;https://gist.githubusercontent.com/TWpower/771f9dfc8d9e1ddc0ecbdaea5b2e379e/raw/2c7785b4835138255bdadb71bd83702e53ac2677/test-example.json&apos;&lt;/span&gt;
+
+data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; requests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;url&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;json&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Unit test]]></title><description><![CDATA[#DoesNotExist vs ObjectsDoesNotExist]]></description><link>https://lordmyshepherd.github.io/posts/unit_test/</link><guid isPermaLink="false">https://lordmyshepherd.github.io/posts/unit_test/</guid><pubDate>Wed, 13 Nov 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;The Lord is my shepherd, I lack nothing. PSLAM 23:1&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&quot;unit-test&quot;&gt;&lt;a href=&quot;#unit-test&quot; aria-label=&quot;unit test permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;unit test&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;unit test라는 이름에서 unit이라는 단어가 들어가 있는 이유는 테스트가 가능한 코드의 unit들을 테스트한다는 의미이다.&lt;br&gt;
@@ -739,9 +1132,8 @@ MySQL을 파이썬에서 사용하기 위함이다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;restful-http-api&quot;&gt;&lt;a href=&quot;#restful-http-api&quot; aria-label=&quot;restful http api permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful HTTP API&lt;/h3&gt;
 &lt;p&gt;REST(Representation State Transfer)ful의 약자로 REST 기반으로 API 시스템을 구현하기 위한 아키텍처의 한 방식이다.&lt;br&gt;
-&lt;br&gt;HTTP URI(Uniform Resource Idntifier)를 통해 특정 Resurce(Database에 저장되어 있는 정보)의 위치를 나타내고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 행위(CRUD Operation)를 정의하고 Payload로 데이터를 주고 받는다.&lt;br&gt;
-&lt;br&gt;
-&lt;span
+&lt;br&gt;HTTP URI(Uniform Resource Idntifier)를 통해 특정 Resurce(Database에 저장되어 있는 정보)의 위치를 나타내고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 행위(CRUD Operation)를 정의하고 Payload로 데이터를 주고 받는다.  &lt;/p&gt;
+&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
     &gt;
