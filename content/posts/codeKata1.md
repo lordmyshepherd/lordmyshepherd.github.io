@@ -1,6 +1,6 @@
 ---
 title: "JavaScript code kata"
-date: "2019-12-15T22:40:32.169Z"
+date: "2019-10-10T22:40:32.169Z"
 template: "post"
 draft: false
 slug: "/posts/codeKata1/"

@@ -1,10 +1,10 @@
 ---
 title: "JavaScript async and await in loops"
-date: "2019-12-15T22:40:32.169Z"
+date: "2019-10-11T22:40:32.169Z"
 template: "post"
 draft: false
 slug: "/posts/AsyncAwaitForLoop/"
-category: "Django"
+category: "Javascript"
 tags:
 description: "#동시성을 활용한 비동기 호출 제어"
 socialImage: ""
