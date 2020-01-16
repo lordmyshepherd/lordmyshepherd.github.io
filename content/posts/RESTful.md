@@ -3,7 +3,7 @@ title: "RESTful HTTP API"
 date: "2019-11-09T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "/posts/Django_framwork/"
+slug: "/posts/RESTful/"
 category: "기본 개념"
 tags:
   - "Restful API"  
@@ -19,9 +19,19 @@ socialImage: ""
 
 ### RESTful HTTP API
 REST(Representation State Transfer)ful의 약자로 REST 기반으로 API 시스템을 구현하기 위한 아키텍처의 한 방식이다.  
-<br>HTTP URI(Uniform Resource Idntifier)를 통해 특정 Resurce(Database에 저장되어 있는 정보)의 위치를 나타내고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 행위(CRUD Operation)를 정의하고 Payload로 데이터를 주고 받는다.  
 
+### REST란 무엇인가?
+HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다.
 ![Nulla faucibus vestibulum eros in tempus. Vestibulum tempor imperdiet velit nec dapibus](/media/Django/restful_api.png)
+
+   + 즉, REST는 자원 기반의 구조(ROA, Resource Oriented Architecture) 설계의 중심에 Resource가 있고 HTTP Method를 통해 Resource를 처리하도록 설계된 아키텍쳐를 의미한다.
+   +  웹 사이트의 이미지, 텍스트, DB 내용 등의 모든 자원에 고유한 ID인 HTTP URI를 부여한다.
+   + CRUD Operation  
+   Create : 생성(POST)
+   Read : 조회(GET)
+   Update : 수정(PUT)
+   Delete : 삭제(DELETE)
+   HEAD: header 정보 조회(HEAD)
 
 ### RSET 구성 요소
    1. 자원(Resource): URI  
